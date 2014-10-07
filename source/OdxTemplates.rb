@@ -54,7 +54,7 @@ def getTemplate_Read_PosResp(did, r_service="Read")
 					<SHORT-NAME>#{did[:DID_name]}</SHORT-NAME>
 					<LONG-NAME>#{did[:DID_name]}</LONG-NAME>
 					<BYTE-POSITION>3</BYTE-POSITION>
-					 <DOP-REF ID-REF='#{did[:DID_struct_ref_id]}'/>
+					 <DOP-REF ID-REF='_#{did[:DID_struct_ref_id]}'/>
 				  </PARAM>
 				</PARAMS>
 			  </POS-RESPONSE>
@@ -139,7 +139,7 @@ def getTemplate_Write_Request(did, r_service="Write")
 					<SHORT-NAME>#{did[:DID_name]}</SHORT-NAME>
 					<LONG-NAME>#{did[:DID_name]}</LONG-NAME>
 					<BYTE-POSITION>3</BYTE-POSITION>
-					 <DOP-REF ID-REF='#{did[:DID_struct_ref_id]}'/>
+					 <DOP-REF ID-REF='_#{did[:DID_struct_ref_id]}'/>
 			  </PARAM>
             </PARAMS>
         </REQUEST>
@@ -228,7 +228,7 @@ end
 
 def getTemplate_DiagComms(did, r_service)
 	return "
-			  <DIAG-SERVICE ID='_#{$id}' SEMANTIC='IDENTIFICATION' ADDRESSING='FUNCTIONAL-OR-PHYSICAL'>
+			  <DIAG-SERVICE ID='_#{$id}' SEMANTIC='STOREDDATA' ADDRESSING='FUNCTIONAL-OR-PHYSICAL'>
 				<SHORT-NAME>#{did[:DID_name]}_#{r_service}</SHORT-NAME>
 				<LONG-NAME>#{did[:DID_name]} #{r_service}</LONG-NAME>
 				<SDGS>
@@ -262,4 +262,41 @@ def getTemplate_DiagComms(did, r_service)
 				</NEG-RESPONSE-REFS>
 			  </DIAG-SERVICE>
 		"
+end
+
+def getTemplate_Params(params)
+	return "
+              <PARAMS>
+                <PARAM SEMANTIC='DATA' xsi:type='VALUE'>
+                  <SHORT-NAME>blinker_mode</SHORT-NAME>
+                  <LONG-NAME>blinker_mode</LONG-NAME>
+                  <BYTE-POSITION>0</BYTE-POSITION>
+                  <DOP-REF ID-REF='_11'/>
+                </PARAM>
+                <PARAM SEMANTIC='DATA' xsi:type='VALUE'>
+                  <SHORT-NAME>Unused</SHORT-NAME>
+                  <LONG-NAME>Unused</LONG-NAME>
+                  <BYTE-POSITION>0</BYTE-POSITION>
+                  <BIT-POSITION>1</BIT-POSITION>
+                  <DOP-REF ID-REF='_5'/>
+                </PARAM>
+              </PARAMS>
+	"
+end
+
+def getTemplate_Structure(did)
+	xml_struct = Nokogiri::XML("
+		<STRUCTURE ID='_#{$id}'>
+		  <SHORT-NAME>#{did[:DID_name]}</SHORT-NAME>
+		  <LONG-NAME>#{did[:DID_name]}</LONG-NAME>
+		  <BYTE-SIZE>#{did[:DID_byte_size]}</BYTE-SIZE>
+		</STRUCTURE>")
+		
+	xml_param1 = xml_struct.root
+	xml_param2 = Nokogiri::XML(getTemplate_Params(did[:DID_params])).root
+
+	xml_param1 << xml_param2
+			
+	return xml_struct.root
+		
 end

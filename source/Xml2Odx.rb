@@ -7,7 +7,7 @@ OdxTemplateInputFile = ARGV[1]
 OdxOutputFile = ARGV[2]
 
 $id = 10000
-ID_REF_FunctionalClass = '_172' # 172 --> Ident, 250 --> Engineering Parameters
+ID_REF_FunctionalClass = '_161' # 161 --> Stored data
 ID_REF_Nrc			   = '_106'
 
 begin
@@ -24,6 +24,35 @@ xml_in2 = Nokogiri::XML(f2)
 f1.close
 f2.close
 
+
+def getDidParams(subdata_nodes)
+
+	paramArray = []
+	subdata_nodes.map do |subdata|
+		hash = getDidParam(subdata)
+		paramArray.push(hash)
+	end
+	
+	return paramArray
+end
+
+def getDidParam(subdata)
+	hash = {	:PRM_shortname => subdata.xpath('Name').text,
+				:PRM_longname  => subdata.xpath('GroupName').text,
+				:PRM_startbyte => subdata.xpath('BitStruct/StartByte').text.to_i,
+				:PRM_startbit  => subdata.xpath('BitStruct/StartBit').text.to_i,
+				:PRM_lengthinbits => subdata.xpath('BitStruct/LengthInBits').text.to_i,
+				:PRM_isArray   => "#{subdata.xpath('BitStruct')}".include?('BitStructs'),
+				:PRM_ArrayLengthInByte => if "#{subdata.xpath('BitStruct')}".include?('BitStructs') then subdata.xpath('BitStruct/BitStructs/RepeatCount').text.to_i else 0 end,
+				:PRM_ArrayElementLengthInBits => if "#{subdata.xpath('BitStruct')}".include?('BitStructs') then subdata.xpath('BitStruct/BitStructs/LengthInBits').text.to_i else 0 end,
+				:PRM_dop	   => "_1"
+	}
+	
+	return hash
+end
+
+
+
 dataArray = []
 
 xml_in1.xpath("//Data").map do |node|
@@ -32,24 +61,32 @@ xml_in1.xpath("//Data").map do |node|
 				:DID_desc 			=> "Supported Variants: #{node.xpath('SupportedVariants').text}",
 				:DID_id 			=> node.xpath('ID').text,
 				:DID_rw				=> node.xpath('ReadWriteMode').text,
+				:DID_byte_size		=> 1, #node.xpath('Length').text,
 				:DID_struct_ref_id 	=> 0, 
 				:RQ_id				=> 0,
 				:POSRESP_id			=> 0,
-				:NEGRESP_id			=> 0
+				:NEGRESP_id			=> 0,
+				:DID_params			=> getDidParams(node.xpath('SubData'))
 			}
 			
 	dataArray.push(hash)
-			  
+		  
 end
+
+puts dataArray[0][:DID_params]
 
 # Find nodes in xml template file
 request_node = xml_in2 %('//REQUESTS')
 posresp_node = xml_in2 %('//POS-RESPONSES')
 negresp_node = xml_in2 %('//NEG-RESPONSES')
 diagcomms_node = xml_in2 %('//DIAG-COMMS')
-structures_node = xml_in2 %('//DIAG-DATA-DICTIONARY-SPEC')
+structures_node = xml_in2 %('//STRUCTURES')
 
 dataArray.each{ |did|
+
+	structures_node << getTemplate_Structure(did)
+	did[:DID_struct_ref_id] = $id
+	$id = $id + 1;
 
 	if did[:DID_rw].include? "Read"
 		request_node.last_element_child.after(getTemplate_Read_Request(did))
