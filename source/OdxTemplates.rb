@@ -298,7 +298,7 @@ def getTemplate_Read_PosResp_Toyota(did, r_service="Read")
 				  <PARAM SEMANTIC='DATA' xsi:type='VALUE'>
 					<SHORT-NAME>#{did[:DID_name]}</SHORT-NAME>
 					<LONG-NAME>#{did[:DID_name]}</LONG-NAME>
-					<BYTE-POSITION>3</BYTE-POSITION>
+					<BYTE-POSITION>4</BYTE-POSITION>
 					 <DOP-REF ID-REF='_#{did[:DID_struct_ref_id]}'/>
 				  </PARAM>
 				</PARAMS>
@@ -376,7 +376,7 @@ def getTemplate_Write_Request_Toyota(did, r_service="Write")
 			  <PARAM SEMANTIC='DATA' xsi:type='VALUE'>
 					<SHORT-NAME>#{did[:DID_name]}</SHORT-NAME>
 					<LONG-NAME>#{did[:DID_name]}</LONG-NAME>
-					<BYTE-POSITION>3</BYTE-POSITION>
+					<BYTE-POSITION>4</BYTE-POSITION>
 					 <DOP-REF ID-REF='_#{did[:DID_struct_ref_id]}'/>
 			  </PARAM>
             </PARAMS>
@@ -456,7 +456,32 @@ def getTemplate_Write_NegResp_Toyota(did, r_service="Write")
 end
 
 
+def getTemplate_Dops(did)
 
+	prm_string = ""
+	
+	did[:DID_params].each{ |prm|
+	
+		bit_length = if prm[:PRM_isArray] then (prm[:PRM_ArrayLengthInByte]*prm[:PRM_ArrayElementLengthInBits]) else prm[:PRM_lengthinbits] end
+	
+		prm_string += "
+			<DATA-OBJECT-PROP ID='_#{prm[:PRM_dop]}'>
+              <SHORT-NAME>#{prm[:PRM_shortname]}</SHORT-NAME>
+              <LONG-NAME>#{prm[:PRM_longname]}</LONG-NAME>
+              <COMPU-METHOD>
+                <CATEGORY>IDENTICAL</CATEGORY>
+              </COMPU-METHOD>
+              <DIAG-CODED-TYPE BASE-TYPE-ENCODING='NONE' BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
+                <BIT-LENGTH>#{bit_length}</BIT-LENGTH>
+              </DIAG-CODED-TYPE>
+              <PHYSICAL-TYPE BASE-DATA-TYPE='A_UINT32' DISPLAY-RADIX='DEC'/>
+            </DATA-OBJECT-PROP>
+		"
+	}
+	
+	return prm_string
+	#return "<DATA-OBJECT-PROPS>#{prm_string}</DATA-OBJECT-PROPS>"
+end
 
 def getTemplate_DiagComms(did, r_service)
 	return "
@@ -510,7 +535,8 @@ def getTemplate_Params(params)
                   <SHORT-NAME>#{prm[:PRM_shortname]}</SHORT-NAME>
                   <LONG-NAME>#{prm[:PRM_longname]}</LONG-NAME>
                   <BYTE-POSITION>#{prm[:PRM_startbyte]}</BYTE-POSITION>
-                  <DOP-REF ID-REF='_1'/>
+				  <BIT-POSITION>#{prm[:PRM_startbit]}</BIT-POSITION>
+                  <DOP-REF ID-REF='_#{prm[:PRM_dop]}'/>
                 </PARAM>
 		"
 	}
