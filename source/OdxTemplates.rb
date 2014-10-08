@@ -266,38 +266,42 @@ end
 
 def getTemplate_Params(params)
 
-	paramsString1 = "<PARAMS>"
+	paramsString1 = "<ODX xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' MODEL-VERSION='2.2.0' xsi:noNamespaceSchemaLocation='odx.xsd'><PARAMS>"
 	paramsString2 = ""
 	paramsString3 = "</PARAMS>"
 	
-	params.each{ |did|
+	start_byte = 0
+	
+	params.each{ |prm|
 		paramsString2 += "
 			    <PARAM SEMANTIC='DATA' xsi:type='VALUE'>
-                  <SHORT-NAME>blinker_mode</SHORT-NAME>
-                  <LONG-NAME>blinker_mode</LONG-NAME>
-                  <BYTE-POSITION>0</BYTE-POSITION>
-                  <DOP-REF ID-REF='_11'/>
+                  <SHORT-NAME>#{prm[:PRM_shortname]}</SHORT-NAME>
+                  <LONG-NAME>#{prm[:PRM_longname]}</LONG-NAME>
+                  <BYTE-POSITION>#{prm[:PRM_startbyte]}</BYTE-POSITION>
+                  <DOP-REF ID-REF='_1'/>
                 </PARAM>
 		"
 	}
 
-	return "
-              <PARAMS>
-                <PARAM SEMANTIC='DATA' xsi:type='VALUE'>
-                  <SHORT-NAME>blinker_mode</SHORT-NAME>
-                  <LONG-NAME>blinker_mode</LONG-NAME>
-                  <BYTE-POSITION>0</BYTE-POSITION>
-                  <DOP-REF ID-REF='_11'/>
-                </PARAM>
-                <PARAM SEMANTIC='DATA' xsi:type='VALUE'>
-                  <SHORT-NAME>Unused</SHORT-NAME>
-                  <LONG-NAME>Unused</LONG-NAME>
-                  <BYTE-POSITION>0</BYTE-POSITION>
-                  <BIT-POSITION>1</BIT-POSITION>
-                  <DOP-REF ID-REF='_5'/>
-                </PARAM>
-              </PARAMS>
-	"
+	return paramsString1 + paramsString2 + paramsString3
+	
+#	return "
+#              <PARAMS>
+#                <PARAM SEMANTIC='DATA' xsi:type='VALUE'>
+#                  <SHORT-NAME>blinker_mode</SHORT-NAME>
+#                  <LONG-NAME>blinker_mode</LONG-NAME>
+#                  <BYTE-POSITION>0</BYTE-POSITION>
+#                  <DOP-REF ID-REF='_11'/>
+#                </PARAM>
+#                <PARAM SEMANTIC='DATA' xsi:type='VALUE'>
+#                  <SHORT-NAME>Unused</SHORT-NAME>
+#                  <LONG-NAME>Unused</LONG-NAME>
+#                  <BYTE-POSITION>0</BYTE-POSITION>
+#                  <BIT-POSITION>1</BIT-POSITION>
+#                  <DOP-REF ID-REF='_5'/>
+#                </PARAM>
+#              </PARAMS>
+#	"
 end
 
 def getTemplate_Structure(did)
@@ -309,7 +313,7 @@ def getTemplate_Structure(did)
 		</STRUCTURE>")
 		
 	xml_param1 = xml_struct.root
-	xml_param2 = Nokogiri::XML(getTemplate_Params(did[:DID_params])).root
+	xml_param2 = Nokogiri::XML(getTemplate_Params(did[:DID_params])).root.to_xml
 
 	xml_param1 << xml_param2
 			
