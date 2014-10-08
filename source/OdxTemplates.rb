@@ -1,4 +1,4 @@
-def getTemplate_Read_Request(did, r_service="Read")
+def getTemplate_Read_Request_22(did, r_service="Read")
 	return "
 	  <REQUEST ID='_#{$id}'>
 		<SHORT-NAME>RQ_#{did[:DID_name]}_#{r_service}</SHORT-NAME>
@@ -26,7 +26,7 @@ def getTemplate_Read_Request(did, r_service="Read")
 	  </REQUEST>
 		"
 end
-def getTemplate_Read_PosResp(did, r_service="Read")
+def getTemplate_Read_PosResp_22(did, r_service="Read")
 	return "
 			  <POS-RESPONSE ID='_#{$id}'>
 				<SHORT-NAME>PR_#{did[:DID_name]}_#{r_service}</SHORT-NAME>
@@ -60,7 +60,7 @@ def getTemplate_Read_PosResp(did, r_service="Read")
 			  </POS-RESPONSE>
 		"
 end
-def getTemplate_Read_NegResp(did, r_service="Read")
+def getTemplate_Read_NegResp_22(did, r_service="Read")
 	return "
 			  <NEG-RESPONSE ID='_#{$id}'>
 				<SHORT-NAME>NR_#{did[:DID_name]}_#{r_service}</SHORT-NAME>
@@ -111,7 +111,7 @@ def getTemplate_Read_NegResp(did, r_service="Read")
 		"
 end
 
-def getTemplate_Write_Request(did, r_service="Write")
+def getTemplate_Write_Request_2E(did, r_service="Write")
 	return "
 		<REQUEST ID='_#{$id}'>
 		<SHORT-NAME>RQ_#{did[:DID_name]}_#{r_service}</SHORT-NAME>
@@ -145,7 +145,7 @@ def getTemplate_Write_Request(did, r_service="Write")
         </REQUEST>
 		"
 end
-def getTemplate_Write_PosResp(did, r_service="Write")
+def getTemplate_Write_PosResp_2E(did, r_service="Write")
 	return "
 		<POS-RESPONSE ID='_#{$id}'>
 			<SHORT-NAME>PR_#{did[:DID_name]}_#{r_service}</SHORT-NAME>
@@ -173,7 +173,7 @@ def getTemplate_Write_PosResp(did, r_service="Write")
           </POS-RESPONSE>
 		"
 end
-def getTemplate_Write_NegResp(did, r_service="Write")
+def getTemplate_Write_NegResp_2E(did, r_service="Write")
 	return "
 		<NEG-RESPONSE ID='_#{$id}'>
 			<SHORT-NAME>NR_#{did[:DID_name]}_#{r_service}</SHORT-NAME>
@@ -224,6 +224,238 @@ def getTemplate_Write_NegResp(did, r_service="Write")
           </NEG-RESPONSE>
 		"
 end
+
+def getTemplate_Read_Request_Toyota(did, r_service="Read")
+	return "
+	  <REQUEST ID='_#{$id}'>
+		<SHORT-NAME>RQ_#{did[:DID_name]}_#{r_service}</SHORT-NAME>
+		<LONG-NAME>RQ #{did[:DID_name]} #{r_service}</LONG-NAME>
+		<PARAMS>
+		  <PARAM SEMANTIC='SERVICE-ID' xsi:type='CODED-CONST'>
+			<SHORT-NAME>SID_RQ</SHORT-NAME>
+			<LONG-NAME>SID-RQ</LONG-NAME>
+			<BYTE-POSITION>0</BYTE-POSITION>
+			<CODED-VALUE>186</CODED-VALUE>
+			<DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
+			  <BIT-LENGTH>8</BIT-LENGTH>
+			</DIAG-CODED-TYPE>
+		  </PARAM>
+		  <PARAM SEMANTIC='SUBFUNCTION' xsi:type='CODED-CONST'>
+			<SHORT-NAME>Read_Data</SHORT-NAME>
+			<LONG-NAME>Read Data</LONG-NAME>
+			<BYTE-POSITION>1</BYTE-POSITION>
+			<CODED-VALUE>0</CODED-VALUE>
+			<DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
+			  <BIT-LENGTH>8</BIT-LENGTH>
+			</DIAG-CODED-TYPE>
+		  </PARAM>
+		  <PARAM SEMANTIC='ID' xsi:type='CODED-CONST'>
+			<SHORT-NAME>RecordDataIdentifier</SHORT-NAME>
+			<LONG-NAME>RecordDataIdentifier</LONG-NAME>
+			<BYTE-POSITION>2</BYTE-POSITION>
+			<CODED-VALUE>#{did[:DID_id]}</CODED-VALUE>
+			<DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
+			  <BIT-LENGTH>16</BIT-LENGTH>
+			</DIAG-CODED-TYPE>
+		  </PARAM>
+		</PARAMS>
+	  </REQUEST>
+		"
+end
+def getTemplate_Read_PosResp_Toyota(did, r_service="Read")
+	return "
+			  <POS-RESPONSE ID='_#{$id}'>
+				<SHORT-NAME>PR_#{did[:DID_name]}_#{r_service}</SHORT-NAME>
+				<LONG-NAME>PR #{did[:DID_name]} #{r_service}</LONG-NAME>
+				<PARAMS>
+				  <PARAM SEMANTIC='SERVICE-ID' xsi:type='CODED-CONST'>
+					<SHORT-NAME>SID_PR</SHORT-NAME>
+					<LONG-NAME>SID-PR</LONG-NAME>
+					<BYTE-POSITION>0</BYTE-POSITION>
+					<CODED-VALUE>250</CODED-VALUE>
+					<DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
+					  <BIT-LENGTH>8</BIT-LENGTH>
+					</DIAG-CODED-TYPE>
+				  </PARAM>
+				  <PARAM SEMANTIC='SUBFUNCTION' xsi:type='CODED-CONST'>
+					<SHORT-NAME>Read_Data</SHORT-NAME>
+					<LONG-NAME>Read Data</LONG-NAME>
+					<BYTE-POSITION>1</BYTE-POSITION>
+					<CODED-VALUE>0</CODED-VALUE>
+					<DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
+					  <BIT-LENGTH>8</BIT-LENGTH>
+					</DIAG-CODED-TYPE>
+				  </PARAM>
+				  <PARAM SEMANTIC='ID' xsi:type='CODED-CONST'>
+					<SHORT-NAME>RecordDataIdentifier</SHORT-NAME>
+					<LONG-NAME>RecordDataIdentifier</LONG-NAME>
+					<BYTE-POSITION>2</BYTE-POSITION>
+					<CODED-VALUE>#{did[:DID_id]}</CODED-VALUE>
+					<DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
+					  <BIT-LENGTH>16</BIT-LENGTH>
+					</DIAG-CODED-TYPE>
+				  </PARAM>
+				  <PARAM SEMANTIC='DATA' xsi:type='VALUE'>
+					<SHORT-NAME>#{did[:DID_name]}</SHORT-NAME>
+					<LONG-NAME>#{did[:DID_name]}</LONG-NAME>
+					<BYTE-POSITION>3</BYTE-POSITION>
+					 <DOP-REF ID-REF='_#{did[:DID_struct_ref_id]}'/>
+				  </PARAM>
+				</PARAMS>
+			  </POS-RESPONSE>
+		"
+end
+def getTemplate_Read_NegResp_Toyota(did, r_service="Read")
+	return "
+			  <NEG-RESPONSE ID='_#{$id}'>
+				<SHORT-NAME>NR_#{did[:DID_name]}_#{r_service}</SHORT-NAME>
+				<LONG-NAME>NR #{did[:DID_name]} #{r_service}</LONG-NAME>
+				<PARAMS>
+				  <PARAM SEMANTIC='SERVICE-ID' xsi:type='CODED-CONST'>
+					<SHORT-NAME>SID_NR</SHORT-NAME>
+					<LONG-NAME>SID-NR</LONG-NAME>
+					<BYTE-POSITION>0</BYTE-POSITION>
+					<CODED-VALUE>127</CODED-VALUE>
+					<DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
+					  <BIT-LENGTH>8</BIT-LENGTH>
+					</DIAG-CODED-TYPE>
+				  </PARAM>
+				  <PARAM SEMANTIC='SERVICEIDRQ' xsi:type='CODED-CONST'>
+					<SHORT-NAME>SID_RQ_NR</SHORT-NAME>
+					<LONG-NAME>SID-RQ-NR</LONG-NAME>
+					<BYTE-POSITION>1</BYTE-POSITION>
+					<CODED-VALUE>186</CODED-VALUE>
+					<DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
+					  <BIT-LENGTH>8</BIT-LENGTH>
+					</DIAG-CODED-TYPE>
+				  </PARAM>
+				  <PARAM xsi:type='RESERVED'>
+					<SHORT-NAME>#{r_service}_NR</SHORT-NAME>
+					<LONG-NAME>#{r_service} NR</LONG-NAME>
+					<BYTE-POSITION>2</BYTE-POSITION>
+					<BIT-LENGTH>8</BIT-LENGTH>
+				  </PARAM>
+				</PARAMS>
+			  </NEG-RESPONSE>
+		"
+end
+
+def getTemplate_Write_Request_Toyota(did, r_service="Write")
+	return "
+		<REQUEST ID='_#{$id}'>
+		<SHORT-NAME>RQ_#{did[:DID_name]}_#{r_service}</SHORT-NAME>
+		<LONG-NAME>RQ #{did[:DID_name]} #{r_service}</LONG-NAME>
+			<PARAMS>
+               <PARAM SEMANTIC='SERVICE-ID' xsi:type='CODED-CONST'>
+                <SHORT-NAME>SID_RQ</SHORT-NAME>
+                <LONG-NAME>SID-RQ</LONG-NAME>
+                <BYTE-POSITION>0</BYTE-POSITION>
+                <CODED-VALUE>186</CODED-VALUE>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
+                  <BIT-LENGTH>8</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+              </PARAM>
+              <PARAM SEMANTIC='SUBFUNCTION' xsi:type='CODED-CONST'>
+                <SHORT-NAME>Write_Data</SHORT-NAME>
+                <LONG-NAME>Write Data</LONG-NAME>
+                <BYTE-POSITION>1</BYTE-POSITION>
+                <CODED-VALUE>1</CODED-VALUE>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
+                  <BIT-LENGTH>8</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+              </PARAM>              
+			  <PARAM SEMANTIC='ID' xsi:type='CODED-CONST'>
+                <SHORT-NAME>RecordDataIdentifier</SHORT-NAME>
+                <LONG-NAME>RecordDataIdentifier</LONG-NAME>
+                <BYTE-POSITION>2</BYTE-POSITION>
+                <CODED-VALUE>#{did[:DID_id]}</CODED-VALUE>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
+                  <BIT-LENGTH>16</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+              </PARAM>
+			  <PARAM SEMANTIC='DATA' xsi:type='VALUE'>
+					<SHORT-NAME>#{did[:DID_name]}</SHORT-NAME>
+					<LONG-NAME>#{did[:DID_name]}</LONG-NAME>
+					<BYTE-POSITION>3</BYTE-POSITION>
+					 <DOP-REF ID-REF='_#{did[:DID_struct_ref_id]}'/>
+			  </PARAM>
+            </PARAMS>
+        </REQUEST>
+		"
+end
+def getTemplate_Write_PosResp_Toyota(did, r_service="Write")
+	return "
+		<POS-RESPONSE ID='_#{$id}'>
+			<SHORT-NAME>PR_#{did[:DID_name]}_#{r_service}</SHORT-NAME>
+			<LONG-NAME>PR #{did[:DID_name]} #{r_service}</LONG-NAME>
+            <PARAMS>
+             <PARAM SEMANTIC='SERVICE-ID' xsi:type='CODED-CONST'>
+                <SHORT-NAME>SID_PR</SHORT-NAME>
+                <LONG-NAME>SID-PR</LONG-NAME>
+                <BYTE-POSITION>0</BYTE-POSITION>
+                <CODED-VALUE>250</CODED-VALUE>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
+                  <BIT-LENGTH>8</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+              </PARAM>
+              <PARAM SEMANTIC='SUBFUNCTION' xsi:type='CODED-CONST'>
+                <SHORT-NAME>Write_Data</SHORT-NAME>
+                <LONG-NAME>Write Data</LONG-NAME>
+                <BYTE-POSITION>1</BYTE-POSITION>
+                <CODED-VALUE>1</CODED-VALUE>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
+                  <BIT-LENGTH>8</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+              </PARAM>
+              <PARAM SEMANTIC='ID' xsi:type='CODED-CONST'>
+                <SHORT-NAME>RecordDataIdentifier</SHORT-NAME>
+                <LONG-NAME>RecordDataIdentifier</LONG-NAME>
+                <BYTE-POSITION>2</BYTE-POSITION>
+                <CODED-VALUE>#{did[:DID_id]}</CODED-VALUE>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
+                  <BIT-LENGTH>16</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+              </PARAM>
+            </PARAMS>
+          </POS-RESPONSE>
+		"
+end
+def getTemplate_Write_NegResp_Toyota(did, r_service="Write")
+	return "
+		<NEG-RESPONSE ID='_#{$id}'>
+			<SHORT-NAME>NR_#{did[:DID_name]}_#{r_service}</SHORT-NAME>
+			<LONG-NAME>NR #{did[:DID_name]} #{r_service}</LONG-NAME>
+            <PARAMS>
+              <PARAM SEMANTIC='SERVICE-ID' xsi:type='CODED-CONST'>
+                <SHORT-NAME>SID_NR</SHORT-NAME>
+                <LONG-NAME>SID-NR</LONG-NAME>
+                <BYTE-POSITION>0</BYTE-POSITION>
+                <CODED-VALUE>127</CODED-VALUE>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
+                  <BIT-LENGTH>8</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+              </PARAM>
+              <PARAM SEMANTIC='SERVICEIDRQ' xsi:type='CODED-CONST'>
+                <SHORT-NAME>SID_RQ_NR</SHORT-NAME>
+                <LONG-NAME>SID-RQ-NR</LONG-NAME>
+                <BYTE-POSITION>1</BYTE-POSITION>
+                <CODED-VALUE>186</CODED-VALUE>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
+                  <BIT-LENGTH>8</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+              </PARAM>
+			  <PARAM xsi:type='RESERVED'>
+                <SHORT-NAME>#{r_service}_NR</SHORT-NAME>
+                <LONG-NAME>#{r_service}_NR</LONG-NAME>
+                <BYTE-POSITION>2</BYTE-POSITION>
+                <BIT-LENGTH>8</BIT-LENGTH>
+              </PARAM>
+			</PARAMS>
+          </NEG-RESPONSE>
+		"
+end
+
+
 
 
 def getTemplate_DiagComms(did, r_service)

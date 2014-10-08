@@ -85,20 +85,19 @@ structures_node = xml_in2 %('//STRUCTURES')
 dataArray.each{ |did|
 
 	structures_node.last_element_child.after(getTemplate_Structure(did))
-		
 	did[:DID_struct_ref_id] = $id
 	$id = $id + 1;
 	
-	if did[:DID_rw].include? "Read"
-		request_node.last_element_child.after(getTemplate_Read_Request(did))
+	if did[:DID_rw].include? "Read"	
+		request_node.last_element_child.after(getTemplate_Read_Request_Toyota(did))
 		did[:RQ_id] = $id;
 		$id = $id + 1;
 		
-		posresp_node.last_element_child.after(getTemplate_Read_PosResp(did))
+		posresp_node.last_element_child.after(getTemplate_Read_PosResp_Toyota(did))
 		did[:POSRESP_id] = $id;
 		$id = $id + 1;
 
-		negresp_node.last_element_child.after(getTemplate_Read_NegResp(did))
+		negresp_node.last_element_child.after(getTemplate_Read_NegResp_Toyota(did))
 		did[:NEGRESP_id] = $id;
 		$id = $id + 1;	
 		
@@ -107,15 +106,22 @@ dataArray.each{ |did|
 	end
 	
 	if did[:DID_rw].include? "Write"
-		request_node.last_element_child.after(getTemplate_Write_Request(did))
+	
+		#puts getTemplate_Write_Request_Toyota(did)
+		#puts getTemplate_Write_PosResp_Toyota(did)
+		
+		#break;
+
+	
+		request_node.last_element_child.after(getTemplate_Write_Request_Toyota(did))
 		did[:RQ_id] = $id;
 		$id = $id + 1;
 		
-		posresp_node.last_element_child.after(getTemplate_Write_PosResp(did))
+		posresp_node.last_element_child.after(getTemplate_Write_PosResp_Toyota(did))
 		did[:POSRESP_id] = $id;
 		$id = $id + 1;
 
-		negresp_node.last_element_child.after(getTemplate_Write_NegResp(did))
+		negresp_node.last_element_child.after(getTemplate_Write_NegResp_Toyota(did))
 		did[:NEGRESP_id] = $id;
 		$id = $id + 1;	
 		
