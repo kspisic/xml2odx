@@ -5132,77 +5132,76 @@
                 </PARAM>
               </PARAMS>
             </STRUCTURE>
-          <STRUCTURE ID="_10000">
+		<STRUCTURE ID="_10000">
 		  <SHORT-NAME>Common_Car_configuration</SHORT-NAME>
 		  <LONG-NAME>Common_Car_configuration</LONG-NAME>
 		  <BYTE-SIZE>25</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>led_dim_characteristic_table[12] (Dimmwerte)</SHORT-NAME>
+                  <SHORT-NAME>led_dim_characteristic_table_12___Dimmwerte_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_01.default_common_dataset_ram.common_car_cfg_S.dim_led_cfg</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>PWM Dimmfehlerwert</SHORT-NAME>
+                  <SHORT-NAME>PWM_Dimmfehlerwert</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_01.default_common_dataset_ram.common_car_cfg_S.dim_led_cfg</LONG-NAME>
                   <BYTE-POSITION>12</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>mit Elektrische Park Bremse</SHORT-NAME>
+                  <SHORT-NAME>mit_Elektrische_Park_Bremse</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_01.default_common_dataset_ram.common_car_cfg_S</LONG-NAME>
                   <BYTE-POSITION>13</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Entprellzeit für Park4U-Rückwärtsgang bei Automatik-Getriebe</SHORT-NAME>
+                  <SHORT-NAME>Entprellzeit_f_r_Park4U_R_ckw_rtsgang_bei_Automatik_Getriebe</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_01.default_common_dataset_ram.common_car_cfg_S.reverse_debounce_cfg</LONG-NAME>
                   <BYTE-POSITION>14</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Entprellzeit für RWG bei Automatik</SHORT-NAME>
+                  <SHORT-NAME>Entprellzeit_f_r_RWG_bei_Automatik</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_01.default_common_dataset_ram.common_car_cfg_S.reverse_debounce_cfg</LONG-NAME>
                   <BYTE-POSITION>15</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Entprellzeit für Park4U-Rückwärtsgang bei Elektro-Fahrzeug</SHORT-NAME>
+                  <SHORT-NAME>Entprellzeit_f_r_Park4U_R_ckw_rtsgang_bei_Elektro_Fahrzeug</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_01.default_common_dataset_ram.common_car_cfg_S.reverse_debounce_cfg</LONG-NAME>
                   <BYTE-POSITION>16</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Entprellzeit für RWG bei Elektro-Fahrzeug</SHORT-NAME>
+                  <SHORT-NAME>Entprellzeit_f_r_RWG_bei_Elektro_Fahrzeug</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_01.default_common_dataset_ram.common_car_cfg_S.reverse_debounce_cfg</LONG-NAME>
                   <BYTE-POSITION>17</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Entprellzeit für Park4U-Rückwärtsgang bei Handschaltung</SHORT-NAME>
+                  <SHORT-NAME>Entprellzeit_f_r_Park4U_R_ckw_rtsgang_bei_Handschaltung</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_01.default_common_dataset_ram.common_car_cfg_S.reverse_debounce_cfg</LONG-NAME>
                   <BYTE-POSITION>18</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Entprellzeit für RWG bei Handschaltung</SHORT-NAME>
+                  <SHORT-NAME>Entprellzeit_f_r_RWG_bei_Handschaltung</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_01.default_common_dataset_ram.common_car_cfg_S.reverse_debounce_cfg</LONG-NAME>
                   <BYTE-POSITION>19</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Aktive Ticks bis RückwRollen erkant. (0=sofort, 1-254=ticks, 255=nur Hindernisse)</SHORT-NAME>
+                  <SHORT-NAME>Aktive_Ticks_bis_R_ckwRollen_erkant___0_sofort__1_254_ticks__255_nur_Hindernisse_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_01.default_common_dataset_ram.common_car_cfg_S.backward_roll_cfg</LONG-NAME>
                   <BYTE-POSITION>20</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
@@ -5229,12 +5228,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10013">
+		</STRUCTURE>
+		<STRUCTURE ID="_10013">
 		  <SHORT-NAME>Codingdata_DAPM___Kodierdaten_DAPM</SHORT-NAME>
 		  <LONG-NAME>Codingdata_DAPM___Kodierdaten_DAPM</LONG-NAME>
 		  <BYTE-SIZE>16</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>prod_p4u</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_01.default_common_dataset_ram.dapm_cfg.variant</LONG-NAME>
@@ -5347,12 +5346,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10026">
+		</STRUCTURE>
+		<STRUCTURE ID="_10026">
 		  <SHORT-NAME>Codingdata_DAPM_vehicle_cfg</SHORT-NAME>
 		  <LONG-NAME>Codingdata_DAPM_vehicle_cfg</LONG-NAME>
 		  <BYTE-SIZE>26</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>length_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_01.default_common_dataset_ram.dapm_cfg.vehicle_cfg</LONG-NAME>
@@ -5444,12 +5443,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10039">
+		</STRUCTURE>
+		<STRUCTURE ID="_10039">
 		  <SHORT-NAME>Codingdata_DAPM_number_sectors_and_sensors</SHORT-NAME>
 		  <LONG-NAME>Codingdata_DAPM_number_sectors_and_sensors</LONG-NAME>
 		  <BYTE-SIZE>6</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>num_sectors_front</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_01.default_common_dataset_ram.dapm_cfg.num_sectors</LONG-NAME>
@@ -5492,12 +5491,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10052">
+		</STRUCTURE>
+		<STRUCTURE ID="_10052">
 		  <SHORT-NAME>Codingdata_DAPM_sensor_front</SHORT-NAME>
 		  <LONG-NAME>Codingdata_DAPM_sensor_front</LONG-NAME>
 		  <BYTE-SIZE>42</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>pose_p_x_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_01.default_common_dataset_ram.dapm_cfg.sensor_front_cfg.ARRAY_0</LONG-NAME>
@@ -5687,12 +5686,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10065">
+		</STRUCTURE>
+		<STRUCTURE ID="_10065">
 		  <SHORT-NAME>Codingdata_DAPM_sensor_rear</SHORT-NAME>
 		  <LONG-NAME>Codingdata_DAPM_sensor_rear</LONG-NAME>
 		  <BYTE-SIZE>42</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>pose_p_x_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_01.default_common_dataset_ram.dapm_cfg.sensor_rear_cfg.ARRAY_0</LONG-NAME>
@@ -5882,12 +5881,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10078">
+		</STRUCTURE>
+		<STRUCTURE ID="_10078">
 		  <SHORT-NAME>Codingdata_DAPM_reserved</SHORT-NAME>
 		  <LONG-NAME>Codingdata_DAPM_reserved</LONG-NAME>
 		  <BYTE-SIZE>20</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>si16_1</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_01.default_common_dataset_ram.dapm_cfg.reserved</LONG-NAME>
@@ -5972,51 +5971,51 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10091">
+		</STRUCTURE>
+		<STRUCTURE ID="_10091">
 		  <SHORT-NAME>Codingdata_DAPM_wheel_ang_fw</SHORT-NAME>
 		  <LONG-NAME>Codingdata_DAPM_wheel_ang_fw</LONG-NAME>
 		  <BYTE-SIZE>32</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>wheel_ang_front_fw_tbl_u16f[16]</SHORT-NAME>
+                  <SHORT-NAME>wheel_ang_front_fw_tbl_u16f_16_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_01.default_common_dataset_ram.dapm_cfg</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10104">
+		</STRUCTURE>
+		<STRUCTURE ID="_10104">
 		  <SHORT-NAME>Codingdata_DAPM_wheel_ang_bw</SHORT-NAME>
 		  <LONG-NAME>Codingdata_DAPM_wheel_ang_bw</LONG-NAME>
 		  <BYTE-SIZE>32</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>wheel_ang_front_bw_tbl_u16f[16]</SHORT-NAME>
+                  <SHORT-NAME>wheel_ang_front_bw_tbl_u16f_16_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_01.default_common_dataset_ram.dapm_cfg</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10117">
+		</STRUCTURE>
+		<STRUCTURE ID="_10117">
 		  <SHORT-NAME>Codingdata_DAPM_steer_in</SHORT-NAME>
 		  <LONG-NAME>Codingdata_DAPM_steer_in</LONG-NAME>
 		  <BYTE-SIZE>32</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>steer_in_out_front_tbl[16]</SHORT-NAME>
+                  <SHORT-NAME>steer_in_out_front_tbl_16_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_01.default_common_dataset_ram.dapm_cfg</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10130">
+		</STRUCTURE>
+		<STRUCTURE ID="_10130">
 		  <SHORT-NAME>Codingdata_DAPM_varia1</SHORT-NAME>
 		  <LONG-NAME>Codingdata_DAPM_varia1</LONG-NAME>
 		  <BYTE-SIZE>14</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>add_length_short_slot_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_01.default_common_dataset_ram.dapm_cfg</LONG-NAME>
@@ -6101,12 +6100,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10143">
+		</STRUCTURE>
+		<STRUCTURE ID="_10143">
 		  <SHORT-NAME>Codingdata_ODOM</SHORT-NAME>
 		  <LONG-NAME>Codingdata_ODOM</LONG-NAME>
 		  <BYTE-SIZE>16</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>min_yaw_rate_u16f_s</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_01.default_common_dataset_ram.odom_cfg.drdi_cfg.ddyr_cfg</LONG-NAME>
@@ -6157,7 +6156,7 @@
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>priority[3]</SHORT-NAME>
+                  <SHORT-NAME>priority_3_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_01.default_common_dataset_ram.odom_cfg.drdi_cfg</LONG-NAME>
                   <BYTE-POSITION>12</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
@@ -6170,12 +6169,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10156">
+		</STRUCTURE>
+		<STRUCTURE ID="_10156">
 		  <SHORT-NAME>Codingdata_ODOM_pofu</SHORT-NAME>
 		  <LONG-NAME>Codingdata_ODOM_pofu</LONG-NAME>
 		  <BYTE-SIZE>14</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>track_width_offset_rear_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_01.default_common_dataset_ram.odom_cfg.pofu_cfg</LONG-NAME>
@@ -6239,12 +6238,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10169">
+		</STRUCTURE>
+		<STRUCTURE ID="_10169">
 		  <SHORT-NAME>Codingdata_ODOM_cast</SHORT-NAME>
 		  <LONG-NAME>Codingdata_ODOM_cast</LONG-NAME>
 		  <BYTE-SIZE>8</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>ss_fast_cfg_standstill_timer_ms</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_01.default_common_dataset_ram.odom_cfg.cast_cfg</LONG-NAME>
@@ -6287,12 +6286,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10182">
+		</STRUCTURE>
+		<STRUCTURE ID="_10182">
 		  <SHORT-NAME>Codingdata_ODOM_swof</SHORT-NAME>
 		  <LONG-NAME>Codingdata_ODOM_swof</LONG-NAME>
 		  <BYTE-SIZE>12</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>max_steer_moment_10th_nm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_01.default_common_dataset_ram.odom_cfg.swof_cfg</LONG-NAME>
@@ -6349,12 +6348,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10195">
+		</STRUCTURE>
+		<STRUCTURE ID="_10195">
 		  <SHORT-NAME>Codingdata_ODOM_wcca</SHORT-NAME>
 		  <LONG-NAME>Codingdata_ODOM_wcca</LONG-NAME>
 		  <BYTE-SIZE>26</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>min_value</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_01.default_common_dataset_ram.odom_cfg.wcca_cfg.cfg_x1</LONG-NAME>
@@ -6460,12 +6459,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10208">
+		</STRUCTURE>
+		<STRUCTURE ID="_10208">
 		  <SHORT-NAME>Codingdata_ODOM_rsaf</SHORT-NAME>
 		  <LONG-NAME>Codingdata_ODOM_rsaf</LONG-NAME>
 		  <BYTE-SIZE>8</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>min_time_begin_standstill_ms</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_01.default_common_dataset_ram.odom_cfg.rsaf_cfg</LONG-NAME>
@@ -6501,12 +6500,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10221">
+		</STRUCTURE>
+		<STRUCTURE ID="_10221">
 		  <SHORT-NAME>Codingdata_ODOM_wcc_avg</SHORT-NAME>
 		  <LONG-NAME>Codingdata_ODOM_wcc_avg</LONG-NAME>
 		  <BYTE-SIZE>21</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>cnt_wheel_circum</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_01.default_common_dataset_ram.odom_cfg.wcc_avg_cfg</LONG-NAME>
@@ -6584,12 +6583,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10234">
+		</STRUCTURE>
+		<STRUCTURE ID="_10234">
 		  <SHORT-NAME>Codingdata_MOPM___Kodierdaten_MOPM</SHORT-NAME>
 		  <LONG-NAME>Codingdata_MOPM___Kodierdaten_MOPM</LONG-NAME>
 		  <BYTE-SIZE>37</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>perp_target_depth_offset_cm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_02.default_common_mopm_objm.mopm_cfg.past_cfg</LONG-NAME>
@@ -6814,12 +6813,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10247">
+		</STRUCTURE>
+		<STRUCTURE ID="_10247">
 		  <SHORT-NAME>Codingdata_MOPM_mpla</SHORT-NAME>
 		  <LONG-NAME>Codingdata_MOPM_mpla</LONG-NAME>
 		  <BYTE-SIZE>2</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>max_way_wrong_direct_dm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_02.default_common_mopm_objm.mopm_cfg.mpla_cfg</LONG-NAME>
@@ -6834,42 +6833,42 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10260">
+		</STRUCTURE>
+		<STRUCTURE ID="_10260">
 		  <SHORT-NAME>Codingdata_MOPM_mpab1</SHORT-NAME>
 		  <LONG-NAME>Codingdata_MOPM_mpab1</LONG-NAME>
 		  <BYTE-SIZE>44</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>mul_moves_radius_tbl_mm[3]</SHORT-NAME>
+                  <SHORT-NAME>mul_moves_radius_tbl_mm_3_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_02.default_common_mopm_objm.mopm_cfg.mpab_cfg</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>mul_moves_delta_theta_tbl_u16f[3]</SHORT-NAME>
+                  <SHORT-NAME>mul_moves_delta_theta_tbl_u16f_3_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_02.default_common_mopm_objm.mopm_cfg.mpab_cfg</LONG-NAME>
                   <BYTE-POSITION>6</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>ps_length_tbl_mm[5]</SHORT-NAME>
+                  <SHORT-NAME>ps_length_tbl_mm_5_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_02.default_common_mopm_objm.mopm_cfg.mpab_cfg</LONG-NAME>
                   <BYTE-POSITION>12</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>traj_radius_tbl_mm[5]</SHORT-NAME>
+                  <SHORT-NAME>traj_radius_tbl_mm_5_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_02.default_common_mopm_objm.mopm_cfg.mpab_cfg</LONG-NAME>
                   <BYTE-POSITION>22</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>traj_theta_tbl_u16f[5]</SHORT-NAME>
+                  <SHORT-NAME>traj_theta_tbl_u16f_5_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_02.default_common_mopm_objm.mopm_cfg.mpab_cfg</LONG-NAME>
                   <BYTE-POSITION>32</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
@@ -6882,12 +6881,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10273">
+		</STRUCTURE>
+		<STRUCTURE ID="_10273">
 		  <SHORT-NAME>Codingdata_MOPM_mpab2</SHORT-NAME>
 		  <LONG-NAME>Codingdata_MOPM_mpab2</LONG-NAME>
 		  <BYTE-SIZE>22</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>theta_pos_ok_max_u16f</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_02.default_common_mopm_objm.mopm_cfg.mpab_cfg</LONG-NAME>
@@ -6924,7 +6923,7 @@
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>limit_y_target_offset_tbl_cm[5]</SHORT-NAME>
+                  <SHORT-NAME>limit_y_target_offset_tbl_cm_5_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_02.default_common_mopm_objm.mopm_cfg.mpab_cfg</LONG-NAME>
                   <BYTE-POSITION>7</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
@@ -7000,12 +6999,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10286">
+		</STRUCTURE>
+		<STRUCTURE ID="_10286">
 		  <SHORT-NAME>Codingdata_MOPM_mpeb</SHORT-NAME>
 		  <LONG-NAME>Codingdata_MOPM_mpeb</LONG-NAME>
 		  <BYTE-SIZE>36</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>offset_goal_cm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_02.default_common_mopm_objm.mopm_cfg.mpeb_cfg</LONG-NAME>
@@ -7174,12 +7173,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10299">
+		</STRUCTURE>
+		<STRUCTURE ID="_10299">
 		  <SHORT-NAME>Codingdata_MOPM_iebm1</SHORT-NAME>
 		  <LONG-NAME>Codingdata_MOPM_iebm1</LONG-NAME>
 		  <BYTE-SIZE>48</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>eb_max_abs_wa_speed_u16fps</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_02.default_common_mopm_objm.mopm_cfg.iebm_cfg</LONG-NAME>
@@ -7258,14 +7257,14 @@
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>eb_track_tbl_veh_speed_100thkmh[4]</SHORT-NAME>
+                  <SHORT-NAME>eb_track_tbl_veh_speed_100thkmh_4_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_02.default_common_mopm_objm.mopm_cfg.iebm_cfg</LONG-NAME>
                   <BYTE-POSITION>22</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>eb_track_tbl_dist_mm[4]</SHORT-NAME>
+                  <SHORT-NAME>eb_track_tbl_dist_mm_4_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_02.default_common_mopm_objm.mopm_cfg.iebm_cfg</LONG-NAME>
                   <BYTE-POSITION>30</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
@@ -7279,34 +7278,34 @@
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>eb_bd_tbl_veh_speed_fw_100thkmh[4]</SHORT-NAME>
+                  <SHORT-NAME>eb_bd_tbl_veh_speed_fw_100thkmh_4_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_02.default_common_mopm_objm.mopm_cfg.iebm_cfg</LONG-NAME>
                   <BYTE-POSITION>40</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10312">
+		</STRUCTURE>
+		<STRUCTURE ID="_10312">
 		  <SHORT-NAME>Codingdata_MOPM_iebm2</SHORT-NAME>
 		  <LONG-NAME>Codingdata_MOPM_iebm2</LONG-NAME>
 		  <BYTE-SIZE>46</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>eb_bd_tbl_dist_fw_mm[4]</SHORT-NAME>
+                  <SHORT-NAME>eb_bd_tbl_dist_fw_mm_4_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_02.default_common_mopm_objm.mopm_cfg.iebm_cfg</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>eb_bd_tbl_veh_speed_bw_100thkmh[4]</SHORT-NAME>
+                  <SHORT-NAME>eb_bd_tbl_veh_speed_bw_100thkmh_4_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_02.default_common_mopm_objm.mopm_cfg.iebm_cfg</LONG-NAME>
                   <BYTE-POSITION>8</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>eb_bd_tbl_dist_bw_mm[4]</SHORT-NAME>
+                  <SHORT-NAME>eb_bd_tbl_dist_bw_mm_4_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_02.default_common_mopm_objm.mopm_cfg.iebm_cfg</LONG-NAME>
                   <BYTE-POSITION>16</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
@@ -7459,12 +7458,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10325">
+		</STRUCTURE>
+		<STRUCTURE ID="_10325">
 		  <SHORT-NAME>Codingdata_MOPM_moaf</SHORT-NAME>
 		  <LONG-NAME>Codingdata_MOPM_moaf</LONG-NAME>
 		  <BYTE-SIZE>20</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>max_vehicle_orientation_u16f</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_02.default_common_mopm_objm.mopm_cfg.moaf_cfg</LONG-NAME>
@@ -7487,14 +7486,14 @@
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>fwd_move_delta_theta_tbl_u16f[3]</SHORT-NAME>
+                  <SHORT-NAME>fwd_move_delta_theta_tbl_u16f_3_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_02.default_common_mopm_objm.mopm_cfg.moaf_cfg</LONG-NAME>
                   <BYTE-POSITION>6</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>fwd_move_radius_tbl_pct[3]</SHORT-NAME>
+                  <SHORT-NAME>fwd_move_radius_tbl_pct_3_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_02.default_common_mopm_objm.mopm_cfg.moaf_cfg</LONG-NAME>
                   <BYTE-POSITION>12</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
@@ -7535,12 +7534,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10338">
+		</STRUCTURE>
+		<STRUCTURE ID="_10338">
 		  <SHORT-NAME>Codingdata_MOPM_moeb___autochoose</SHORT-NAME>
 		  <LONG-NAME>Codingdata_MOPM_moeb___autochoose</LONG-NAME>
 		  <BYTE-SIZE>16</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>percent_min_radius</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_02.default_common_mopm_objm.mopm_cfg.moeb_cfg</LONG-NAME>
@@ -7618,12 +7617,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10351">
+		</STRUCTURE>
+		<STRUCTURE ID="_10351">
 		  <SHORT-NAME>Codingdata_OBJM</SHORT-NAME>
 		  <LONG-NAME>Codingdata_OBJM</LONG-NAME>
 		  <BYTE-SIZE>36</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>max_allowed_slot_length_cm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_02.default_common_mopm_objm.objm_cfg.sdet_det_cfg</LONG-NAME>
@@ -7799,12 +7798,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10364">
+		</STRUCTURE>
+		<STRUCTURE ID="_10364">
 		  <SHORT-NAME>Codingdata_OBJM_sdet_rem</SHORT-NAME>
 		  <LONG-NAME>Codingdata_OBJM_sdet_rem</LONG-NAME>
 		  <BYTE-SIZE>39</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>max_dist_x_rem_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_02.default_common_mopm_objm.objm_cfg.sdet_rem_cfg</LONG-NAME>
@@ -8036,12 +8035,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10377">
+		</STRUCTURE>
+		<STRUCTURE ID="_10377">
 		  <SHORT-NAME>Codingdata_OBJM_sdet_out</SHORT-NAME>
 		  <LONG-NAME>Codingdata_OBJM_sdet_out</LONG-NAME>
 		  <BYTE-SIZE>21</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>pa_ang_tol_v_pts_u16f</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_02.default_common_mopm_objm.objm_cfg.sdet_out_cfg</LONG-NAME>
@@ -8175,12 +8174,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10390">
+		</STRUCTURE>
+		<STRUCTURE ID="_10390">
 		  <SHORT-NAME>Codingdata_OBJM_pmrg</SHORT-NAME>
 		  <LONG-NAME>Codingdata_OBJM_pmrg</LONG-NAME>
 		  <BYTE-SIZE>8</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>submerging_zone_front_cm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_02.default_common_mopm_objm.objm_cfg.pmrg_cfg</LONG-NAME>
@@ -8237,12 +8236,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10403">
+		</STRUCTURE>
+		<STRUCTURE ID="_10403">
 		  <SHORT-NAME>Codingdata_VDIM___Kodierdaten_VDIM</SHORT-NAME>
 		  <LONG-NAME>Codingdata_VDIM___Kodierdaten_VDIM</LONG-NAME>
 		  <BYTE-SIZE>34</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>acoustical_border_pos_x_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_cfg.sect_acoustical_cfg</LONG-NAME>
@@ -8460,334 +8459,334 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10416">
+		</STRUCTURE>
+		<STRUCTURE ID="_10416">
 		  <SHORT-NAME>Codingdata_VDIM_sectors1</SHORT-NAME>
 		  <LONG-NAME>Codingdata_VDIM_sectors1</LONG-NAME>
 		  <BYTE-SIZE>42</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>front_sector0_p0.x_mm</SHORT-NAME>
+                  <SHORT-NAME>front_sector0_p0_x_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.front_sector0_p0</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>front_sector0_p0.y_mm</SHORT-NAME>
+                  <SHORT-NAME>front_sector0_p0_y_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.front_sector0_p0</LONG-NAME>
                   <BYTE-POSITION>2</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>front_sector0_p0.angle_u16f</SHORT-NAME>
+                  <SHORT-NAME>front_sector0_p0_angle_u16f</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.front_sector0_p0</LONG-NAME>
                   <BYTE-POSITION>4</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>front_sector0_p1.x_mm</SHORT-NAME>
+                  <SHORT-NAME>front_sector0_p1_x_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.front_sector0_p1</LONG-NAME>
                   <BYTE-POSITION>6</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>front_sector0_p1.y_mm</SHORT-NAME>
+                  <SHORT-NAME>front_sector0_p1_y_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.front_sector0_p1</LONG-NAME>
                   <BYTE-POSITION>8</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>front_sector0_p1.angle_u16f</SHORT-NAME>
+                  <SHORT-NAME>front_sector0_p1_angle_u16f</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.front_sector0_p1</LONG-NAME>
                   <BYTE-POSITION>10</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>front_sector1_p0.x_mm</SHORT-NAME>
+                  <SHORT-NAME>front_sector1_p0_x_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.front_sector1_p0</LONG-NAME>
                   <BYTE-POSITION>12</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>front_sector1_p0.y_mm</SHORT-NAME>
+                  <SHORT-NAME>front_sector1_p0_y_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.front_sector1_p0</LONG-NAME>
                   <BYTE-POSITION>14</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>front_sector1_p0.angle_u16f</SHORT-NAME>
+                  <SHORT-NAME>front_sector1_p0_angle_u16f</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.front_sector1_p0</LONG-NAME>
                   <BYTE-POSITION>16</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>front_sector2_p0.x_mm</SHORT-NAME>
+                  <SHORT-NAME>front_sector2_p0_x_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.front_sector2_p0</LONG-NAME>
                   <BYTE-POSITION>18</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>front_sector2_p0.y_mm</SHORT-NAME>
+                  <SHORT-NAME>front_sector2_p0_y_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.front_sector2_p0</LONG-NAME>
                   <BYTE-POSITION>20</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>front_sector2_p0.angle_u16f</SHORT-NAME>
+                  <SHORT-NAME>front_sector2_p0_angle_u16f</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.front_sector2_p0</LONG-NAME>
                   <BYTE-POSITION>22</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>front_sector3_p0.x_mm</SHORT-NAME>
+                  <SHORT-NAME>front_sector3_p0_x_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.front_sector3_p0</LONG-NAME>
                   <BYTE-POSITION>24</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>front_sector3_p0.y_mm</SHORT-NAME>
+                  <SHORT-NAME>front_sector3_p0_y_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.front_sector3_p0</LONG-NAME>
                   <BYTE-POSITION>26</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>front_sector3_p0.angle_u16f</SHORT-NAME>
+                  <SHORT-NAME>front_sector3_p0_angle_u16f</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.front_sector3_p0</LONG-NAME>
                   <BYTE-POSITION>28</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>rear_sector0_p0.x_mm</SHORT-NAME>
+                  <SHORT-NAME>rear_sector0_p0_x_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.rear_sector0_p0</LONG-NAME>
                   <BYTE-POSITION>30</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>rear_sector0_p0.y_mm</SHORT-NAME>
+                  <SHORT-NAME>rear_sector0_p0_y_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.rear_sector0_p0</LONG-NAME>
                   <BYTE-POSITION>32</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>rear_sector0_p0.angle_u16f</SHORT-NAME>
+                  <SHORT-NAME>rear_sector0_p0_angle_u16f</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.rear_sector0_p0</LONG-NAME>
                   <BYTE-POSITION>34</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>rear_sector0_p1.x_mm</SHORT-NAME>
+                  <SHORT-NAME>rear_sector0_p1_x_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.rear_sector0_p1</LONG-NAME>
                   <BYTE-POSITION>36</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>rear_sector0_p1.y_mm</SHORT-NAME>
+                  <SHORT-NAME>rear_sector0_p1_y_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.rear_sector0_p1</LONG-NAME>
                   <BYTE-POSITION>38</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>rear_sector0_p1.angle_u16f</SHORT-NAME>
+                  <SHORT-NAME>rear_sector0_p1_angle_u16f</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.rear_sector0_p1</LONG-NAME>
                   <BYTE-POSITION>40</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10429">
+		</STRUCTURE>
+		<STRUCTURE ID="_10429">
 		  <SHORT-NAME>Codingdata_VDIM_sectors2</SHORT-NAME>
 		  <LONG-NAME>Codingdata_VDIM_sectors2</LONG-NAME>
 		  <BYTE-SIZE>42</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>rear_sector1_p1.x_mm</SHORT-NAME>
+                  <SHORT-NAME>rear_sector1_p1_x_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.rear_sector1_p1</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>rear_sector1_p1.y_mm</SHORT-NAME>
+                  <SHORT-NAME>rear_sector1_p1_y_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.rear_sector1_p1</LONG-NAME>
                   <BYTE-POSITION>2</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>rear_sector1_p1.angle_u16f</SHORT-NAME>
+                  <SHORT-NAME>rear_sector1_p1_angle_u16f</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.rear_sector1_p1</LONG-NAME>
                   <BYTE-POSITION>4</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>rear_sector2_p1.x_mm</SHORT-NAME>
+                  <SHORT-NAME>rear_sector2_p1_x_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.rear_sector2_p1</LONG-NAME>
                   <BYTE-POSITION>6</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>rear_sector2_p1.y_mm</SHORT-NAME>
+                  <SHORT-NAME>rear_sector2_p1_y_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.rear_sector2_p1</LONG-NAME>
                   <BYTE-POSITION>8</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>rear_sector2_p1.angle_u16f</SHORT-NAME>
+                  <SHORT-NAME>rear_sector2_p1_angle_u16f</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.rear_sector2_p1</LONG-NAME>
                   <BYTE-POSITION>10</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>rear_sector3_p1.x_mm</SHORT-NAME>
+                  <SHORT-NAME>rear_sector3_p1_x_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.rear_sector3_p1</LONG-NAME>
                   <BYTE-POSITION>12</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>rear_sector3_p1.y_mm</SHORT-NAME>
+                  <SHORT-NAME>rear_sector3_p1_y_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.rear_sector3_p1</LONG-NAME>
                   <BYTE-POSITION>14</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>rear_sector3_p1.angle_u16f</SHORT-NAME>
+                  <SHORT-NAME>rear_sector3_p1_angle_u16f</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.rear_sector3_p1</LONG-NAME>
                   <BYTE-POSITION>16</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>side_sector0_p1.x_mm</SHORT-NAME>
+                  <SHORT-NAME>side_sector0_p1_x_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.side_sector0_p1</LONG-NAME>
                   <BYTE-POSITION>18</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>side_sector0_p1.y_mm</SHORT-NAME>
+                  <SHORT-NAME>side_sector0_p1_y_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.side_sector0_p1</LONG-NAME>
                   <BYTE-POSITION>20</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>side_sector0_p1.angle_u16f</SHORT-NAME>
+                  <SHORT-NAME>side_sector0_p1_angle_u16f</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.side_sector0_p1</LONG-NAME>
                   <BYTE-POSITION>22</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>side_sector1_p1.x_mm</SHORT-NAME>
+                  <SHORT-NAME>side_sector1_p1_x_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.side_sector1_p1</LONG-NAME>
                   <BYTE-POSITION>24</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>side_sector1_p1.y_mm</SHORT-NAME>
+                  <SHORT-NAME>side_sector1_p1_y_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.side_sector1_p1</LONG-NAME>
                   <BYTE-POSITION>26</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>side_sector1_p1.angle_u16f</SHORT-NAME>
+                  <SHORT-NAME>side_sector1_p1_angle_u16f</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.side_sector1_p1</LONG-NAME>
                   <BYTE-POSITION>28</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>side_sector2_p1.x_mm</SHORT-NAME>
+                  <SHORT-NAME>side_sector2_p1_x_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.side_sector2_p1</LONG-NAME>
                   <BYTE-POSITION>30</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>side_sector2_p1.y_mm</SHORT-NAME>
+                  <SHORT-NAME>side_sector2_p1_y_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.side_sector2_p1</LONG-NAME>
                   <BYTE-POSITION>32</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>side_sector2_p1.angle_u16f</SHORT-NAME>
+                  <SHORT-NAME>side_sector2_p1_angle_u16f</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.side_sector2_p1</LONG-NAME>
                   <BYTE-POSITION>34</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>side_sector3_p1.x_mm</SHORT-NAME>
+                  <SHORT-NAME>side_sector3_p1_x_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.side_sector3_p1</LONG-NAME>
                   <BYTE-POSITION>36</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>side_sector3_p1.y_mm</SHORT-NAME>
+                  <SHORT-NAME>side_sector3_p1_y_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.side_sector3_p1</LONG-NAME>
                   <BYTE-POSITION>38</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>side_sector3_p1.angle_u16f</SHORT-NAME>
+                  <SHORT-NAME>side_sector3_p1_angle_u16f</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.side_sector3_p1</LONG-NAME>
                   <BYTE-POSITION>40</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10442">
+		</STRUCTURE>
+		<STRUCTURE ID="_10442">
 		  <SHORT-NAME>Codingdata_VDIM_sectors3</SHORT-NAME>
 		  <LONG-NAME>Codingdata_VDIM_sectors3</LONG-NAME>
 		  <BYTE-SIZE>39</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>side_sector4_p1.x_mm</SHORT-NAME>
+                  <SHORT-NAME>side_sector4_p1_x_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.side_sector4_p1</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>side_sector4_p1.y_mm</SHORT-NAME>
+                  <SHORT-NAME>side_sector4_p1_y_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.side_sector4_p1</LONG-NAME>
                   <BYTE-POSITION>2</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>side_sector4_p1.angle_u16f</SHORT-NAME>
+                  <SHORT-NAME>side_sector4_p1_angle_u16f</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg.side_sector4_p1</LONG-NAME>
                   <BYTE-POSITION>4</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
@@ -9024,12 +9023,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10455">
+		</STRUCTURE>
+		<STRUCTURE ID="_10455">
 		  <SHORT-NAME>Codingdata_VDIM_sectors43</SHORT-NAME>
 		  <LONG-NAME>Codingdata_VDIM_sectors43</LONG-NAME>
 		  <BYTE-SIZE>41</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>rear_sector1_depth_cm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.vdim_cfg.sect_layout_cfg</LONG-NAME>
@@ -9310,12 +9309,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10468">
+		</STRUCTURE>
+		<STRUCTURE ID="_10468">
 		  <SHORT-NAME>Codingdata_WPCA___Kodierdaten_WPCA</SHORT-NAME>
 		  <LONG-NAME>Codingdata_WPCA___Kodierdaten_WPCA</LONG-NAME>
 		  <BYTE-SIZE>40</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>max_dist_x1_m</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.wpca_cfg</LONG-NAME>
@@ -9442,12 +9441,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10481">
+		</STRUCTURE>
+		<STRUCTURE ID="_10481">
 		  <SHORT-NAME>Codingdata_WPCA_1</SHORT-NAME>
 		  <LONG-NAME>Codingdata_WPCA_1</LONG-NAME>
 		  <BYTE-SIZE>28</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>reset_angle_grad_scaled_x2</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.wpca_cfg</LONG-NAME>
@@ -9532,12 +9531,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10494">
+		</STRUCTURE>
+		<STRUCTURE ID="_10494">
 		  <SHORT-NAME>Codingdata_WPGW___Kodierdaten_WPGW</SHORT-NAME>
 		  <LONG-NAME>Codingdata_WPGW___Kodierdaten_WPGW</LONG-NAME>
 		  <BYTE-SIZE>22</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>wheel_circum_rear_left_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_03.default_common_vdim_wpca.wpgw_cfg</LONG-NAME>
@@ -9622,258 +9621,258 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10507">
+		</STRUCTURE>
+		<STRUCTURE ID="_10507">
 		  <SHORT-NAME>Rear_Side_Thresholds</SHORT-NAME>
 		  <LONG-NAME>Rear_Side_Thresholds</LONG-NAME>
 		  <BYTE-SIZE>40</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>rear_side_psm_upa_t1[8]</SHORT-NAME>
+                  <SHORT-NAME>rear_side_psm_upa_t1_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.thresholds_cfg</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>rear_side_psm_upa_t2[8]</SHORT-NAME>
+                  <SHORT-NAME>rear_side_psm_upa_t2_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.thresholds_cfg</LONG-NAME>
                   <BYTE-POSITION>8</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>rear_side_psm_upa_t3[8]</SHORT-NAME>
+                  <SHORT-NAME>rear_side_psm_upa_t3_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.thresholds_cfg</LONG-NAME>
                   <BYTE-POSITION>16</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>rear_side_psm_upa_t4[8]</SHORT-NAME>
+                  <SHORT-NAME>rear_side_psm_upa_t4_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.thresholds_cfg</LONG-NAME>
                   <BYTE-POSITION>24</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>rear_side_psm_upa_t5[8]</SHORT-NAME>
+                  <SHORT-NAME>rear_side_psm_upa_t5_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.thresholds_cfg</LONG-NAME>
                   <BYTE-POSITION>32</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10520">
+		</STRUCTURE>
+		<STRUCTURE ID="_10520">
 		  <SHORT-NAME>Rear_Outer_Thresholds</SHORT-NAME>
 		  <LONG-NAME>Rear_Outer_Thresholds</LONG-NAME>
 		  <BYTE-SIZE>40</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>rear_outer_upa_t1[8]</SHORT-NAME>
+                  <SHORT-NAME>rear_outer_upa_t1_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.thresholds_cfg</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>rear_outer_upa_t2[8]</SHORT-NAME>
+                  <SHORT-NAME>rear_outer_upa_t2_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.thresholds_cfg</LONG-NAME>
                   <BYTE-POSITION>8</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>rear_outer_upa_t3[8]</SHORT-NAME>
+                  <SHORT-NAME>rear_outer_upa_t3_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.thresholds_cfg</LONG-NAME>
                   <BYTE-POSITION>16</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>rear_outer_upa_t4[8]</SHORT-NAME>
+                  <SHORT-NAME>rear_outer_upa_t4_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.thresholds_cfg</LONG-NAME>
                   <BYTE-POSITION>24</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>rear_outer_upa_t5[8]</SHORT-NAME>
+                  <SHORT-NAME>rear_outer_upa_t5_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.thresholds_cfg</LONG-NAME>
                   <BYTE-POSITION>32</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10533">
+		</STRUCTURE>
+		<STRUCTURE ID="_10533">
 		  <SHORT-NAME>Rear_Inner_Thresholds</SHORT-NAME>
 		  <LONG-NAME>Rear_Inner_Thresholds</LONG-NAME>
 		  <BYTE-SIZE>40</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>rear_inner_upa_t1[8]</SHORT-NAME>
+                  <SHORT-NAME>rear_inner_upa_t1_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.thresholds_cfg</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>rear_inner_upa_t2[8]</SHORT-NAME>
+                  <SHORT-NAME>rear_inner_upa_t2_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.thresholds_cfg</LONG-NAME>
                   <BYTE-POSITION>8</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>rear_inner_upa_t3[8]</SHORT-NAME>
+                  <SHORT-NAME>rear_inner_upa_t3_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.thresholds_cfg</LONG-NAME>
                   <BYTE-POSITION>16</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>rear_inner_upa_t4[8]</SHORT-NAME>
+                  <SHORT-NAME>rear_inner_upa_t4_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.thresholds_cfg</LONG-NAME>
                   <BYTE-POSITION>24</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>rear_inner_upa_t5[8]</SHORT-NAME>
+                  <SHORT-NAME>rear_inner_upa_t5_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.thresholds_cfg</LONG-NAME>
                   <BYTE-POSITION>32</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10546">
+		</STRUCTURE>
+		<STRUCTURE ID="_10546">
 		  <SHORT-NAME>Front_Side_Thresholds</SHORT-NAME>
 		  <LONG-NAME>Front_Side_Thresholds</LONG-NAME>
 		  <BYTE-SIZE>40</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>front_side_psm_upa_t1[8]</SHORT-NAME>
+                  <SHORT-NAME>front_side_psm_upa_t1_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.thresholds_cfg</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>front_side_psm_upa_t2[8]</SHORT-NAME>
+                  <SHORT-NAME>front_side_psm_upa_t2_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.thresholds_cfg</LONG-NAME>
                   <BYTE-POSITION>8</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>front_side_psm_upa_t3[8]</SHORT-NAME>
+                  <SHORT-NAME>front_side_psm_upa_t3_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.thresholds_cfg</LONG-NAME>
                   <BYTE-POSITION>16</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>front_side_psm_upa_t4[8]</SHORT-NAME>
+                  <SHORT-NAME>front_side_psm_upa_t4_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.thresholds_cfg</LONG-NAME>
                   <BYTE-POSITION>24</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>front_side_psm_upa_t5[8]</SHORT-NAME>
+                  <SHORT-NAME>front_side_psm_upa_t5_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.thresholds_cfg</LONG-NAME>
                   <BYTE-POSITION>32</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10559">
+		</STRUCTURE>
+		<STRUCTURE ID="_10559">
 		  <SHORT-NAME>Front_Outer_Thresholds</SHORT-NAME>
 		  <LONG-NAME>Front_Outer_Thresholds</LONG-NAME>
 		  <BYTE-SIZE>40</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>front_outer_upa_t1[8]</SHORT-NAME>
+                  <SHORT-NAME>front_outer_upa_t1_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.thresholds_cfg</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>front_outer_upa_t2[8]</SHORT-NAME>
+                  <SHORT-NAME>front_outer_upa_t2_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.thresholds_cfg</LONG-NAME>
                   <BYTE-POSITION>8</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>front_outer_upa_t3[8]</SHORT-NAME>
+                  <SHORT-NAME>front_outer_upa_t3_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.thresholds_cfg</LONG-NAME>
                   <BYTE-POSITION>16</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>front_outer_upa_t4[8]</SHORT-NAME>
+                  <SHORT-NAME>front_outer_upa_t4_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.thresholds_cfg</LONG-NAME>
                   <BYTE-POSITION>24</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>front_outer_upa_t5[8]</SHORT-NAME>
+                  <SHORT-NAME>front_outer_upa_t5_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.thresholds_cfg</LONG-NAME>
                   <BYTE-POSITION>32</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10572">
+		</STRUCTURE>
+		<STRUCTURE ID="_10572">
 		  <SHORT-NAME>Front_Inner_Thresholds</SHORT-NAME>
 		  <LONG-NAME>Front_Inner_Thresholds</LONG-NAME>
 		  <BYTE-SIZE>40</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>front_inner_upa_t1[8]</SHORT-NAME>
+                  <SHORT-NAME>front_inner_upa_t1_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.thresholds_cfg</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>front_inner_upa_t2[8]</SHORT-NAME>
+                  <SHORT-NAME>front_inner_upa_t2_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.thresholds_cfg</LONG-NAME>
                   <BYTE-POSITION>8</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>front_inner_upa_t3[8]</SHORT-NAME>
+                  <SHORT-NAME>front_inner_upa_t3_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.thresholds_cfg</LONG-NAME>
                   <BYTE-POSITION>16</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>front_inner_upa_t4[8]</SHORT-NAME>
+                  <SHORT-NAME>front_inner_upa_t4_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.thresholds_cfg</LONG-NAME>
                   <BYTE-POSITION>24</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>front_inner_upa_t5[8]</SHORT-NAME>
+                  <SHORT-NAME>front_inner_upa_t5_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.thresholds_cfg</LONG-NAME>
                   <BYTE-POSITION>32</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10585">
+		</STRUCTURE>
+		<STRUCTURE ID="_10585">
 		  <SHORT-NAME>Distances_TempThresholds</SHORT-NAME>
 		  <LONG-NAME>Distances_TempThresholds</LONG-NAME>
 		  <BYTE-SIZE>11</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>dist_rso</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_04.default_ulsm.ulsm_cfg.distances_cfg</LONG-NAME>
@@ -9951,12 +9950,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10598">
+		</STRUCTURE>
+		<STRUCTURE ID="_10598">
 		  <SHORT-NAME>Codingdata_VCTM___Kodierdaten_VCTM</SHORT-NAME>
 		  <LONG-NAME>Codingdata_VCTM___Kodierdaten_VCTM</LONG-NAME>
 		  <BYTE-SIZE>16</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>min_x_pos_with_active_steer_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_05.default_vctm.vctm_cfg.stma_cfg</LONG-NAME>
@@ -10055,12 +10054,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10611">
+		</STRUCTURE>
+		<STRUCTURE ID="_10611">
 		  <SHORT-NAME>Codingdata_VCTM_pipo</SHORT-NAME>
 		  <LONG-NAME>Codingdata_VCTM_pipo</LONG-NAME>
 		  <BYTE-SIZE>14</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>min_ipo_speed_100th_kmh</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_05.default_vctm.vctm_cfg.pipo_cfg</LONG-NAME>
@@ -10124,55 +10123,55 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10624">
+		</STRUCTURE>
+		<STRUCTURE ID="_10624">
 		  <SHORT-NAME>Codingdata_VCTM_paco</SHORT-NAME>
 		  <LONG-NAME>Codingdata_VCTM_paco</LONG-NAME>
 		  <BYTE-SIZE>40</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>veh_vel_tbl_100th_kmh[5]</SHORT-NAME>
+                  <SHORT-NAME>veh_vel_tbl_100th_kmh_5_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_05.default_vctm.vctm_cfg.paco_cfg</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>gain_k1_tbl[5]</SHORT-NAME>
+                  <SHORT-NAME>gain_k1_tbl_5_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_05.default_vctm.vctm_cfg.paco_cfg</LONG-NAME>
                   <BYTE-POSITION>10</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>gain_k2_tbl[5]</SHORT-NAME>
+                  <SHORT-NAME>gain_k2_tbl_5_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_05.default_vctm.vctm_cfg.paco_cfg</LONG-NAME>
                   <BYTE-POSITION>20</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>gain_k3_tbl[5]</SHORT-NAME>
+                  <SHORT-NAME>gain_k3_tbl_5_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_05.default_vctm.vctm_cfg.paco_cfg</LONG-NAME>
                   <BYTE-POSITION>30</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10637">
+		</STRUCTURE>
+		<STRUCTURE ID="_10637">
 		  <SHORT-NAME>Codingdata_VCTM_strf</SHORT-NAME>
 		  <LONG-NAME>Codingdata_VCTM_strf</LONG-NAME>
 		  <BYTE-SIZE>40</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>limit_wheel_ang_vel_u16f_s_tbl[5]</SHORT-NAME>
+                  <SHORT-NAME>limit_wheel_ang_vel_u16f_s_tbl_5_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_05.default_vctm.vctm_cfg.strf_cfg</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>limit_wheel_ang_acc_u16f_s2_tbl[5]</SHORT-NAME>
+                  <SHORT-NAME>limit_wheel_ang_acc_u16f_s2_tbl_5_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_05.default_vctm.vctm_cfg.strf_cfg</LONG-NAME>
                   <BYTE-POSITION>10</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
@@ -10248,12 +10247,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10650">
+		</STRUCTURE>
+		<STRUCTURE ID="_10650">
 		  <SHORT-NAME>Codingdata_VCTM_strc</SHORT-NAME>
 		  <LONG-NAME>Codingdata_VCTM_strc</LONG-NAME>
 		  <BYTE-SIZE>20</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>max_diff_veh_wheel_ang_u16f</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_05.default_vctm.vctm_cfg.strc_cfg</LONG-NAME>
@@ -10331,12 +10330,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10663">
+		</STRUCTURE>
+		<STRUCTURE ID="_10663">
 		  <SHORT-NAME>Codingdata_VCTM_drvc</SHORT-NAME>
 		  <LONG-NAME>Codingdata_VCTM_drvc</LONG-NAME>
 		  <BYTE-SIZE>18</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>max_acc_mm_s2</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_05.default_vctm.vctm_cfg.drvc_cfg</LONG-NAME>
@@ -10345,7 +10344,7 @@
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>cmd_acc_tbl_mm_s2[5]</SHORT-NAME>
+                  <SHORT-NAME>cmd_acc_tbl_mm_s2_5_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_05.default_vctm.vctm_cfg.drvc_cfg</LONG-NAME>
                   <BYTE-POSITION>2</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
@@ -10359,18 +10358,18 @@
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>cmd_brake_pressure_tbl_perc[5]</SHORT-NAME>
+                  <SHORT-NAME>cmd_brake_pressure_tbl_perc_5_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_05.default_vctm.vctm_cfg.drvc_cfg</LONG-NAME>
                   <BYTE-POSITION>13</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10676">
+		</STRUCTURE>
+		<STRUCTURE ID="_10676">
 		  <SHORT-NAME>Codingdata_VCTM_velc_vipo_brake</SHORT-NAME>
 		  <LONG-NAME>Codingdata_VCTM_velc_vipo_brake</LONG-NAME>
 		  <BYTE-SIZE>30</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>max_vel_mm_s</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_05.default_vctm.vctm_cfg.velc_cfg</LONG-NAME>
@@ -10497,14 +10496,14 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10689">
+		</STRUCTURE>
+		<STRUCTURE ID="_10689">
 		  <SHORT-NAME>Codingdata_ULS_Customer___Kodierdaten_ULS_Kunde</SHORT-NAME>
 		  <LONG-NAME>Codingdata_ULS_Customer___Kodierdaten_ULS_Kunde</LONG-NAME>
 		  <BYTE-SIZE>34</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>f182_vw_application_data_identification[2]</SHORT-NAME>
+                  <SHORT-NAME>f182_vw_application_data_identification_2_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
@@ -10518,181 +10517,181 @@
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Dauertonausweitung bei manueller Anhängerkupplung</SHORT-NAME>
+                  <SHORT-NAME>Dauertonausweitung_bei_manueller_Anh_ngerkupplung</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg</LONG-NAME>
                   <BYTE-POSITION>3</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Dauertonausweitung bei schwenkbarer Anhängerkupplung</SHORT-NAME>
+                  <SHORT-NAME>Dauertonausweitung_bei_schwenkbarer_Anh_ngerkupplung</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg</LONG-NAME>
                   <BYTE-POSITION>4</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Abstand mittlerer/innerer Wandler zur Anhängerkupplung</SHORT-NAME>
+                  <SHORT-NAME>Abstand_mittlerer_innerer_Wandler_zur_Anh_ngerkupplung</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg</LONG-NAME>
                   <BYTE-POSITION>5</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Aktivierung PDC-Aktivierung durch Rückwärtsrollen</SHORT-NAME>
+                  <SHORT-NAME>Aktivierung_PDC_Aktivierung_durch_R_ckw_rtsrollen</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg</LONG-NAME>
                   <BYTE-POSITION>6</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>ist Cabrio (z.B. VW EOS)</SHORT-NAME>
+                  <SHORT-NAME>ist_Cabrio__z_B__VW_EOS_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg</LONG-NAME>
                   <BYTE-POSITION>7</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Aktivierung Ice and Mud Detection (Prototyp!)</SHORT-NAME>
+                  <SHORT-NAME>Aktivierung_Ice_and_Mud_Detection__Prototyp__</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg</LONG-NAME>
                   <BYTE-POSITION>8</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Aktivierung PLA-Start/Stopp-Funktion</SHORT-NAME>
+                  <SHORT-NAME>Aktivierung_PLA_Start_Stopp_Funktion</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg</LONG-NAME>
                   <BYTE-POSITION>9</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Aktivierung PDC-Start/Stopp-Funktion</SHORT-NAME>
+                  <SHORT-NAME>Aktivierung_PDC_Start_Stopp_Funktion</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg</LONG-NAME>
                   <BYTE-POSITION>10</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>mit Schiebetür (z.B. VW Sharan)</SHORT-NAME>
+                  <SHORT-NAME>mit_Schiebet_r__z_B__VW_Sharan_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg</LONG-NAME>
                   <BYTE-POSITION>11</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>mit Tippblinkfunktion</SHORT-NAME>
+                  <SHORT-NAME>mit_Tippblinkfunktion</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg</LONG-NAME>
                   <BYTE-POSITION>12</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Aktivierung Schlüsselnummer Fahrberechtigung</SHORT-NAME>
+                  <SHORT-NAME>Aktivierung_Schl_sselnummer_Fahrberechtigung</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg</LONG-NAME>
                   <BYTE-POSITION>13</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Handshake Bremse</SHORT-NAME>
+                  <SHORT-NAME>Handshake_Bremse</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg</LONG-NAME>
                   <BYTE-POSITION>14</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Parklücke in RearView-Bild</SHORT-NAME>
+                  <SHORT-NAME>Parkl_cke_in_RearView_Bild</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg</LONG-NAME>
                   <BYTE-POSITION>15</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Aktivierung der akustischen Überwachung des HDA</SHORT-NAME>
+                  <SHORT-NAME>Aktivierung_der_akustischen__berwachung_des_HDA</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.liftgate_masking_cfg</LONG-NAME>
                   <BYTE-POSITION>16</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Heckdeckel schliessen Anfang (CAN-Botschaft)</SHORT-NAME>
+                  <SHORT-NAME>Heckdeckel_schliessen_Anfang__CAN_Botschaft_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.liftgate_masking_cfg</LONG-NAME>
                   <BYTE-POSITION>17</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Heckdeckel schliessen Ende (CAN-Botschaft)</SHORT-NAME>
+                  <SHORT-NAME>Heckdeckel_schliessen_Ende__CAN_Botschaft_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.liftgate_masking_cfg</LONG-NAME>
                   <BYTE-POSITION>18</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Heckdeckel öffnen Anfang (CAN-Botschaft)</SHORT-NAME>
+                  <SHORT-NAME>Heckdeckel__ffnen_Anfang__CAN_Botschaft_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.liftgate_masking_cfg</LONG-NAME>
                   <BYTE-POSITION>19</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Heckdeckel öffnen Ende (CAN-Botschaft)</SHORT-NAME>
+                  <SHORT-NAME>Heckdeckel__ffnen_Ende__CAN_Botschaft_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.liftgate_masking_cfg</LONG-NAME>
                   <BYTE-POSITION>20</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Heckdeckel ausblenden Maximum</SHORT-NAME>
+                  <SHORT-NAME>Heckdeckel_ausblenden_Maximum</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.liftgate_masking_cfg</LONG-NAME>
                   <BYTE-POSITION>21</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Heckdeckel ausblenden Minimum</SHORT-NAME>
+                  <SHORT-NAME>Heckdeckel_ausblenden_Minimum</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.liftgate_masking_cfg</LONG-NAME>
                   <BYTE-POSITION>22</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>[ACC] Erkennung Sensor-Blindheit Level 1 (normale/ext. Schwellen)</SHORT-NAME>
+                  <SHORT-NAME>_ACC__Erkennung_Sensor_Blindheit_Level_1__normale_ext__Schwellen_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.acc_cfg</LONG-NAME>
                   <BYTE-POSITION>23</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>[ACC] Erkennung Sensor-Blindheit Level 2 (NULL-Schwellen)</SHORT-NAME>
+                  <SHORT-NAME>_ACC__Erkennung_Sensor_Blindheit_Level_2__NULL_Schwellen_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.acc_cfg</LONG-NAME>
                   <BYTE-POSITION>24</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>[ACC] Ausschaltgeschwindigkeitsschwelle ACC</SHORT-NAME>
+                  <SHORT-NAME>_ACC__Ausschaltgeschwindigkeitsschwelle_ACC</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.acc_cfg</LONG-NAME>
                   <BYTE-POSITION>25</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>null_thresholds_tx[8]</SHORT-NAME>
+                  <SHORT-NAME>null_thresholds_tx_8_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.acc_cfg</LONG-NAME>
                   <BYTE-POSITION>26</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10702">
+		</STRUCTURE>
+		<STRUCTURE ID="_10702">
 		  <SHORT-NAME>Codingdata_ULS_Customer_auto_act___cabriolet</SHORT-NAME>
 		  <LONG-NAME>Codingdata_ULS_Customer_auto_act___cabriolet</LONG-NAME>
 		  <BYTE-SIZE>20</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Automatische Aktivierung bei Stillstand</SHORT-NAME>
+                  <SHORT-NAME>Automatische_Aktivierung_bei_Stillstand</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.auto_act_cfg</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
@@ -10720,188 +10719,188 @@
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Volle Aktivierung bei Rückwärts Rollen (0=nein, 1=ja)</SHORT-NAME>
+                  <SHORT-NAME>Volle_Aktivierung_bei_R_ckw_rts_Rollen__0_nein__1_ja_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.auto_act_cfg</LONG-NAME>
                   <BYTE-POSITION>4</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Minimale Listen-Time</SHORT-NAME>
+                  <SHORT-NAME>Minimale_Listen_Time</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.auto_act_cfg</LONG-NAME>
                   <BYTE-POSITION>5</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Distanz für Aktivieren durch Rückwärts Rollen</SHORT-NAME>
+                  <SHORT-NAME>Distanz_f_r_Aktivieren_durch_R_ckw_rts_Rollen</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.auto_act_cfg</LONG-NAME>
                   <BYTE-POSITION>7</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>P setzt Automatische Aktivierung zurück (Audi=0, VW=1)</SHORT-NAME>
+                  <SHORT-NAME>P_setzt_Automatische_Aktivierung_zur_ck__Audi_0__VW_1_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.auto_act_cfg</LONG-NAME>
                   <BYTE-POSITION>9</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>EPB setzt Automatische Aktivierung zurück (Audi=0, VW=1)</SHORT-NAME>
+                  <SHORT-NAME>EPB_setzt_Automatische_Aktivierung_zur_ck__Audi_0__VW_1_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.auto_act_cfg</LONG-NAME>
                   <BYTE-POSITION>10</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Taster schaltet automatisch aktiviertes PDC ab (VW=0, Audi/Porsche=1)</SHORT-NAME>
+                  <SHORT-NAME>Taster_schaltet_automatisch_aktiviertes_PDC_ab__VW_0__Audi_Porsche_1_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.auto_act_cfg</LONG-NAME>
                   <BYTE-POSITION>11</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Anzeige des Fahschlauchs im Mini-OPS (VW=0, Audi=1)</SHORT-NAME>
+                  <SHORT-NAME>Anzeige_des_Fahschlauchs_im_Mini_OPS__VW_0__Audi_1_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.auto_act_cfg</LONG-NAME>
                   <BYTE-POSITION>12</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Aktivierung der akustischen Überwachung des HDA</SHORT-NAME>
+                  <SHORT-NAME>Aktivierung_der_akustischen__berwachung_des_HDA</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.cabriolet_assistant_cfg</LONG-NAME>
                   <BYTE-POSITION>13</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Eckenoffset für Heckdeckelassistent</SHORT-NAME>
+                  <SHORT-NAME>Eckenoffset_f_r_Heckdeckelassistent</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.cabriolet_assistant_cfg</LONG-NAME>
                   <BYTE-POSITION>14</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>HDA-Nachlaufzeit</SHORT-NAME>
+                  <SHORT-NAME>HDA_Nachlaufzeit</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.cabriolet_assistant_cfg</LONG-NAME>
                   <BYTE-POSITION>15</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Überwachungsbereich des Heckdeckelassistenten</SHORT-NAME>
+                  <SHORT-NAME>_berwachungsbereich_des_Heckdeckelassistenten</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.cabriolet_assistant_cfg</LONG-NAME>
                   <BYTE-POSITION>16</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Maximaler Timerwert für Überwachungstimer T1</SHORT-NAME>
+                  <SHORT-NAME>Maximaler_Timerwert_f_r__berwachungstimer_T1</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.cabriolet_assistant_cfg</LONG-NAME>
                   <BYTE-POSITION>17</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>[HC] Maximale Geschwindigkeit für Heading Control</SHORT-NAME>
+                  <SHORT-NAME>_HC__Maximale_Geschwindigkeit_f_r_Heading_Control</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.heading_control_cfg</LONG-NAME>
                   <BYTE-POSITION>18</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>[HC] Minimale Geschwindigkeit für Heading Control</SHORT-NAME>
+                  <SHORT-NAME>_HC__Minimale_Geschwindigkeit_f_r_Heading_Control</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.heading_control_cfg</LONG-NAME>
                   <BYTE-POSITION>19</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10715">
+		</STRUCTURE>
+		<STRUCTURE ID="_10715">
 		  <SHORT-NAME>Codingdata_ULS_Customer_ops___tailgate</SHORT-NAME>
 		  <LONG-NAME>Codingdata_ULS_Customer_ops___tailgate</LONG-NAME>
 		  <BYTE-SIZE>19</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Reaktivierung des Displays bei Rückwärtsgang</SHORT-NAME>
+                  <SHORT-NAME>Reaktivierung_des_Displays_bei_R_ckw_rtsgang</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.ops_cfg</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Rücknahme von OPS bei Stellung P bzw. angezogener EPB</SHORT-NAME>
+                  <SHORT-NAME>R_cknahme_von_OPS_bei_Stellung_P_bzw__angezogener_EPB</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.ops_cfg</LONG-NAME>
                   <BYTE-POSITION>1</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>P bzw. EPB deaktiviert die Einparkhilfe</SHORT-NAME>
+                  <SHORT-NAME>P_bzw__EPB_deaktiviert_die_Einparkhilfe</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.ops_cfg</LONG-NAME>
                   <BYTE-POSITION>2</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>BAP Katalogfunktion "FSG_Control" verwenden</SHORT-NAME>
+                  <SHORT-NAME>BAP_Katalogfunktion__FSG_Control__verwenden</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.ops_cfg</LONG-NAME>
                   <BYTE-POSITION>3</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Automatische OPS-Aufschaltung bei Rücknahme RWG</SHORT-NAME>
+                  <SHORT-NAME>Automatische_OPS_Aufschaltung_bei_R_cknahme_RWG</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.ops_cfg</LONG-NAME>
                   <BYTE-POSITION>4</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>OPS Life Monitoring verwenden</SHORT-NAME>
+                  <SHORT-NAME>OPS_Life_Monitoring_verwenden</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.ops_cfg</LONG-NAME>
                   <BYTE-POSITION>5</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Mittelkritische Hindernisse OPS-Statuslevel</SHORT-NAME>
+                  <SHORT-NAME>Mittelkritische_Hindernisse_OPS_Statuslevel</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.ops_cfg</LONG-NAME>
                   <BYTE-POSITION>6</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Anhänger OPS-Statuslevel</SHORT-NAME>
+                  <SHORT-NAME>Anh_nger_OPS_Statuslevel</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.ops_cfg</LONG-NAME>
                   <BYTE-POSITION>7</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>OPS Life Monitoring Polling Timer "T_Supervision"</SHORT-NAME>
+                  <SHORT-NAME>OPS_Life_Monitoring_Polling_Timer__T_Supervision_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.ops_cfg</LONG-NAME>
                   <BYTE-POSITION>8</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>OPS Life Monitoring ASG Timeout "T_ASGTimeOut"</SHORT-NAME>
+                  <SHORT-NAME>OPS_Life_Monitoring_ASG_Timeout__T_ASGTimeOut_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.ops_cfg</LONG-NAME>
                   <BYTE-POSITION>9</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>[4K only] OPS Nachlaufzeit</SHORT-NAME>
+                  <SHORT-NAME>_4K_only__OPS_Nachlaufzeit</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.ops_cfg</LONG-NAME>
                   <BYTE-POSITION>10</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>[4K only] APS Nachlaufzeit</SHORT-NAME>
+                  <SHORT-NAME>_4K_only__APS_Nachlaufzeit</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.ops_cfg</LONG-NAME>
                   <BYTE-POSITION>11</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
@@ -10956,181 +10955,181 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10728">
+		</STRUCTURE>
+		<STRUCTURE ID="_10728">
 		  <SHORT-NAME>Codingdata_ULS_Customer_tone</SHORT-NAME>
 		  <LONG-NAME>Codingdata_ULS_Customer_tone</LONG-NAME>
 		  <BYTE-SIZE>22</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Tong Wert für Audi Lautstärke 1 für Verdeck geschlossen</SHORT-NAME>
+                  <SHORT-NAME>Tong_Wert_f_r_Audi_Lautst_rke_1_f_r_Verdeck_geschlossen</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.tone_cfg</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Tong Schrittweite pro Audi Lautstärke-Stufe für Verdeck geschlossen</SHORT-NAME>
+                  <SHORT-NAME>Tong_Schrittweite_pro_Audi_Lautst_rke_Stufe_f_r_Verdeck_geschlossen</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.tone_cfg</LONG-NAME>
                   <BYTE-POSITION>1</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Tong Wert für Audi Lautstärke 1 für Verdeck offen</SHORT-NAME>
+                  <SHORT-NAME>Tong_Wert_f_r_Audi_Lautst_rke_1_f_r_Verdeck_offen</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.tone_cfg</LONG-NAME>
                   <BYTE-POSITION>2</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Tong Schrittweite pro Audi Lautstärke-Stufe für Verdeck offen</SHORT-NAME>
+                  <SHORT-NAME>Tong_Schrittweite_pro_Audi_Lautst_rke_Stufe_f_r_Verdeck_offen</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.tone_cfg</LONG-NAME>
                   <BYTE-POSITION>3</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Offset für Fehlerton-Lautstärkestufe</SHORT-NAME>
+                  <SHORT-NAME>Offset_f_r_Fehlerton_Lautst_rkestufe</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.tone_cfg</LONG-NAME>
                   <BYTE-POSITION>4</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Fehlerton-Frequenzstufe</SHORT-NAME>
+                  <SHORT-NAME>Fehlerton_Frequenzstufe</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.tone_cfg</LONG-NAME>
                   <BYTE-POSITION>5</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Fehlerton-Dauer</SHORT-NAME>
+                  <SHORT-NAME>Fehlerton_Dauer</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.tone_cfg</LONG-NAME>
                   <BYTE-POSITION>6</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Offset für Quittierton-Lautstärkestufe</SHORT-NAME>
+                  <SHORT-NAME>Offset_f_r_Quittierton_Lautst_rkestufe</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.tone_cfg</LONG-NAME>
                   <BYTE-POSITION>7</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Quittierton-Frequenzstufe</SHORT-NAME>
+                  <SHORT-NAME>Quittierton_Frequenzstufe</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.tone_cfg</LONG-NAME>
                   <BYTE-POSITION>8</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Quittierton-Dauer</SHORT-NAME>
+                  <SHORT-NAME>Quittierton_Dauer</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.tone_cfg</LONG-NAME>
                   <BYTE-POSITION>9</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Quittierton aktiviert</SHORT-NAME>
+                  <SHORT-NAME>Quittierton_aktiviert</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.tone_cfg</LONG-NAME>
                   <BYTE-POSITION>10</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Offset für Deaktivierungston-Lautstärkestufe</SHORT-NAME>
+                  <SHORT-NAME>Offset_f_r_Deaktivierungston_Lautst_rkestufe</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.tone_cfg</LONG-NAME>
                   <BYTE-POSITION>11</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Deaktivierungston-Frequenzstufe</SHORT-NAME>
+                  <SHORT-NAME>Deaktivierungston_Frequenzstufe</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.tone_cfg</LONG-NAME>
                   <BYTE-POSITION>12</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Deaktivierungston-Dauer</SHORT-NAME>
+                  <SHORT-NAME>Deaktivierungston_Dauer</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.tone_cfg</LONG-NAME>
                   <BYTE-POSITION>13</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Demoton-Dauer</SHORT-NAME>
+                  <SHORT-NAME>Demoton_Dauer</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.tone_cfg</LONG-NAME>
                   <BYTE-POSITION>14</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Vergleichston-Dauer</SHORT-NAME>
+                  <SHORT-NAME>Vergleichston_Dauer</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.tone_cfg</LONG-NAME>
                   <BYTE-POSITION>15</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Lautstärkerampe Startzeit</SHORT-NAME>
+                  <SHORT-NAME>Lautst_rkerampe_Startzeit</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.tone_cfg</LONG-NAME>
                   <BYTE-POSITION>16</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Lautstärkerampe Dauer</SHORT-NAME>
+                  <SHORT-NAME>Lautst_rkerampe_Dauer</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.tone_cfg</LONG-NAME>
                   <BYTE-POSITION>18</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Lautstärkerampe hintere Endlautstärkestufe</SHORT-NAME>
+                  <SHORT-NAME>Lautst_rkerampe_hintere_Endlautst_rkestufe</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.tone_cfg</LONG-NAME>
                   <BYTE-POSITION>20</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Lautstärkerampe vordere Endlautstärkestufe</SHORT-NAME>
+                  <SHORT-NAME>Lautst_rkerampe_vordere_Endlautst_rkestufe</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.tone_cfg</LONG-NAME>
                   <BYTE-POSITION>21</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10741">
+		</STRUCTURE>
+		<STRUCTURE ID="_10741">
 		  <SHORT-NAME>Codingdata_ULS_Customer_rcta___offroad___brake_control___sector_merge___temp_ranges</SHORT-NAME>
 		  <LONG-NAME>Codingdata_ULS_Customer_rcta___offroad___brake_control___sector_merge___temp_ranges</LONG-NAME>
 		  <BYTE-SIZE>28</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>RCTA aktiviert</SHORT-NAME>
+                  <SHORT-NAME>RCTA_aktiviert</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.rcta_cfg</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Ping-Pong zwischen PDC und RCTA</SHORT-NAME>
+                  <SHORT-NAME>Ping_Pong_zwischen_PDC_und_RCTA</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.rcta_cfg</LONG-NAME>
                   <BYTE-POSITION>1</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Maximaler Tondauer für RCTA</SHORT-NAME>
+                  <SHORT-NAME>Maximaler_Tondauer_f_r_RCTA</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.rcta_cfg</LONG-NAME>
                   <BYTE-POSITION>2</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Ausgabe Fehler für RCTA</SHORT-NAME>
+                  <SHORT-NAME>Ausgabe_Fehler_f_r_RCTA</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.rcta_cfg</LONG-NAME>
                   <BYTE-POSITION>3</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
@@ -11151,21 +11150,21 @@
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Auto Activation deactivates offroad</SHORT-NAME>
+                  <SHORT-NAME>Auto_Activation_deactivates_offroad</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.offroad_cfg</LONG-NAME>
                   <BYTE-POSITION>6</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Pdc button deactivates offroad</SHORT-NAME>
+                  <SHORT-NAME>Pdc_button_deactivates_offroad</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.offroad_cfg</LONG-NAME>
                   <BYTE-POSITION>7</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Rear gear and rolling backwards deactivates offroad</SHORT-NAME>
+                  <SHORT-NAME>Rear_gear_and_rolling_backwards_deactivates_offroad</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.car_cfg.offroad_cfg</LONG-NAME>
                   <BYTE-POSITION>8</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
@@ -11304,63 +11303,63 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10754">
+		</STRUCTURE>
+		<STRUCTURE ID="_10754">
 		  <SHORT-NAME>Codingdata_ULS_Customer_personalization1</SHORT-NAME>
 		  <LONG-NAME>Codingdata_ULS_Customer_personalization1</LONG-NAME>
 		  <BYTE-SIZE>24</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Art der Personalisierung (0=Aus, 1=Schlüsselnummer, 2=Dynamisch)</SHORT-NAME>
+                  <SHORT-NAME>Art_der_Personalisierung__0_Aus__1_Schl_sselnummer__2_Dynamisch_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.personalization_cfg</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Timeout für Initialisierung Personalisierung</SHORT-NAME>
+                  <SHORT-NAME>Timeout_f_r_Initialisierung_Personalisierung</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.personalization_cfg</LONG-NAME>
                   <BYTE-POSITION>1</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Frequenzstufe des Lautsprechers vorne</SHORT-NAME>
+                  <SHORT-NAME>Frequenzstufe_des_Lautsprechers_vorne</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.personalization_cfg.driver_preferences.ARRAY_0</LONG-NAME>
                   <BYTE-POSITION>2</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Lautstärkestufe vorne</SHORT-NAME>
+                  <SHORT-NAME>Lautst_rkestufe_vorne</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.personalization_cfg.driver_preferences.ARRAY_0</LONG-NAME>
                   <BYTE-POSITION>3</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Automatische Aktivierung</SHORT-NAME>
+                  <SHORT-NAME>Automatische_Aktivierung</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.personalization_cfg.driver_preferences.ARRAY_0</LONG-NAME>
                   <BYTE-POSITION>4</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Frequenzstufe des Lautsprechers hinten</SHORT-NAME>
+                  <SHORT-NAME>Frequenzstufe_des_Lautsprechers_hinten</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.personalization_cfg.driver_preferences.ARRAY_0</LONG-NAME>
                   <BYTE-POSITION>5</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Lautstärkestufe hinten</SHORT-NAME>
+                  <SHORT-NAME>Lautst_rkestufe_hinten</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.personalization_cfg.driver_preferences.ARRAY_0</LONG-NAME>
                   <BYTE-POSITION>6</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Parklücken Einblendung in RearView-Camera-Bild</SHORT-NAME>
+                  <SHORT-NAME>Parkl_cken_Einblendung_in_RearView_Camera_Bild</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.personalization_cfg.driver_preferences.ARRAY_0</LONG-NAME>
                   <BYTE-POSITION>7</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
@@ -11402,42 +11401,42 @@
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Frequenzstufe des Lautsprechers vorne</SHORT-NAME>
+                  <SHORT-NAME>Frequenzstufe_des_Lautsprechers_vorne</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.personalization_cfg.driver_preferences.ARRAY_1</LONG-NAME>
                   <BYTE-POSITION>13</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Lautstärkestufe vorne</SHORT-NAME>
+                  <SHORT-NAME>Lautst_rkestufe_vorne</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.personalization_cfg.driver_preferences.ARRAY_1</LONG-NAME>
                   <BYTE-POSITION>14</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Automatische Aktivierung</SHORT-NAME>
+                  <SHORT-NAME>Automatische_Aktivierung</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.personalization_cfg.driver_preferences.ARRAY_1</LONG-NAME>
                   <BYTE-POSITION>15</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Frequenzstufe des Lautsprechers hinten</SHORT-NAME>
+                  <SHORT-NAME>Frequenzstufe_des_Lautsprechers_hinten</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.personalization_cfg.driver_preferences.ARRAY_1</LONG-NAME>
                   <BYTE-POSITION>16</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Lautstärkestufe hinten</SHORT-NAME>
+                  <SHORT-NAME>Lautst_rkestufe_hinten</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.personalization_cfg.driver_preferences.ARRAY_1</LONG-NAME>
                   <BYTE-POSITION>17</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Parklücken Einblendung in RearView-Camera-Bild</SHORT-NAME>
+                  <SHORT-NAME>Parkl_cken_Einblendung_in_RearView_Camera_Bild</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.personalization_cfg.driver_preferences.ARRAY_1</LONG-NAME>
                   <BYTE-POSITION>18</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
@@ -11478,49 +11477,49 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10767">
+		</STRUCTURE>
+		<STRUCTURE ID="_10767">
 		  <SHORT-NAME>Codingdata_ULS_Customer_personalization2</SHORT-NAME>
 		  <LONG-NAME>Codingdata_ULS_Customer_personalization2</LONG-NAME>
 		  <BYTE-SIZE>22</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Frequenzstufe des Lautsprechers vorne</SHORT-NAME>
+                  <SHORT-NAME>Frequenzstufe_des_Lautsprechers_vorne</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.personalization_cfg.driver_preferences.ARRAY_2</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Lautstärkestufe vorne</SHORT-NAME>
+                  <SHORT-NAME>Lautst_rkestufe_vorne</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.personalization_cfg.driver_preferences.ARRAY_2</LONG-NAME>
                   <BYTE-POSITION>1</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Automatische Aktivierung</SHORT-NAME>
+                  <SHORT-NAME>Automatische_Aktivierung</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.personalization_cfg.driver_preferences.ARRAY_2</LONG-NAME>
                   <BYTE-POSITION>2</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Frequenzstufe des Lautsprechers hinten</SHORT-NAME>
+                  <SHORT-NAME>Frequenzstufe_des_Lautsprechers_hinten</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.personalization_cfg.driver_preferences.ARRAY_2</LONG-NAME>
                   <BYTE-POSITION>3</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Lautstärkestufe hinten</SHORT-NAME>
+                  <SHORT-NAME>Lautst_rkestufe_hinten</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.personalization_cfg.driver_preferences.ARRAY_2</LONG-NAME>
                   <BYTE-POSITION>4</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Parklücken Einblendung in RearView-Camera-Bild</SHORT-NAME>
+                  <SHORT-NAME>Parkl_cken_Einblendung_in_RearView_Camera_Bild</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.personalization_cfg.driver_preferences.ARRAY_2</LONG-NAME>
                   <BYTE-POSITION>5</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
@@ -11562,42 +11561,42 @@
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Frequenzstufe des Lautsprechers vorne</SHORT-NAME>
+                  <SHORT-NAME>Frequenzstufe_des_Lautsprechers_vorne</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.personalization_cfg.driver_preferences.ARRAY_3</LONG-NAME>
                   <BYTE-POSITION>11</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Lautstärkestufe vorne</SHORT-NAME>
+                  <SHORT-NAME>Lautst_rkestufe_vorne</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.personalization_cfg.driver_preferences.ARRAY_3</LONG-NAME>
                   <BYTE-POSITION>12</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Automatische Aktivierung</SHORT-NAME>
+                  <SHORT-NAME>Automatische_Aktivierung</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.personalization_cfg.driver_preferences.ARRAY_3</LONG-NAME>
                   <BYTE-POSITION>13</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Frequenzstufe des Lautsprechers hinten</SHORT-NAME>
+                  <SHORT-NAME>Frequenzstufe_des_Lautsprechers_hinten</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.personalization_cfg.driver_preferences.ARRAY_3</LONG-NAME>
                   <BYTE-POSITION>14</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Lautstärkestufe hinten</SHORT-NAME>
+                  <SHORT-NAME>Lautst_rkestufe_hinten</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.personalization_cfg.driver_preferences.ARRAY_3</LONG-NAME>
                   <BYTE-POSITION>15</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Parklücken Einblendung in RearView-Camera-Bild</SHORT-NAME>
+                  <SHORT-NAME>Parkl_cken_Einblendung_in_RearView_Camera_Bild</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.personalization_cfg.driver_preferences.ARRAY_3</LONG-NAME>
                   <BYTE-POSITION>16</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
@@ -11638,12 +11637,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10780">
+		</STRUCTURE>
+		<STRUCTURE ID="_10780">
 		  <SHORT-NAME>Codingdata_ULS_Customer_ops1</SHORT-NAME>
 		  <LONG-NAME>Codingdata_ULS_Customer_ops1</LONG-NAME>
 		  <BYTE-SIZE>28</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>acoustical_border_pos_x_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.extra_sector_cfg.ops_acoustical_cfg</LONG-NAME>
@@ -11798,12 +11797,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10793">
+		</STRUCTURE>
+		<STRUCTURE ID="_10793">
 		  <SHORT-NAME>Codingdata_ULS_Customer_ops2</SHORT-NAME>
 		  <LONG-NAME>Codingdata_ULS_Customer_ops2</LONG-NAME>
 		  <BYTE-SIZE>28</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>it_trend_strategy_front</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.extra_sector_cfg.ops_trend_cfg</LONG-NAME>
@@ -11945,185 +11944,185 @@
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Vorne: Mitte</SHORT-NAME>
+                  <SHORT-NAME>Vorne__Mitte</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ops_acoustic_cont_tone</LONG-NAME>
                   <BYTE-POSITION>20</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Vorne: Aussen</SHORT-NAME>
+                  <SHORT-NAME>Vorne__Aussen</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ops_acoustic_cont_tone</LONG-NAME>
                   <BYTE-POSITION>21</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Vorne: Seite</SHORT-NAME>
+                  <SHORT-NAME>Vorne__Seite</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ops_acoustic_cont_tone</LONG-NAME>
                   <BYTE-POSITION>22</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Vorne: Seite Mitte</SHORT-NAME>
+                  <SHORT-NAME>Vorne__Seite_Mitte</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ops_acoustic_cont_tone</LONG-NAME>
                   <BYTE-POSITION>23</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Hinten: Mitte</SHORT-NAME>
+                  <SHORT-NAME>Hinten__Mitte</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ops_acoustic_cont_tone</LONG-NAME>
                   <BYTE-POSITION>24</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Hinten: Aussen</SHORT-NAME>
+                  <SHORT-NAME>Hinten__Aussen</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ops_acoustic_cont_tone</LONG-NAME>
                   <BYTE-POSITION>25</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Hinten: Seite</SHORT-NAME>
+                  <SHORT-NAME>Hinten__Seite</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ops_acoustic_cont_tone</LONG-NAME>
                   <BYTE-POSITION>26</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Hinten: Seite Mitte</SHORT-NAME>
+                  <SHORT-NAME>Hinten__Seite_Mitte</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ops_acoustic_cont_tone</LONG-NAME>
                   <BYTE-POSITION>27</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10806">
+		</STRUCTURE>
+		<STRUCTURE ID="_10806">
 		  <SHORT-NAME>Codingdata_ULS_Customer_ops3</SHORT-NAME>
 		  <LONG-NAME>Codingdata_ULS_Customer_ops3</LONG-NAME>
 		  <BYTE-SIZE>16</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Vorne: Mitte</SHORT-NAME>
+                  <SHORT-NAME>Vorne__Mitte</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ops_acoustic_meas_ranges</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Vorne: Aussen</SHORT-NAME>
+                  <SHORT-NAME>Vorne__Aussen</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ops_acoustic_meas_ranges</LONG-NAME>
                   <BYTE-POSITION>1</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Vorne: Seite</SHORT-NAME>
+                  <SHORT-NAME>Vorne__Seite</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ops_acoustic_meas_ranges</LONG-NAME>
                   <BYTE-POSITION>2</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Vorne: Seite Mitte</SHORT-NAME>
+                  <SHORT-NAME>Vorne__Seite_Mitte</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ops_acoustic_meas_ranges</LONG-NAME>
                   <BYTE-POSITION>3</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Hinten: Mitte</SHORT-NAME>
+                  <SHORT-NAME>Hinten__Mitte</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ops_acoustic_meas_ranges</LONG-NAME>
                   <BYTE-POSITION>4</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Hinten: Aussen</SHORT-NAME>
+                  <SHORT-NAME>Hinten__Aussen</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ops_acoustic_meas_ranges</LONG-NAME>
                   <BYTE-POSITION>5</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Hinten: Seite</SHORT-NAME>
+                  <SHORT-NAME>Hinten__Seite</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ops_acoustic_meas_ranges</LONG-NAME>
                   <BYTE-POSITION>6</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Hinten: Seite Mitte</SHORT-NAME>
+                  <SHORT-NAME>Hinten__Seite_Mitte</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ops_acoustic_meas_ranges</LONG-NAME>
                   <BYTE-POSITION>7</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Vorne: Mitte</SHORT-NAME>
+                  <SHORT-NAME>Vorne__Mitte</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ops_optical_meas_ranges</LONG-NAME>
                   <BYTE-POSITION>8</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Vorne: Aussen</SHORT-NAME>
+                  <SHORT-NAME>Vorne__Aussen</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ops_optical_meas_ranges</LONG-NAME>
                   <BYTE-POSITION>9</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Vorne: Seite</SHORT-NAME>
+                  <SHORT-NAME>Vorne__Seite</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ops_optical_meas_ranges</LONG-NAME>
                   <BYTE-POSITION>10</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Vorne: Seite Mitte</SHORT-NAME>
+                  <SHORT-NAME>Vorne__Seite_Mitte</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ops_optical_meas_ranges</LONG-NAME>
                   <BYTE-POSITION>11</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Hinten: Mitte</SHORT-NAME>
+                  <SHORT-NAME>Hinten__Mitte</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ops_optical_meas_ranges</LONG-NAME>
                   <BYTE-POSITION>12</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Hinten: Aussen</SHORT-NAME>
+                  <SHORT-NAME>Hinten__Aussen</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ops_optical_meas_ranges</LONG-NAME>
                   <BYTE-POSITION>13</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Hinten: Seite</SHORT-NAME>
+                  <SHORT-NAME>Hinten__Seite</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ops_optical_meas_ranges</LONG-NAME>
                   <BYTE-POSITION>14</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Hinten: Seite Mitte</SHORT-NAME>
+                  <SHORT-NAME>Hinten__Seite_Mitte</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ops_optical_meas_ranges</LONG-NAME>
                   <BYTE-POSITION>15</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10819">
+		</STRUCTURE>
+		<STRUCTURE ID="_10819">
 		  <SHORT-NAME>Codingdata_ULS_Customer_park4u_logic1</SHORT-NAME>
 		  <LONG-NAME>Codingdata_ULS_Customer_park4u_logic1</LONG-NAME>
 		  <BYTE-SIZE>19</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>add_length_short_slot_mm</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.park4u_logic_cfg</LONG-NAME>
@@ -12181,14 +12180,14 @@
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Motordrehzahl für Abwürgen-Erkennung</SHORT-NAME>
+                  <SHORT-NAME>Motordrehzahl_f_r_Abw_rgen_Erkennung</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.park4u_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>9</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>hmi_flags (bitfield)</SHORT-NAME>
+                  <SHORT-NAME>hmi_flags__bitfield_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.park4u_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>11</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
@@ -12243,12 +12242,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10832">
+		</STRUCTURE>
+		<STRUCTURE ID="_10832">
 		  <SHORT-NAME>Codingdata_ULS_Customer_park4u_logic2</SHORT-NAME>
 		  <LONG-NAME>Codingdata_ULS_Customer_park4u_logic2</LONG-NAME>
 		  <BYTE-SIZE>24</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>v_max_reverse_steering_kmh</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.park4u_logic_cfg</LONG-NAME>
@@ -12382,77 +12381,77 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10845">
+		</STRUCTURE>
+		<STRUCTURE ID="_10845">
 		  <SHORT-NAME>Codingdata_ULS_Customer_pdc_logic</SHORT-NAME>
 		  <LONG-NAME>Codingdata_ULS_Customer_pdc_logic</LONG-NAME>
 		  <BYTE-SIZE>16</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Ausschaltgeschwindigkeitsschwelle UPA mit APS</SHORT-NAME>
+                  <SHORT-NAME>Ausschaltgeschwindigkeitsschwelle_UPA_mit_APS</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.pdc_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Ausschaltgeschwindigkeitsschwelle UPA mit OPS</SHORT-NAME>
+                  <SHORT-NAME>Ausschaltgeschwindigkeitsschwelle_UPA_mit_OPS</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.pdc_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>1</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Ausschaltgeschwindigkeitsschwelle UPA mit VPS</SHORT-NAME>
+                  <SHORT-NAME>Ausschaltgeschwindigkeitsschwelle_UPA_mit_VPS</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.pdc_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>2</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Freischaltung Mute bei gesicherter Anzeige-Rückmeldung</SHORT-NAME>
+                  <SHORT-NAME>Freischaltung_Mute_bei_gesicherter_Anzeige_R_ckmeldung</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.pdc_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>3</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Deaktivierung der Funktion Mute bei EPB geschlossen</SHORT-NAME>
+                  <SHORT-NAME>Deaktivierung_der_Funktion_Mute_bei_EPB_geschlossen</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.pdc_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>4</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Mute nach deaktivieren EPB oder auslegen P</SHORT-NAME>
+                  <SHORT-NAME>Mute_nach_deaktivieren_EPB_oder_auslegen_P</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.pdc_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>5</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Anforderung Absenkung Lautstärke an Audiosystem</SHORT-NAME>
+                  <SHORT-NAME>Anforderung_Absenkung_Lautst_rke_an_Audiosystem</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.pdc_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>6</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Verzögerung des Quittiertons bei Absenkung des Audiosystems</SHORT-NAME>
+                  <SHORT-NAME>Verz_gerung_des_Quittiertons_bei_Absenkung_des_Audiosystems</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.pdc_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>7</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Verzögerung für Wiederanhebung des Audiosystems</SHORT-NAME>
+                  <SHORT-NAME>Verz_gerung_f_r_Wiederanhebung_des_Audiosystems</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.pdc_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>8</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Verzögerung für Wiederanhebung des Audiosystems nach Demoton</SHORT-NAME>
+                  <SHORT-NAME>Verz_gerung_f_r_Wiederanhebung_des_Audiosystems_nach_Demoton</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.pdc_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>9</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
@@ -12473,21 +12472,21 @@
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Nachlauf der Tongeber-Statusanzeige im CAN</SHORT-NAME>
+                  <SHORT-NAME>Nachlauf_der_Tongeber_Statusanzeige_im_CAN</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.pdc_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>12</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Verzögerung für Speicherung von Nutzereinstellungen</SHORT-NAME>
+                  <SHORT-NAME>Verz_gerung_f_r_Speicherung_von_Nutzereinstellungen</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.pdc_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>13</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>Ausgabegerät für Fehlermeldung</SHORT-NAME>
+                  <SHORT-NAME>Ausgabeger_t_f_r_Fehlermeldung</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.pdc_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>14</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
@@ -12500,12 +12499,12 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10858">
+		</STRUCTURE>
+		<STRUCTURE ID="_10858">
 		  <SHORT-NAME>Codingdata_ULS_Customer_ics_logic_1</SHORT-NAME>
 		  <LONG-NAME>Codingdata_ULS_Customer_ics_logic_1</LONG-NAME>
 		  <BYTE-SIZE>40</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>ics_deact_speed_kmh</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
@@ -12598,102 +12597,102 @@
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>drive_limit_D_distance[13]</SHORT-NAME>
+                  <SHORT-NAME>drive_limit_D_distance_13_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>14</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10871">
+		</STRUCTURE>
+		<STRUCTURE ID="_10871">
 		  <SHORT-NAME>Codingdata_ULS_Customer_ics_logic_2</SHORT-NAME>
 		  <LONG-NAME>Codingdata_ULS_Customer_ics_logic_2</LONG-NAME>
 		  <BYTE-SIZE>52</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>drive_limit_D_acceleration[13]</SHORT-NAME>
+                  <SHORT-NAME>drive_limit_D_acceleration_13_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>drive_limit_R_distance[13]</SHORT-NAME>
+                  <SHORT-NAME>drive_limit_R_distance_13_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>26</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10884">
+		</STRUCTURE>
+		<STRUCTURE ID="_10884">
 		  <SHORT-NAME>Codingdata_ULS_Customer_ics_logic_3</SHORT-NAME>
 		  <LONG-NAME>Codingdata_ULS_Customer_ics_logic_3</LONG-NAME>
 		  <BYTE-SIZE>51</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>drive_limit_R_acceleration[13]</SHORT-NAME>
+                  <SHORT-NAME>drive_limit_R_acceleration_13_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>drive_limit_D_vehicle_speed[5]</SHORT-NAME>
+                  <SHORT-NAME>drive_limit_D_vehicle_speed_5_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>26</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>drive_limit_D_diff_acceleration[5]</SHORT-NAME>
+                  <SHORT-NAME>drive_limit_D_diff_acceleration_5_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>31</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>drive_limit_R_vehicle_speed[5]</SHORT-NAME>
+                  <SHORT-NAME>drive_limit_R_vehicle_speed_5_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>36</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>drive_limit_R_diff_acceleration[5]</SHORT-NAME>
+                  <SHORT-NAME>drive_limit_R_diff_acceleration_5_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>41</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>drive_cut_D_vehicle_speed[5]</SHORT-NAME>
+                  <SHORT-NAME>drive_cut_D_vehicle_speed_5_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>46</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10897">
+		</STRUCTURE>
+		<STRUCTURE ID="_10897">
 		  <SHORT-NAME>Codingdata_ULS_Customer_ics_logic_4</SHORT-NAME>
 		  <LONG-NAME>Codingdata_ULS_Customer_ics_logic_4</LONG-NAME>
 		  <BYTE-SIZE>26</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>drive_cut_D_diff_acceleration[5]</SHORT-NAME>
+                  <SHORT-NAME>drive_cut_D_diff_acceleration_5_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>drive_cut_R_vehicle_speed[5]</SHORT-NAME>
+                  <SHORT-NAME>drive_cut_R_vehicle_speed_5_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>5</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>drive_cut_R_diff_acceleration[5]</SHORT-NAME>
+                  <SHORT-NAME>drive_cut_R_diff_acceleration_5_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>10</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
@@ -12707,116 +12706,116 @@
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>drive_return_before_D_vehicle_speed[5]</SHORT-NAME>
+                  <SHORT-NAME>drive_return_before_D_vehicle_speed_5_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>16</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>drive_return_before_D_diff_acc[5]</SHORT-NAME>
+                  <SHORT-NAME>drive_return_before_D_diff_acc_5_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>21</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10910">
+		</STRUCTURE>
+		<STRUCTURE ID="_10910">
 		  <SHORT-NAME>Codingdata_ULS_Customer_ics_logic_5</SHORT-NAME>
 		  <LONG-NAME>Codingdata_ULS_Customer_ics_logic_5</LONG-NAME>
 		  <BYTE-SIZE>30</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>drive_return_before_R_vehicle_speed[5]</SHORT-NAME>
+                  <SHORT-NAME>drive_return_before_R_vehicle_speed_5_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>drive_return_before_R_diff_acc[5]</SHORT-NAME>
+                  <SHORT-NAME>drive_return_before_R_diff_acc_5_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>5</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>drive_return_after_D_vehicle_speed[5]</SHORT-NAME>
+                  <SHORT-NAME>drive_return_after_D_vehicle_speed_5_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>10</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>drive_return_after_D_diff_acc[5]</SHORT-NAME>
+                  <SHORT-NAME>drive_return_after_D_diff_acc_5_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>15</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>drive_return_after_R_vehicle_speed[5]</SHORT-NAME>
+                  <SHORT-NAME>drive_return_after_R_vehicle_speed_5_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>20</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>drive_return_after_R_diff_acc[5]</SHORT-NAME>
+                  <SHORT-NAME>drive_return_after_R_diff_acc_5_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>25</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10923">
+		</STRUCTURE>
+		<STRUCTURE ID="_10923">
 		  <SHORT-NAME>Codingdata_ULS_Customer_ics_logic_6</SHORT-NAME>
 		  <LONG-NAME>Codingdata_ULS_Customer_ics_logic_6</LONG-NAME>
 		  <BYTE-SIZE>52</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>drive_slope_D_slope_acc[13]</SHORT-NAME>
+                  <SHORT-NAME>drive_slope_D_slope_acc_13_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>drive_slope_D_offset_acc[13]</SHORT-NAME>
+                  <SHORT-NAME>drive_slope_D_offset_acc_13_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>13</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>drive_slope_R_slope_acc[13]</SHORT-NAME>
+                  <SHORT-NAME>drive_slope_R_slope_acc_13_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>26</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>drive_slope_R_offset_acc[13]</SHORT-NAME>
+                  <SHORT-NAME>drive_slope_R_offset_acc_13_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>39</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10936">
+		</STRUCTURE>
+		<STRUCTURE ID="_10936">
 		  <SHORT-NAME>Codingdata_ULS_Customer_ics_logic_7</SHORT-NAME>
 		  <LONG-NAME>Codingdata_ULS_Customer_ics_logic_7</LONG-NAME>
 		  <BYTE-SIZE>17</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>drive_slope_filter_veh_spd_dms[5]</SHORT-NAME>
+                  <SHORT-NAME>drive_slope_filter_veh_spd_dms_5_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>drive_slope_filter_cut_freq[5]</SHORT-NAME>
+                  <SHORT-NAME>drive_slope_filter_cut_freq_5_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>5</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
@@ -12850,46 +12849,46 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10949">
+		</STRUCTURE>
+		<STRUCTURE ID="_10949">
 		  <SHORT-NAME>Codingdata_ULS_Customer_ics_logic_8</SHORT-NAME>
 		  <LONG-NAME>Codingdata_ULS_Customer_ics_logic_8</LONG-NAME>
 		  <BYTE-SIZE>52</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>ib_D_slope_acc[13]</SHORT-NAME>
+                  <SHORT-NAME>ib_D_slope_acc_13_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>0</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>ib_D_offset_acc[13]</SHORT-NAME>
+                  <SHORT-NAME>ib_D_offset_acc_13_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>13</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>ib_R_slope_acc[13]</SHORT-NAME>
+                  <SHORT-NAME>ib_R_slope_acc_13_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>26</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
-                  <SHORT-NAME>ib_R_offset_acc[13]</SHORT-NAME>
+                  <SHORT-NAME>ib_R_offset_acc_13_</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
                   <BYTE-POSITION>39</BYTE-POSITION>
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE><STRUCTURE ID="_10962">
+		</STRUCTURE>
+		<STRUCTURE ID="_10962">
 		  <SHORT-NAME>Codingdata_ULS_Customer_ics_logic_9</SHORT-NAME>
 		  <LONG-NAME>Codingdata_ULS_Customer_ics_logic_9</LONG-NAME>
 		  <BYTE-SIZE>9</BYTE-SIZE>
-		<ODX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd">
-  <PARAMS>
+		  <PARAMS>
 			    <PARAM SEMANTIC="DATA" xsi:type="VALUE">
                   <SHORT-NAME>bulb_check_timer</SHORT-NAME>
                   <LONG-NAME>dataset.dataset_06.default_uls_customer.ics_logic_cfg</LONG-NAME>
@@ -12953,7 +12952,8 @@
                   <DOP-REF ID-REF="_1"/>
                 </PARAM>
 		</PARAMS>
-</ODX></STRUCTURE></STRUCTURES>
+		</STRUCTURE>
+          </STRUCTURES>
           <DYNAMIC-LENGTH-FIELDS>
             <DYNAMIC-LENGTH-FIELD ID="_97">
               <SHORT-NAME>Supported_bits_in_response_bytes_1</SHORT-NAME>

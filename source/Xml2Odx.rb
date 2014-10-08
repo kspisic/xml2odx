@@ -37,7 +37,7 @@ def getDidParams(subdata_nodes)
 end
 
 def getDidParam(subdata)
-	hash = {	:PRM_shortname => subdata.xpath('Name').text,
+	hash = {	:PRM_shortname => subdata.xpath('Name').text.gsub(/[^0-9A-Za-z]/, '_'),
 				:PRM_longname  => subdata.xpath('GroupName').text,
 				:PRM_startbyte => subdata.xpath('BitStruct/StartByte').text.to_i,
 				:PRM_startbit  => subdata.xpath('BitStruct/StartBit').text.to_i,
@@ -84,10 +84,11 @@ structures_node = xml_in2 %('//STRUCTURES')
 
 dataArray.each{ |did|
 
-	structures_node << getTemplate_Structure(did)
+	structures_node.last_element_child.after(getTemplate_Structure(did))
+		
 	did[:DID_struct_ref_id] = $id
 	$id = $id + 1;
-
+	
 	if did[:DID_rw].include? "Read"
 		request_node.last_element_child.after(getTemplate_Read_Request(did))
 		did[:RQ_id] = $id;

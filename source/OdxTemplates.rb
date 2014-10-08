@@ -266,7 +266,7 @@ end
 
 def getTemplate_Params(params)
 
-	paramsString1 = "<ODX xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' MODEL-VERSION='2.2.0' xsi:noNamespaceSchemaLocation='odx.xsd'><PARAMS>"
+	paramsString1 = "<PARAMS>"
 	paramsString2 = ""
 	paramsString3 = "</PARAMS>"
 	
@@ -305,18 +305,13 @@ def getTemplate_Params(params)
 end
 
 def getTemplate_Structure(did)
-	xml_struct = Nokogiri::XML("
+	xml_struct = "
 		<STRUCTURE ID='_#{$id}'>
 		  <SHORT-NAME>#{did[:DID_name]}</SHORT-NAME>
 		  <LONG-NAME>#{did[:DID_name]}</LONG-NAME>
 		  <BYTE-SIZE>#{did[:DID_byte_size]}</BYTE-SIZE>
-		</STRUCTURE>")
+		  #{getTemplate_Params(did[:DID_params])}
+		</STRUCTURE>"
 		
-	xml_param1 = xml_struct.root
-	xml_param2 = Nokogiri::XML(getTemplate_Params(did[:DID_params])).root.to_xml
-
-	xml_param1 << xml_param2
-			
-	return xml_struct.root
-		
+	return xml_struct
 end
