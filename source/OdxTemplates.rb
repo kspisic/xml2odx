@@ -265,6 +265,22 @@ def getTemplate_DiagComms(did, r_service)
 end
 
 def getTemplate_Params(params)
+
+	paramsString1 = "<PARAMS>"
+	paramsString2 = ""
+	paramsString3 = "</PARAMS>"
+	
+	params.each{ |did|
+		paramsString2 += "
+			    <PARAM SEMANTIC='DATA' xsi:type='VALUE'>
+                  <SHORT-NAME>blinker_mode</SHORT-NAME>
+                  <LONG-NAME>blinker_mode</LONG-NAME>
+                  <BYTE-POSITION>0</BYTE-POSITION>
+                  <DOP-REF ID-REF='_11'/>
+                </PARAM>
+		"
+	}
+
 	return "
               <PARAMS>
                 <PARAM SEMANTIC='DATA' xsi:type='VALUE'>

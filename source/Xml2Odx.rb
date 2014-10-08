@@ -61,7 +61,7 @@ xml_in1.xpath("//Data").map do |node|
 				:DID_desc 			=> "Supported Variants: #{node.xpath('SupportedVariants').text}",
 				:DID_id 			=> node.xpath('ID').text,
 				:DID_rw				=> node.xpath('ReadWriteMode').text,
-				:DID_byte_size		=> 1, #node.xpath('Length').text,
+				:DID_byte_size		=> node.xpath('Length').text,
 				:DID_struct_ref_id 	=> 0, 
 				:RQ_id				=> 0,
 				:POSRESP_id			=> 0,
