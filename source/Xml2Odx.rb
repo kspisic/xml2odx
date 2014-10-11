@@ -94,15 +94,15 @@ dataArray.each{ |did|
 	$id = $id + 1;
 	
 	if did[:DID_rw].include? "Read"	
-		request_node.last_element_child.after(getTemplate_Read_Request_22(did))
+		request_node.last_element_child.after(getTemplate_Read_Request_Toyota(did))
 		did[:RQ_id] = $id;
 		$id = $id + 1;
 		
-		posresp_node.last_element_child.after(getTemplate_Read_PosResp_22(did))
+		posresp_node.last_element_child.after(getTemplate_Read_PosResp_Toyota(did))
 		did[:POSRESP_id] = $id;
 		$id = $id + 1;
 
-		negresp_node.last_element_child.after(getTemplate_Read_NegResp_22(did))
+		negresp_node.last_element_child.after(getTemplate_Read_NegResp_Toyota(did))
 		did[:NEGRESP_id] = $id;
 		$id = $id + 1;	
 		
@@ -111,15 +111,15 @@ dataArray.each{ |did|
 	end
 	
 	if did[:DID_rw].include? "Write"
-		request_node.last_element_child.after(getTemplate_Write_Request_2E(did))
+		request_node.last_element_child.after(getTemplate_Write_Request_Toyota(did))
 		did[:RQ_id] = $id;
 		$id = $id + 1;
 		
-		posresp_node.last_element_child.after(getTemplate_Write_PosResp_2E(did))
+		posresp_node.last_element_child.after(getTemplate_Write_PosResp_Toyota(did))
 		did[:POSRESP_id] = $id;
 		$id = $id + 1;
 
-		negresp_node.last_element_child.after(getTemplate_Write_NegResp_2E(did))
+		negresp_node.last_element_child.after(getTemplate_Write_NegResp_Toyota(did))
 		did[:NEGRESP_id] = $id;
 		$id = $id + 1;	
 		
