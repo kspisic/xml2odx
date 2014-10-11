@@ -1,27 +1,10 @@
 def getTemplate_Read_Request_22(did, r_service="Read")
 	return "
 	  <REQUEST ID='_#{$id}'>
-		<SHORT-NAME>RQ_#{did[:DID_name]}_#{r_service}</SHORT-NAME>
-		<LONG-NAME>RQ #{did[:DID_name]} #{r_service}</LONG-NAME>
+		#{getTemplate_Short_Long_Name("RQ #{did[:DID_name]} #{r_service}")}
 		<PARAMS>
-		  <PARAM SEMANTIC='SERVICE-ID' xsi:type='CODED-CONST'>
-			<SHORT-NAME>SID_RQ</SHORT-NAME>
-			<LONG-NAME>SID-RQ</LONG-NAME>
-			<BYTE-POSITION>0</BYTE-POSITION>
-			<CODED-VALUE>34</CODED-VALUE>
-			<DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
-			  <BIT-LENGTH>8</BIT-LENGTH>
-			</DIAG-CODED-TYPE>
-		  </PARAM>
-		  <PARAM SEMANTIC='ID' xsi:type='CODED-CONST'>
-			<SHORT-NAME>RecordDataIdentifier</SHORT-NAME>
-			<LONG-NAME>RecordDataIdentifier</LONG-NAME>
-			<BYTE-POSITION>1</BYTE-POSITION>
-			<CODED-VALUE>#{did[:DID_id]}</CODED-VALUE>
-			<DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
-			  <BIT-LENGTH>16</BIT-LENGTH>
-			</DIAG-CODED-TYPE>
-		  </PARAM>
+		  #{getTemplate_ServiceParam('SERVICE-ID',	'CODED-CONST',	'SID_RQ',		'SID-RQ',		'0',	'34',	'8')}
+		  #{getTemplate_ServiceParam('ID',			'CODED-CONST',	'RecordDataIdentifier',	'RecordDataIdentifier',	'1', "#{did[:DID_id]}",	'16')}
 		</PARAMS>
 	  </REQUEST>
 		"
@@ -29,30 +12,12 @@ end
 def getTemplate_Read_PosResp_22(did, r_service="Read")
 	return "
 			  <POS-RESPONSE ID='_#{$id}'>
-				<SHORT-NAME>PR_#{did[:DID_name]}_#{r_service}</SHORT-NAME>
-				<LONG-NAME>PR #{did[:DID_name]} #{r_service}</LONG-NAME>
+			  	#{getTemplate_Short_Long_Name("PR #{did[:DID_name]} #{r_service}")}
 				<PARAMS>
-				  <PARAM SEMANTIC='SERVICE-ID' xsi:type='CODED-CONST'>
-					<SHORT-NAME>SID_PR</SHORT-NAME>
-					<LONG-NAME>SID-PR</LONG-NAME>
-					<BYTE-POSITION>0</BYTE-POSITION>
-					<CODED-VALUE>98</CODED-VALUE>
-					<DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
-					  <BIT-LENGTH>8</BIT-LENGTH>
-					</DIAG-CODED-TYPE>
-				  </PARAM>
-				  <PARAM SEMANTIC='ID' xsi:type='CODED-CONST'>
-					<SHORT-NAME>RecordDataIdentifier</SHORT-NAME>
-					<LONG-NAME>RecordDataIdentifier</LONG-NAME>
-					<BYTE-POSITION>1</BYTE-POSITION>
-					<CODED-VALUE>#{did[:DID_id]}</CODED-VALUE>
-					<DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
-					  <BIT-LENGTH>16</BIT-LENGTH>
-					</DIAG-CODED-TYPE>
-				  </PARAM>
+				  #{getTemplate_ServiceParam('SERVICE-ID',	'CODED-CONST',	'SID_PR',		'SID-PR',		'0',	'98',	'8')}
+				  #{getTemplate_ServiceParam('ID',			'CODED-CONST',	'RecordDataIdentifier',	'RecordDataIdentifier',	'1', "#{did[:DID_id]}",	'16')}
 				  <PARAM SEMANTIC='DATA' xsi:type='VALUE'>
-					<SHORT-NAME>#{did[:DID_name]}</SHORT-NAME>
-					<LONG-NAME>#{did[:DID_name]}</LONG-NAME>
+				    #{getTemplate_Short_Long_Name("#{did[:DID_name]}", "#{did[:DID_name]}")}
 					<BYTE-POSITION>3</BYTE-POSITION>
 					 <DOP-REF ID-REF='_#{did[:DID_struct_ref_id]}'/>
 				  </PARAM>
@@ -63,30 +28,12 @@ end
 def getTemplate_Read_NegResp_22(did, r_service="Read")
 	return "
 			  <NEG-RESPONSE ID='_#{$id}'>
-				<SHORT-NAME>NR_#{did[:DID_name]}_#{r_service}</SHORT-NAME>
-				<LONG-NAME>NR #{did[:DID_name]} #{r_service}</LONG-NAME>
+			  	#{getTemplate_Short_Long_Name("NR #{did[:DID_name]} #{r_service}")}
 				<PARAMS>
-				  <PARAM SEMANTIC='SERVICE-ID' xsi:type='CODED-CONST'>
-					<SHORT-NAME>SID_NR</SHORT-NAME>
-					<LONG-NAME>SID-NR</LONG-NAME>
-					<BYTE-POSITION>0</BYTE-POSITION>
-					<CODED-VALUE>127</CODED-VALUE>
-					<DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
-					  <BIT-LENGTH>8</BIT-LENGTH>
-					</DIAG-CODED-TYPE>
-				  </PARAM>
-				  <PARAM SEMANTIC='SERVICEIDRQ' xsi:type='CODED-CONST'>
-					<SHORT-NAME>SIDRQ_NR</SHORT-NAME>
-					<LONG-NAME>SIDRQ-NR</LONG-NAME>
-					<BYTE-POSITION>1</BYTE-POSITION>
-					<CODED-VALUE>34</CODED-VALUE>
-					<DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
-					  <BIT-LENGTH>8</BIT-LENGTH>
-					</DIAG-CODED-TYPE>
-				  </PARAM>
+				  #{getTemplate_ServiceParam('SERVICE-ID',	'CODED-CONST',	'SID_NR',		'SID-NR',		'0',	'127',	'8')}
+				  #{getTemplate_ServiceParam('SERVICEIDRQ',	'CODED-CONST',	'SID_RQ_NR',	'SID-RQ-NR',	'1',	'34',	'8')}				
 				  <PARAM SEMANTIC='DATA' xsi:type='VALUE'>
-					<SHORT-NAME>#{r_service}_NR</SHORT-NAME>
-					<LONG-NAME>#{r_service} NR</LONG-NAME>
+				    #{getTemplate_Short_Long_Name("#{r_service} NR", "#{r_service}_NR")}
 					<BYTE-POSITION>2</BYTE-POSITION>
 					<DOP-REF ID-REF='#{ID_REF_Nrc}'/>
 				  </PARAM>
@@ -114,30 +61,12 @@ end
 def getTemplate_Write_Request_2E(did, r_service="Write")
 	return "
 		<REQUEST ID='_#{$id}'>
-		<SHORT-NAME>RQ_#{did[:DID_name]}_#{r_service}</SHORT-NAME>
-		<LONG-NAME>RQ #{did[:DID_name]} #{r_service}</LONG-NAME>
+		#{getTemplate_Short_Long_Name("RQ #{did[:DID_name]} #{r_service}")}
             <PARAMS>
-              <PARAM SEMANTIC='SERVICE-ID' xsi:type='CODED-CONST'>
-                <SHORT-NAME>SID_RQ</SHORT-NAME>
-                <LONG-NAME>SID-RQ</LONG-NAME>
-                <BYTE-POSITION>0</BYTE-POSITION>
-                <CODED-VALUE>46</CODED-VALUE>
-                <DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
-                  <BIT-LENGTH>8</BIT-LENGTH>
-                </DIAG-CODED-TYPE>
-              </PARAM>
-              <PARAM SEMANTIC='ID' xsi:type='CODED-CONST'>
-                <SHORT-NAME>RecordDataIdentifier</SHORT-NAME>
-                <LONG-NAME>RecordDataIdentifier</LONG-NAME>
-                <BYTE-POSITION>1</BYTE-POSITION>
-                <CODED-VALUE>#{did[:DID_id]}</CODED-VALUE>
-                <DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
-                  <BIT-LENGTH>16</BIT-LENGTH>
-                </DIAG-CODED-TYPE>
-              </PARAM>
+			  #{getTemplate_ServiceParam('SERVICE-ID',	'CODED-CONST',	'SID_RQ',		'SID-RQ',		'0',	'46',	'8')}
+			  #{getTemplate_ServiceParam('ID',			'CODED-CONST',	'RecordDataIdentifier',	'RecordDataIdentifier',	'1', "#{did[:DID_id]}",	'16')}
 			  <PARAM SEMANTIC='DATA' xsi:type='VALUE'>
-					<SHORT-NAME>#{did[:DID_name]}</SHORT-NAME>
-					<LONG-NAME>#{did[:DID_name]}</LONG-NAME>
+					#{getTemplate_Short_Long_Name("#{did[:DID_name]}", "#{did[:DID_name]}")}
 					<BYTE-POSITION>3</BYTE-POSITION>
 					 <DOP-REF ID-REF='_#{did[:DID_struct_ref_id]}'/>
 			  </PARAM>
@@ -148,27 +77,10 @@ end
 def getTemplate_Write_PosResp_2E(did, r_service="Write")
 	return "
 		<POS-RESPONSE ID='_#{$id}'>
-			<SHORT-NAME>PR_#{did[:DID_name]}_#{r_service}</SHORT-NAME>
-			<LONG-NAME>PR #{did[:DID_name]} #{r_service}</LONG-NAME>
+			#{getTemplate_Short_Long_Name("PR #{did[:DID_name]} #{r_service}")}
             <PARAMS>
-              <PARAM SEMANTIC='SERVICE-ID' xsi:type='CODED-CONST'>
-                <SHORT-NAME>SID_PR</SHORT-NAME>
-                <LONG-NAME>SID-PR</LONG-NAME>
-                <BYTE-POSITION>0</BYTE-POSITION>
-                <CODED-VALUE>110</CODED-VALUE>
-                <DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
-                  <BIT-LENGTH>8</BIT-LENGTH>
-                </DIAG-CODED-TYPE>
-              </PARAM>
-              <PARAM SEMANTIC='ID' xsi:type='CODED-CONST'>
-                <SHORT-NAME>RecordDataIdentifier</SHORT-NAME>
-                <LONG-NAME>RecordDataIdentifier</LONG-NAME>
-                <BYTE-POSITION>1</BYTE-POSITION>
-                <CODED-VALUE>#{did[:DID_id]}</CODED-VALUE>
-                <DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
-                  <BIT-LENGTH>16</BIT-LENGTH>
-                </DIAG-CODED-TYPE>
-              </PARAM>
+			  #{getTemplate_ServiceParam('SERVICE-ID',	'CODED-CONST',	'SID_PR',		'SID-PR',		'0',	'110',	'8')}
+			  #{getTemplate_ServiceParam('ID',			'CODED-CONST',	'RecordDataIdentifier',	'RecordDataIdentifier',	'1', "#{did[:DID_id]}",	'16')}
             </PARAMS>
           </POS-RESPONSE>
 		"
@@ -176,30 +88,12 @@ end
 def getTemplate_Write_NegResp_2E(did, r_service="Write")
 	return "
 		<NEG-RESPONSE ID='_#{$id}'>
-			<SHORT-NAME>NR_#{did[:DID_name]}_#{r_service}</SHORT-NAME>
-			<LONG-NAME>NR #{did[:DID_name]} #{r_service}</LONG-NAME>
+			#{getTemplate_Short_Long_Name("NR #{did[:DID_name]} #{r_service}")}		
             <PARAMS>
-              <PARAM SEMANTIC='SERVICE-ID' xsi:type='CODED-CONST'>
-                <SHORT-NAME>SID_NR</SHORT-NAME>
-                <LONG-NAME>SID-NR</LONG-NAME>
-                <BYTE-POSITION>0</BYTE-POSITION>
-                <CODED-VALUE>127</CODED-VALUE>
-                <DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
-                  <BIT-LENGTH>8</BIT-LENGTH>
-                </DIAG-CODED-TYPE>
-              </PARAM>
-              <PARAM SEMANTIC='SERVICEIDRQ' xsi:type='CODED-CONST'>
-                <SHORT-NAME>SIDRQ_NR</SHORT-NAME>
-                <LONG-NAME>SIDRQ-NR</LONG-NAME>
-                <BYTE-POSITION>1</BYTE-POSITION>
-                <CODED-VALUE>46</CODED-VALUE>
-                <DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
-                  <BIT-LENGTH>8</BIT-LENGTH>
-                </DIAG-CODED-TYPE>
-              </PARAM>
+			  #{getTemplate_ServiceParam('SERVICE-ID',	'CODED-CONST',	'SID_NR',		'SID-NR',		'0',	'127',	'8')}
+			  #{getTemplate_ServiceParam('SERVICEIDRQ',	'CODED-CONST',	'SID_RQ_NR',	'SID-RQ-NR',	'1',	'46',	'8')}							
               <PARAM SEMANTIC='DATA' xsi:type='VALUE'>
-				<SHORT-NAME>#{r_service}_NR</SHORT-NAME>
-				<LONG-NAME>#{r_service} NR</LONG-NAME>
+				#{getTemplate_Short_Long_Name("#{r_service} NR", "#{r_service}_NR")}
                 <BYTE-POSITION>2</BYTE-POSITION>
                 <DOP-REF ID-REF='#{ID_REF_Nrc}'/>
               </PARAM>
@@ -228,36 +122,11 @@ end
 def getTemplate_Read_Request_Toyota(did, r_service="Read")
 	return "
 	  <REQUEST ID='_#{$id}'>
-		<SHORT-NAME>RQ_#{did[:DID_name]}_#{r_service}</SHORT-NAME>
-		<LONG-NAME>RQ #{did[:DID_name]} #{r_service}</LONG-NAME>
+	  	#{getTemplate_Short_Long_Name("RQ #{did[:DID_name]} #{r_service}")}
 		<PARAMS>
-		  <PARAM SEMANTIC='SERVICE-ID' xsi:type='CODED-CONST'>
-			<SHORT-NAME>SID_RQ</SHORT-NAME>
-			<LONG-NAME>SID-RQ</LONG-NAME>
-			<BYTE-POSITION>0</BYTE-POSITION>
-			<CODED-VALUE>186</CODED-VALUE>
-			<DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
-			  <BIT-LENGTH>8</BIT-LENGTH>
-			</DIAG-CODED-TYPE>
-		  </PARAM>
-		  <PARAM SEMANTIC='SUBFUNCTION' xsi:type='CODED-CONST'>
-			<SHORT-NAME>Read_Data</SHORT-NAME>
-			<LONG-NAME>Read Data</LONG-NAME>
-			<BYTE-POSITION>1</BYTE-POSITION>
-			<CODED-VALUE>0</CODED-VALUE>
-			<DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
-			  <BIT-LENGTH>8</BIT-LENGTH>
-			</DIAG-CODED-TYPE>
-		  </PARAM>
-		  <PARAM SEMANTIC='ID' xsi:type='CODED-CONST'>
-			<SHORT-NAME>RecordDataIdentifier</SHORT-NAME>
-			<LONG-NAME>RecordDataIdentifier</LONG-NAME>
-			<BYTE-POSITION>2</BYTE-POSITION>
-			<CODED-VALUE>#{did[:DID_id]}</CODED-VALUE>
-			<DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
-			  <BIT-LENGTH>16</BIT-LENGTH>
-			</DIAG-CODED-TYPE>
-		  </PARAM>
+		  #{getTemplate_ServiceParam('SERVICE-ID',	'CODED-CONST',	'SID_RQ',		'SID-RQ',		'0',	'186',	'8')}
+		  #{getTemplate_ServiceParam('SUBFUNCTION',	'CODED-CONST',	'Read_Data',	'Read Data',	'1',	'0',	'8')}
+		  #{getTemplate_ServiceParam('ID',			'CODED-CONST',	'RecordDataIdentifier',	'RecordDataIdentifier',	'2', "#{did[:DID_id]}",	'16')}
 		</PARAMS>
 	  </REQUEST>
 		"
@@ -265,39 +134,13 @@ end
 def getTemplate_Read_PosResp_Toyota(did, r_service="Read")
 	return "
 			  <POS-RESPONSE ID='_#{$id}'>
-				<SHORT-NAME>PR_#{did[:DID_name]}_#{r_service}</SHORT-NAME>
-				<LONG-NAME>PR #{did[:DID_name]} #{r_service}</LONG-NAME>
+			    #{getTemplate_Short_Long_Name("PR #{did[:DID_name]} #{r_service}")}
 				<PARAMS>
-				  <PARAM SEMANTIC='SERVICE-ID' xsi:type='CODED-CONST'>
-					<SHORT-NAME>SID_PR</SHORT-NAME>
-					<LONG-NAME>SID-PR</LONG-NAME>
-					<BYTE-POSITION>0</BYTE-POSITION>
-					<CODED-VALUE>250</CODED-VALUE>
-					<DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
-					  <BIT-LENGTH>8</BIT-LENGTH>
-					</DIAG-CODED-TYPE>
-				  </PARAM>
-				  <PARAM SEMANTIC='SUBFUNCTION' xsi:type='CODED-CONST'>
-					<SHORT-NAME>Read_Data</SHORT-NAME>
-					<LONG-NAME>Read Data</LONG-NAME>
-					<BYTE-POSITION>1</BYTE-POSITION>
-					<CODED-VALUE>0</CODED-VALUE>
-					<DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
-					  <BIT-LENGTH>8</BIT-LENGTH>
-					</DIAG-CODED-TYPE>
-				  </PARAM>
-				  <PARAM SEMANTIC='ID' xsi:type='CODED-CONST'>
-					<SHORT-NAME>RecordDataIdentifier</SHORT-NAME>
-					<LONG-NAME>RecordDataIdentifier</LONG-NAME>
-					<BYTE-POSITION>2</BYTE-POSITION>
-					<CODED-VALUE>#{did[:DID_id]}</CODED-VALUE>
-					<DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
-					  <BIT-LENGTH>16</BIT-LENGTH>
-					</DIAG-CODED-TYPE>
-				  </PARAM>
+				  #{getTemplate_ServiceParam('SERVICE-ID',	'CODED-CONST',	'SID_PR',		'SID-PR',		'0',	'250',	'8')}
+				  #{getTemplate_ServiceParam('SUBFUNCTION',	'CODED-CONST',	'Read_Data',	'Read Data',	'1',	'0',	'8')}
+				  #{getTemplate_ServiceParam('ID',			'CODED-CONST',	'RecordDataIdentifier',	'RecordDataIdentifier',	'2', "#{did[:DID_id]}",	'16')}
 				  <PARAM SEMANTIC='DATA' xsi:type='VALUE'>
-					<SHORT-NAME>#{did[:DID_name]}</SHORT-NAME>
-					<LONG-NAME>#{did[:DID_name]}</LONG-NAME>
+				    #{getTemplate_Short_Long_Name("#{did[:DID_name]}", "#{did[:DID_name]}")}
 					<BYTE-POSITION>4</BYTE-POSITION>
 					 <DOP-REF ID-REF='_#{did[:DID_struct_ref_id]}'/>
 				  </PARAM>
@@ -308,30 +151,12 @@ end
 def getTemplate_Read_NegResp_Toyota(did, r_service="Read")
 	return "
 			  <NEG-RESPONSE ID='_#{$id}'>
-				<SHORT-NAME>NR_#{did[:DID_name]}_#{r_service}</SHORT-NAME>
-				<LONG-NAME>NR #{did[:DID_name]} #{r_service}</LONG-NAME>
+				#{getTemplate_Short_Long_Name("NR #{did[:DID_name]} #{r_service}")}
 				<PARAMS>
-				  <PARAM SEMANTIC='SERVICE-ID' xsi:type='CODED-CONST'>
-					<SHORT-NAME>SID_NR</SHORT-NAME>
-					<LONG-NAME>SID-NR</LONG-NAME>
-					<BYTE-POSITION>0</BYTE-POSITION>
-					<CODED-VALUE>127</CODED-VALUE>
-					<DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
-					  <BIT-LENGTH>8</BIT-LENGTH>
-					</DIAG-CODED-TYPE>
-				  </PARAM>
-				  <PARAM SEMANTIC='SERVICEIDRQ' xsi:type='CODED-CONST'>
-					<SHORT-NAME>SID_RQ_NR</SHORT-NAME>
-					<LONG-NAME>SID-RQ-NR</LONG-NAME>
-					<BYTE-POSITION>1</BYTE-POSITION>
-					<CODED-VALUE>186</CODED-VALUE>
-					<DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
-					  <BIT-LENGTH>8</BIT-LENGTH>
-					</DIAG-CODED-TYPE>
-				  </PARAM>
+				  #{getTemplate_ServiceParam('SERVICE-ID',	'CODED-CONST',	'SID_NR',		'SID-NR',		'0',	'127',	'8')}
+				  #{getTemplate_ServiceParam('SERVICEIDRQ',	'CODED-CONST',	'SID_RQ_NR',	'SID-RQ-NR',	'1',	'186',	'8')}
 				  <PARAM xsi:type='RESERVED'>
-					<SHORT-NAME>#{r_service}_NR</SHORT-NAME>
-					<LONG-NAME>#{r_service} NR</LONG-NAME>
+				    #{getTemplate_Short_Long_Name("#{r_service} NR", "#{r_service}_NR")}
 					<BYTE-POSITION>2</BYTE-POSITION>
 					<BIT-LENGTH>8</BIT-LENGTH>
 				  </PARAM>
@@ -343,39 +168,13 @@ end
 def getTemplate_Write_Request_Toyota(did, r_service="Write")
 	return "
 		<REQUEST ID='_#{$id}'>
-		<SHORT-NAME>RQ_#{did[:DID_name]}_#{r_service}</SHORT-NAME>
-		<LONG-NAME>RQ #{did[:DID_name]} #{r_service}</LONG-NAME>
+		#{getTemplate_Short_Long_Name("RQ #{did[:DID_name]} #{r_service}")}
 			<PARAMS>
-               <PARAM SEMANTIC='SERVICE-ID' xsi:type='CODED-CONST'>
-                <SHORT-NAME>SID_RQ</SHORT-NAME>
-                <LONG-NAME>SID-RQ</LONG-NAME>
-                <BYTE-POSITION>0</BYTE-POSITION>
-                <CODED-VALUE>186</CODED-VALUE>
-                <DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
-                  <BIT-LENGTH>8</BIT-LENGTH>
-                </DIAG-CODED-TYPE>
-              </PARAM>
-              <PARAM SEMANTIC='SUBFUNCTION' xsi:type='CODED-CONST'>
-                <SHORT-NAME>Write_Data</SHORT-NAME>
-                <LONG-NAME>Write Data</LONG-NAME>
-                <BYTE-POSITION>1</BYTE-POSITION>
-                <CODED-VALUE>1</CODED-VALUE>
-                <DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
-                  <BIT-LENGTH>8</BIT-LENGTH>
-                </DIAG-CODED-TYPE>
-              </PARAM>              
-			  <PARAM SEMANTIC='ID' xsi:type='CODED-CONST'>
-                <SHORT-NAME>RecordDataIdentifier</SHORT-NAME>
-                <LONG-NAME>RecordDataIdentifier</LONG-NAME>
-                <BYTE-POSITION>2</BYTE-POSITION>
-                <CODED-VALUE>#{did[:DID_id]}</CODED-VALUE>
-                <DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
-                  <BIT-LENGTH>16</BIT-LENGTH>
-                </DIAG-CODED-TYPE>
-              </PARAM>
+			   #{getTemplate_ServiceParam('SERVICE-ID',	'CODED-CONST',	'SID_RQ',		'SID-RQ',		'0',	'186',	'8')}
+			   #{getTemplate_ServiceParam('SUBFUNCTION',	'CODED-CONST',	'Write_Data',	'Write Data',	'1',	'1',	'8')}
+			   #{getTemplate_ServiceParam('ID',			'CODED-CONST',	'RecordDataIdentifier',	'RecordDataIdentifier',	'2', "#{did[:DID_id]}",	'16')}
 			  <PARAM SEMANTIC='DATA' xsi:type='VALUE'>
-					<SHORT-NAME>#{did[:DID_name]}</SHORT-NAME>
-					<LONG-NAME>#{did[:DID_name]}</LONG-NAME>
+					#{getTemplate_Short_Long_Name("#{did[:DID_name]}", "#{did[:DID_name]}")}
 					<BYTE-POSITION>4</BYTE-POSITION>
 					 <DOP-REF ID-REF='_#{did[:DID_struct_ref_id]}'/>
 			  </PARAM>
@@ -386,36 +185,11 @@ end
 def getTemplate_Write_PosResp_Toyota(did, r_service="Write")
 	return "
 		<POS-RESPONSE ID='_#{$id}'>
-			<SHORT-NAME>PR_#{did[:DID_name]}_#{r_service}</SHORT-NAME>
-			<LONG-NAME>PR #{did[:DID_name]} #{r_service}</LONG-NAME>
+			#{getTemplate_Short_Long_Name("PR #{did[:DID_name]} #{r_service}")}
             <PARAMS>
-             <PARAM SEMANTIC='SERVICE-ID' xsi:type='CODED-CONST'>
-                <SHORT-NAME>SID_PR</SHORT-NAME>
-                <LONG-NAME>SID-PR</LONG-NAME>
-                <BYTE-POSITION>0</BYTE-POSITION>
-                <CODED-VALUE>250</CODED-VALUE>
-                <DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
-                  <BIT-LENGTH>8</BIT-LENGTH>
-                </DIAG-CODED-TYPE>
-              </PARAM>
-              <PARAM SEMANTIC='SUBFUNCTION' xsi:type='CODED-CONST'>
-                <SHORT-NAME>Write_Data</SHORT-NAME>
-                <LONG-NAME>Write Data</LONG-NAME>
-                <BYTE-POSITION>1</BYTE-POSITION>
-                <CODED-VALUE>1</CODED-VALUE>
-                <DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
-                  <BIT-LENGTH>8</BIT-LENGTH>
-                </DIAG-CODED-TYPE>
-              </PARAM>
-              <PARAM SEMANTIC='ID' xsi:type='CODED-CONST'>
-                <SHORT-NAME>RecordDataIdentifier</SHORT-NAME>
-                <LONG-NAME>RecordDataIdentifier</LONG-NAME>
-                <BYTE-POSITION>2</BYTE-POSITION>
-                <CODED-VALUE>#{did[:DID_id]}</CODED-VALUE>
-                <DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
-                  <BIT-LENGTH>16</BIT-LENGTH>
-                </DIAG-CODED-TYPE>
-              </PARAM>
+			   #{getTemplate_ServiceParam('SERVICE-ID',	'CODED-CONST',	'SID_PR',		'SID-PR',		'0',	'250',	'8')}
+			   #{getTemplate_ServiceParam('SUBFUNCTION',	'CODED-CONST',	'Write_Data',	'Write Data',	'1',	'1',	'8')}
+			   #{getTemplate_ServiceParam('ID',			'CODED-CONST',	'RecordDataIdentifier',	'RecordDataIdentifier',	'2', "#{did[:DID_id]}",	'16')}
             </PARAMS>
           </POS-RESPONSE>
 		"
@@ -423,30 +197,12 @@ end
 def getTemplate_Write_NegResp_Toyota(did, r_service="Write")
 	return "
 		<NEG-RESPONSE ID='_#{$id}'>
-			<SHORT-NAME>NR_#{did[:DID_name]}_#{r_service}</SHORT-NAME>
-			<LONG-NAME>NR #{did[:DID_name]} #{r_service}</LONG-NAME>
+			#{getTemplate_Short_Long_Name("NR #{did[:DID_name]} #{r_service}")}		
             <PARAMS>
-              <PARAM SEMANTIC='SERVICE-ID' xsi:type='CODED-CONST'>
-                <SHORT-NAME>SID_NR</SHORT-NAME>
-                <LONG-NAME>SID-NR</LONG-NAME>
-                <BYTE-POSITION>0</BYTE-POSITION>
-                <CODED-VALUE>127</CODED-VALUE>
-                <DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
-                  <BIT-LENGTH>8</BIT-LENGTH>
-                </DIAG-CODED-TYPE>
-              </PARAM>
-              <PARAM SEMANTIC='SERVICEIDRQ' xsi:type='CODED-CONST'>
-                <SHORT-NAME>SID_RQ_NR</SHORT-NAME>
-                <LONG-NAME>SID-RQ-NR</LONG-NAME>
-                <BYTE-POSITION>1</BYTE-POSITION>
-                <CODED-VALUE>186</CODED-VALUE>
-                <DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
-                  <BIT-LENGTH>8</BIT-LENGTH>
-                </DIAG-CODED-TYPE>
-              </PARAM>
+			#{getTemplate_ServiceParam('SERVICE-ID',	'CODED-CONST',	'SID_NR',		'SID-NR',		'0',	'127',	'8')}
+			#{getTemplate_ServiceParam('SERVICEIDRQ',	'CODED-CONST',	'SID_RQ_NR',	'SID-RQ-NR',	'1',	'186',	'8')}
 			  <PARAM xsi:type='RESERVED'>
-                <SHORT-NAME>#{r_service}_NR</SHORT-NAME>
-                <LONG-NAME>#{r_service}_NR</LONG-NAME>
+			  	#{getTemplate_Short_Long_Name("#{r_service}_NR", "#{r_service}_NR")}
                 <BYTE-POSITION>2</BYTE-POSITION>
                 <BIT-LENGTH>8</BIT-LENGTH>
               </PARAM>
@@ -454,6 +210,27 @@ def getTemplate_Write_NegResp_Toyota(did, r_service="Write")
           </NEG-RESPONSE>
 		"
 end
+
+def getTemplate_Short_Long_Name(long_name, short_name="")
+	if short_name == "" then
+		short_name = long_name.gsub(' ', '_')
+	end
+	
+	ret = 	"<SHORT-NAME>#{short_name}</SHORT-NAME>
+			 <LONG-NAME>#{long_name}</LONG-NAME>"
+end
+
+def getTemplate_ServiceParam(semantic, xsi_type, short_name, long_name, byte_pos, coded_val, bit_len)
+  "<PARAM SEMANTIC='#{semantic}' xsi:type='#{xsi_type}'>
+    #{getTemplate_Short_Long_Name("#{long_name}", "#{short_name}")}	
+	<BYTE-POSITION>#{byte_pos}</BYTE-POSITION>
+	<CODED-VALUE>#{coded_val}</CODED-VALUE>
+	<DIAG-CODED-TYPE BASE-DATA-TYPE='A_UINT32' xsi:type='STANDARD-LENGTH-TYPE'>
+	  <BIT-LENGTH>#{bit_len}</BIT-LENGTH>
+	</DIAG-CODED-TYPE>
+  </PARAM>"
+end
+
 
 
 def getTemplate_Dops(did)
