@@ -94,11 +94,11 @@ dataArray.each{ |did|
 	$id = $id + 1;
 	
 	if did[:DID_rw].include? "Read"	
-		request_node.last_element_child.after(getTemplate_Read_Request_Toyota(did))
+		request_node.last_element_child.after(getTemplate_Read_Request("BA", "00", did))
 		did[:RQ_id] = $id;
 		$id = $id + 1;
 		
-		posresp_node.last_element_child.after(getTemplate_Read_PosResp_Toyota(did))
+		posresp_node.last_element_child.after(getTemplate_Read_PosResp("BA", "00", did))
 		did[:POSRESP_id] = $id;
 		$id = $id + 1;
 

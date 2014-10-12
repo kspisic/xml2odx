@@ -1,31 +1,60 @@
-def getTemplate_Read_Request(main_service, did, r_service="Read")
+def getTemplate_Read_Request(main_service, sub_service, did, r_service="Read")
+
+	byte_pos = 0
+	str1 = getTemplate_ServiceParam('SERVICE-ID',	'CODED-CONST',	'SID_RQ',		'SID-RQ',		byte_pos,	main_service.to_i(16),	8)
+	byte_pos += 1
+	if sub_service != "" then
+		str2 = getTemplate_ServiceParam('SUBFUNCTION',	'CODED-CONST',	'Read_Data',	'Read Data',	byte_pos,	sub_service.to_i(16),	8)
+		byte_pos += 1
+	else
+		str2 = ""
+	end
+	
+	str3 = getTemplate_ServiceParam('ID',			'CODED-CONST',	'RecordDataIdentifier',	'RecordDataIdentifier',	byte_pos, did[:DID_id],	did[:DID_id].to_s)
+	byte_pos += did[:DID_id].hex.to_s.length / 2
+	
 	return "
 	  <REQUEST ID='_#{$id}'>
 		#{getTemplate_Short_Long_Name("RQ #{did[:DID_name]} #{r_service}")}
 		<PARAMS>
-		  #{getTemplate_ServiceParam('SERVICE-ID',	'CODED-CONST',	'SID_RQ',		'SID-RQ',		'0',	main_service.to_i(16),	'8')}
-		  #{getTemplate_ServiceParam('ID',			'CODED-CONST',	'RecordDataIdentifier',	'RecordDataIdentifier',	'1', "#{did[:DID_id]}",	'16')}
+		  #{str1}
+		  #{str2}
+		  #{str3}
 		</PARAMS>
 	  </REQUEST>
 		"
 end
-def getTemplate_Read_PosResp(main_service, did, r_service="Read")
+def getTemplate_Read_PosResp(main_service, sub_service, did, r_service="Read")
+	byte_pos = 0
+	str1 = getTemplate_ServiceParam('SERVICE-ID',	'CODED-CONST',	'SID_PR',		'SID-PR',		byte_pos,	(main_service.to_i(16) + 64).to_s,	8)
+	byte_pos += 1
+	if sub_service != "" then
+		str2 = getTemplate_ServiceParam('SUBFUNCTION',	'CODED-CONST',	'Read_Data',	'Read Data',	byte_pos,	sub_service.to_i(16),	8)
+		byte_pos += 1
+	else
+		str2 = ""
+	end
+	str3 = getTemplate_ServiceParam('ID',			'CODED-CONST',	'RecordDataIdentifier',	'RecordDataIdentifier',	byte_pos, did[:DID_id],	did[:DID_id].hex.to_s.length*4)
+	byte_pos += did[:DID_id].hex.to_s.length / 2
+
 	return "
 			  <POS-RESPONSE ID='_#{$id}'>
 			  	#{getTemplate_Short_Long_Name("PR #{did[:DID_name]} #{r_service}")}
 				<PARAMS>
-				  #{getTemplate_ServiceParam('SERVICE-ID',	'CODED-CONST',	'SID_PR',		'SID-PR',		'0',	(main_service.to_i(16) + 64).to_s,	'8')}
-				  #{getTemplate_ServiceParam('ID',			'CODED-CONST',	'RecordDataIdentifier',	'RecordDataIdentifier',	'1', "#{did[:DID_id]}",	'16')}
+				  #{str1}
+				  #{str2}
+				  #{str3}
 				  <PARAM SEMANTIC='DATA' xsi:type='VALUE'>
 				    #{getTemplate_Short_Long_Name("#{did[:DID_name]}", "#{did[:DID_name]}")}
-					<BYTE-POSITION>3</BYTE-POSITION>
+					<BYTE-POSITION>#{byte_pos}</BYTE-POSITION>
 					 <DOP-REF ID-REF='_#{did[:DID_struct_ref_id]}'/>
 				  </PARAM>
 				</PARAMS>
 			  </POS-RESPONSE>
 		"
 end
-def getTemplate_Read_NegResp(main_service, did, r_service="Read")
+
+def getTemplate_Read_NegResp(main_service, sub_service, did, r_service="Read")
 	return "
 			  <NEG-RESPONSE ID='_#{$id}'>
 			  	#{getTemplate_Short_Long_Name("NR #{did[:DID_name]} #{r_service}")}
@@ -58,7 +87,7 @@ def getTemplate_Read_NegResp(main_service, did, r_service="Read")
 		"
 end
 
-def getTemplate_Write_Request(main_service, did, r_service="Write")
+def getTemplate_Write_Request(main_service, sub_service, did, r_service="Write")
 	return "
 		<REQUEST ID='_#{$id}'>
 		#{getTemplate_Short_Long_Name("RQ #{did[:DID_name]} #{r_service}")}
@@ -74,7 +103,7 @@ def getTemplate_Write_Request(main_service, did, r_service="Write")
         </REQUEST>
 		"
 end
-def getTemplate_Write_PosResp(main_service, did, r_service="Write")
+def getTemplate_Write_PosResp(main_service, sub_service, did, r_service="Write")
 	return "
 		<POS-RESPONSE ID='_#{$id}'>
 			#{getTemplate_Short_Long_Name("PR #{did[:DID_name]} #{r_service}")}
@@ -85,7 +114,7 @@ def getTemplate_Write_PosResp(main_service, did, r_service="Write")
           </POS-RESPONSE>
 		"
 end
-def getTemplate_Write_NegResp(main_service, did, r_service="Write")
+def getTemplate_Write_NegResp(main_service, sub_service, did, r_service="Write")
 	return "
 		<NEG-RESPONSE ID='_#{$id}'>
 			#{getTemplate_Short_Long_Name("NR #{did[:DID_name]} #{r_service}")}		
