@@ -10,8 +10,10 @@ def getTemplate_Read_Request(main_service, sub_service, did, r_service="Read")
 		str2 = ""
 	end
 	
-	str3 = getTemplate_ServiceParam('ID',			'CODED-CONST',	'RecordDataIdentifier',	'RecordDataIdentifier',	byte_pos, did[:DID_id],	did[:DID_id].to_s)
-	byte_pos += did[:DID_id].hex.to_s.length / 2
+	did_hex_len = did[:DID_id].to_i.to_s(16).length
+	
+	str3 = getTemplate_ServiceParam('ID',			'CODED-CONST',	'RecordDataIdentifier',	'RecordDataIdentifier',	byte_pos, did[:DID_id],	did_hex_len*4)
+	byte_pos += did_hex_len / 2
 	
 	return "
 	  <REQUEST ID='_#{$id}'>
@@ -34,8 +36,11 @@ def getTemplate_Read_PosResp(main_service, sub_service, did, r_service="Read")
 	else
 		str2 = ""
 	end
-	str3 = getTemplate_ServiceParam('ID',			'CODED-CONST',	'RecordDataIdentifier',	'RecordDataIdentifier',	byte_pos, did[:DID_id],	did[:DID_id].hex.to_s.length*4)
-	byte_pos += did[:DID_id].hex.to_s.length / 2
+	
+	did_hex_len = did[:DID_id].to_i.to_s(16).length
+	
+	str3 = getTemplate_ServiceParam('ID',			'CODED-CONST',	'RecordDataIdentifier',	'RecordDataIdentifier',	byte_pos, did[:DID_id],	did_hex_len*4)
+	byte_pos += did_hex_len / 2
 
 	return "
 			  <POS-RESPONSE ID='_#{$id}'>

@@ -58,9 +58,12 @@ dataArray = []
 
 xml_in1.xpath("//Data").map do |node|
 	
+	did_st = node.xpath('ID').text
+	did = if did_st.include? "0x" then did_st.gsub('0x','').to_i(16).to_s else did_st end
+	
 	hash = {	:DID_name 			=> node.xpath('Name').text.gsub(/[^0-9A-Za-z]/, '_'),
 				:DID_desc 			=> "Supported Variants: #{node.xpath('SupportedVariants').text}",
-				:DID_id 			=> node.xpath('ID').text,
+				:DID_id 			=> did,
 				:DID_rw				=> node.xpath('ReadWriteMode').text,
 				:DID_byte_size		=> node.xpath('Length').text,
 				:DID_struct_ref_id 	=> 0, 
