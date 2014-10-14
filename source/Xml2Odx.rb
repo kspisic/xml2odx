@@ -6,11 +6,6 @@ require_relative 'OdxTemplates'
 include Methadone::Main
 include Methadone::CLILogging
 
-
-#CvdtInputFile = ARGV[0]
-#OdxTemplateInputFile = ARGV[1]
-#OdxOutputFile = ARGV[2]
-
 $id = 10000
 ID_REF_FunctionalClass = '_161' # 161 --> Stored data
 ID_REF_Nrc			   = '_106'
@@ -144,16 +139,19 @@ main do |cvdt_xml|
 		did[:DID_struct_ref_id] = $id
 		$id = $id + 1;
 		
+		s_id = options['service-id-read'][0..1]
+		sub_id = options['service-id-read'][2..3]
+		
 		if did[:DID_rw].include? "Read"	
-			request_node.last_element_child.after(getTemplate_Read_Request("BA", "00", did))
+			request_node.last_element_child.after(getTemplate_Read_Request(s_id, sub_id, did))
 			did[:RQ_id] = $id;
 			$id = $id + 1;
 			
-			posresp_node.last_element_child.after(getTemplate_Read_PosResp("BA", "00", did))
+			posresp_node.last_element_child.after(getTemplate_Read_PosResp(s_id, sub_id, did))
 			did[:POSRESP_id] = $id;
 			$id = $id + 1;
 
-			negresp_node.last_element_child.after(getTemplate_Read_NegResp("BA", "00", did))
+			negresp_node.last_element_child.after(getTemplate_Read_NegResp(s_id, sub_id, did))
 			did[:NEGRESP_id] = $id;
 			$id = $id + 1;	
 			
@@ -161,22 +159,27 @@ main do |cvdt_xml|
 			$id = $id + 3;
 		end
 		
+		s_id = options['service-id-write'][0..1]
+		sub_id = options['service-id-write'][2..3]
+		
 		if did[:DID_rw].include? "Write"
-			request_node.last_element_child.after(getTemplate_Write_Request("BA", "01", did))
+			request_node.last_element_child.after(getTemplate_Write_Request(s_id, sub_id, did))
 			did[:RQ_id] = $id;
 			$id = $id + 1;
 			
-			posresp_node.last_element_child.after(getTemplate_Write_PosResp("BA", "01", did))
+			posresp_node.last_element_child.after(getTemplate_Write_PosResp(s_id, sub_id, did))
 			did[:POSRESP_id] = $id;
 			$id = $id + 1;
 
-			negresp_node.last_element_child.after(getTemplate_Write_NegResp("BA", "01", did))
+			negresp_node.last_element_child.after(getTemplate_Write_NegResp(s_id, sub_id, did))
 			did[:NEGRESP_id] = $id;
 			$id = $id + 1;	
 			
 			diagcomms_node.last_element_child.after(getTemplate_DiagComms(did, "Write"))
 			$id = $id + 3;
 		end
+		
+		puts "Found following DID: #{did} \n" if options[:verbose]
 	}
 
 	f3.write(xml_in2.to_xml)
@@ -195,5 +198,12 @@ on("-t ODX_TEMPLATE", "--template", "File will be used as ODX template for outpu
 
 options['output'] = "output.odx-d"
 on("-o ODX_OUTPUT", "--output", "ODX_OUTPUT = ODX_TEMPLATE + cvdt_xml")
+
+options['service-id-read'] = '22'
+on('--service-id-read "XX[YY]"', "XX = Main Service ID for Read Request. YY = optional Sub Service ID", /^[a-fA-F0-9]{2,4}/)
+
+options['service-id-write'] = '2E'
+on('--service-id-write "XX[YY]"', "XX = Main Service ID for Write Request. YY = optional Sub Service ID", /^[a-fA-F0-9]{2,4}/)
+
 
 go!
