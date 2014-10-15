@@ -8,7 +8,6 @@ include Methadone::CLILogging
 
 $id = 10000
 ID_REF_FunctionalClass = '_161' # 161 --> Stored data
-ID_REF_Nrc			   = '_106'
 
 
 def getDidParams(subdata_nodes)
@@ -39,6 +38,94 @@ def getDidParam(subdata)
 	return hash
 end
 
+def getDidArray(xml_in)
+	dataArray = []
+	xml_in.xpath("//Data").map do |node|
+		
+		did_st = node.xpath('ID').text
+		did = if did_st.include? "0x" then did_st.gsub('0x','').to_i(16).to_s else did_st end
+		
+		hash = {	:DID_name 			=> node.xpath('Name').text.gsub(/[^0-9A-Za-z]/, '_'),
+					:DID_desc 			=> "Supported Variants: #{node.xpath('SupportedVariants').text}",
+					:DID_id 			=> did,
+					:DID_rw				=> node.xpath('ReadWriteMode').text,
+					:DID_byte_size		=> node.xpath('Length').text,
+					:DID_struct_ref_id 	=> 0, 
+					:RQ_id				=> 0,
+					:POSRESP_id			=> 0,
+					:NEGRESP_id			=> 0,
+					:DID_params			=> getDidParams(node.xpath('SubData'))
+				}
+				
+		dataArray.push(hash)
+			  
+	end # xml_in1
+	
+	return dataArray
+end
+
+def putDataToOdx(dataArray, xml_in2)
+	# Find nodes in xml template file
+	request_node = xml_in2 %('//REQUESTS')
+	posresp_node = xml_in2 %('//POS-RESPONSES')
+	negresp_node = xml_in2 %('//NEG-RESPONSES')
+	diagcomms_node = xml_in2 %('//DIAG-COMMS')
+	structures_node = xml_in2 %('//STRUCTURES')
+	dop_node = xml_in2 %('//DATA-OBJECT-PROPS')
+
+	dataArray.each{ |did|
+		
+		dop_node.add_child(getTemplate_Dops(did))
+		
+		structures_node.add_child(getTemplate_Structure(did))
+		did[:DID_struct_ref_id] = $id
+		$id = $id + 1;
+		
+		s_id = options['service-id-read'][0..1]
+		sub_id = options['service-id-read'][2..3]
+		
+		if did[:DID_rw].include? "Read"	
+			request_node.add_child(getTemplate_Read_Request(s_id, sub_id, did))
+			did[:RQ_id] = $id;
+			$id = $id + 1;
+			
+			posresp_node.add_child(getTemplate_Read_PosResp(s_id, sub_id, did))
+			did[:POSRESP_id] = $id;
+			$id = $id + 1;
+
+			negresp_node.add_child(getTemplate_Read_NegResp(s_id, sub_id, did))
+			did[:NEGRESP_id] = $id;
+			$id = $id + 1;	
+			
+			diagcomms_node.add_child(getTemplate_DiagComms(did, "Read"))
+			$id = $id + 3;
+		end
+		
+		s_id = options['service-id-write'][0..1]
+		sub_id = options['service-id-write'][2..3]
+		
+		if did[:DID_rw].include? "Write"
+			request_node.add_child(getTemplate_Write_Request(s_id, sub_id, did))
+			did[:RQ_id] = $id;
+			$id = $id + 1;
+			
+			posresp_node.add_child(getTemplate_Write_PosResp(s_id, sub_id, did))
+			did[:POSRESP_id] = $id;
+			$id = $id + 1;
+
+			negresp_node.add_child(getTemplate_Write_NegResp(s_id, sub_id, did))
+			did[:NEGRESP_id] = $id;
+			$id = $id + 1;	
+			
+			diagcomms_node.add_child(getTemplate_DiagComms(did, "Write"))
+			$id = $id + 3;
+		end
+		
+		puts "Found following DID: #{did} \n" if options[:verbose]
+	}
+
+	return xml_in2
+end
 
 main do |cvdt_xml|
 	
@@ -73,12 +160,10 @@ main do |cvdt_xml|
 		exit 1
 	end
 	
-	dataArray = []
 	
 	xml_file_array.map do |xml_file|
 
 		if xml_file[:file_type] == "Data" then
-	
 			begin
 				fh = File.open(xml_file[:file_name], "rb")
 				puts "Parsing #{xml_file[:file_name]}..."
@@ -90,26 +175,12 @@ main do |cvdt_xml|
 			xml_in = Nokogiri::XML(fh)
 			fh.close
 	
-			xml_in.xpath("//Data").map do |node|
-				
-				did_st = node.xpath('ID').text
-				did = if did_st.include? "0x" then did_st.gsub('0x','').to_i(16).to_s else did_st end
-				
-				hash = {	:DID_name 			=> node.xpath('Name').text.gsub(/[^0-9A-Za-z]/, '_'),
-							:DID_desc 			=> "Supported Variants: #{node.xpath('SupportedVariants').text}",
-							:DID_id 			=> did,
-							:DID_rw				=> node.xpath('ReadWriteMode').text,
-							:DID_byte_size		=> node.xpath('Length').text,
-							:DID_struct_ref_id 	=> 0, 
-							:RQ_id				=> 0,
-							:POSRESP_id			=> 0,
-							:NEGRESP_id			=> 0,
-							:DID_params			=> getDidParams(node.xpath('SubData'))
-						}
-						
-				dataArray.push(hash)
-					  
-			end # xml_in1
+			dataArray = getDidArray(xml_in)
+			
+			puts "Warning: Could not find any useful data in parsed file" if dataArray.empty?
+			puts dataArray if options[:verbose]
+			
+			xml_in2 = putDataToOdx(dataArray, xml_in2)
 		
 		elsif xml_file[:file_type] == "DTC" then
 			puts "Warning: DTCs not yet handled. " + xml_file[:file_name] + " ---> Will ignore this file"
@@ -117,70 +188,6 @@ main do |cvdt_xml|
 			puts "Warning: Type '#{xml_file[:file_type]}' not supported yet." + xml_file[:file_name] + " ---> Will ignore this file"
 		end # if Data
 	end # xml_file_array
-
-	#puts dataArray[0][:DID_params]
-
-	puts "Warning: Could not find any useful data in parsed files" if dataArray.empty?
-	puts dataArray if options[:verbose]
-	
-	# Find nodes in xml template file
-	request_node = xml_in2 %('//REQUESTS')
-	posresp_node = xml_in2 %('//POS-RESPONSES')
-	negresp_node = xml_in2 %('//NEG-RESPONSES')
-	diagcomms_node = xml_in2 %('//DIAG-COMMS')
-	structures_node = xml_in2 %('//STRUCTURES')
-	dop_node = xml_in2 %('//DATA-OBJECT-PROPS')
-
-	dataArray.each{ |did|
-		
-		dop_node.last_element_child.after(getTemplate_Dops(did))
-		
-		structures_node.last_element_child.after(getTemplate_Structure(did))
-		did[:DID_struct_ref_id] = $id
-		$id = $id + 1;
-		
-		s_id = options['service-id-read'][0..1]
-		sub_id = options['service-id-read'][2..3]
-		
-		if did[:DID_rw].include? "Read"	
-			request_node.last_element_child.after(getTemplate_Read_Request(s_id, sub_id, did))
-			did[:RQ_id] = $id;
-			$id = $id + 1;
-			
-			posresp_node.last_element_child.after(getTemplate_Read_PosResp(s_id, sub_id, did))
-			did[:POSRESP_id] = $id;
-			$id = $id + 1;
-
-			negresp_node.last_element_child.after(getTemplate_Read_NegResp(s_id, sub_id, did))
-			did[:NEGRESP_id] = $id;
-			$id = $id + 1;	
-			
-			diagcomms_node.last_element_child.after(getTemplate_DiagComms(did, "Read"))
-			$id = $id + 3;
-		end
-		
-		s_id = options['service-id-write'][0..1]
-		sub_id = options['service-id-write'][2..3]
-		
-		if did[:DID_rw].include? "Write"
-			request_node.last_element_child.after(getTemplate_Write_Request(s_id, sub_id, did))
-			did[:RQ_id] = $id;
-			$id = $id + 1;
-			
-			posresp_node.last_element_child.after(getTemplate_Write_PosResp(s_id, sub_id, did))
-			did[:POSRESP_id] = $id;
-			$id = $id + 1;
-
-			negresp_node.last_element_child.after(getTemplate_Write_NegResp(s_id, sub_id, did))
-			did[:NEGRESP_id] = $id;
-			$id = $id + 1;	
-			
-			diagcomms_node.last_element_child.after(getTemplate_DiagComms(did, "Write"))
-			$id = $id + 3;
-		end
-		
-		puts "Found following DID: #{did} \n" if options[:verbose]
-	}
 
 	f3.write(xml_in2.to_xml)
 	f3.close
@@ -193,7 +200,7 @@ arg         :cvdt_xml, :required
 
 on("--verbose","Be verbose")
 
-options['template'] = "Template.odx-d"
+options['template'] = "Templates/UDS_ODX_Template.odx-d"
 on("-t ODX_TEMPLATE", "--template", "File will be used as ODX template for output")
 
 options['output'] = "output.odx-d"

@@ -176,7 +176,12 @@ def getTemplate_ServiceParam(semantic, xsi_type, short_name, long_name, byte_pos
   </PARAM>"
 end
 
-
+def getTemplate_FunctClass(short_name, long_name)
+	return 
+          "<FUNCT-CLASS ID='_#{$id}'>
+				#{getTemplate_Short_Long_Name(long_name, short_name)}
+          </FUNCT-CLASS>"
+end
 
 def getTemplate_Dops(did)
 
