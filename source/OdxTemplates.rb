@@ -177,8 +177,7 @@ def getTemplate_ServiceParam(semantic, xsi_type, short_name, long_name, byte_pos
 end
 
 def getTemplate_FunctClass(short_name, long_name)
-	return 
-          "<FUNCT-CLASS ID='_#{$id}'>
+    ret ="<FUNCT-CLASS ID='_#{$id}'>
 				#{getTemplate_Short_Long_Name(long_name, short_name)}
           </FUNCT-CLASS>"
 end
@@ -209,7 +208,7 @@ def getTemplate_Dops(did)
 	return prm_string
 end
 
-def getTemplate_DiagComms(did, r_service)
+def getTemplate_DiagComms(did, r_service, id_ref_functionalclass)
 	return "
 			  <DIAG-SERVICE ID='_#{$id}' SEMANTIC='STOREDDATA' ADDRESSING='FUNCTIONAL-OR-PHYSICAL'>
 				<SHORT-NAME>#{did[:DID_name]}_#{r_service}</SHORT-NAME>
@@ -233,7 +232,7 @@ def getTemplate_DiagComms(did, r_service)
 				  </SDG>
 				</SDGS>
 				<FUNCT-CLASS-REFS>
-				  <FUNCT-CLASS-REF ID-REF='#{ID_REF_FunctionalClass}'/>
+				  <FUNCT-CLASS-REF ID-REF='_#{id_ref_functionalclass}'/>
 				</FUNCT-CLASS-REFS>
 				<AUDIENCE/>
 				<REQUEST-REF ID-REF='_#{did[:RQ_id]}'/>
@@ -271,13 +270,11 @@ def getTemplate_Params(params)
 end
 
 def getTemplate_Structure(did)
-	xml_struct = "
+	return "
 		<STRUCTURE ID='_#{$id}'>
 		  <SHORT-NAME>#{did[:DID_name]}</SHORT-NAME>
 		  <LONG-NAME>#{did[:DID_name]}</LONG-NAME>
 		  <BYTE-SIZE>#{did[:DID_byte_size]}</BYTE-SIZE>
 		  #{getTemplate_Params(did[:DID_params])}
 		</STRUCTURE>"
-		
-	return xml_struct
 end

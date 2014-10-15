@@ -64,7 +64,7 @@ def getDidArray(xml_in)
 	return dataArray
 end
 
-def putDataToOdx(dataArray, xml_in2)
+def putDataToOdx(dataArray, xml_in2, funct_class)
 	# Find nodes in xml template file
 	request_node = xml_in2 %('//REQUESTS')
 	posresp_node = xml_in2 %('//POS-RESPONSES')
@@ -72,7 +72,12 @@ def putDataToOdx(dataArray, xml_in2)
 	diagcomms_node = xml_in2 %('//DIAG-COMMS')
 	structures_node = xml_in2 %('//STRUCTURES')
 	dop_node = xml_in2 %('//DATA-OBJECT-PROPS')
-
+	funct_class_node = xml_in2 %('//FUNCT-CLASSS')
+	
+	funct_class_node.add_child(getTemplate_FunctClass(funct_class, funct_class))
+	id_ref_functionalclass = $id
+	$id = $id + 1;
+	
 	dataArray.each{ |did|
 		
 		dop_node.add_child(getTemplate_Dops(did))
@@ -97,7 +102,7 @@ def putDataToOdx(dataArray, xml_in2)
 			did[:NEGRESP_id] = $id;
 			$id = $id + 1;	
 			
-			diagcomms_node.add_child(getTemplate_DiagComms(did, "Read"))
+			diagcomms_node.add_child(getTemplate_DiagComms(did, "Read", id_ref_functionalclass))
 			$id = $id + 3;
 		end
 		
@@ -117,7 +122,7 @@ def putDataToOdx(dataArray, xml_in2)
 			did[:NEGRESP_id] = $id;
 			$id = $id + 1;	
 			
-			diagcomms_node.add_child(getTemplate_DiagComms(did, "Write"))
+			diagcomms_node.add_child(getTemplate_DiagComms(did, "Write", id_ref_functionalclass))
 			$id = $id + 3;
 		end
 		
@@ -156,8 +161,11 @@ main do |cvdt_xml|
 	end
 	
 	if xml_file_array.empty? then 
-		puts "Problem with #{cvdt_xml}: Could not detect <PartialSetList> Node in XML file"
-		exit 1
+		puts "Problem with #{cvdt_xml}: Could not detect <PartialSetList> Node in XML file. Seems not to be a vdtxml file. Will try to handle file as data xml file..."
+		
+		f_hash = { :file_name			=> cvdt_xml,
+				   :file_type		 	=> "Data"   	}
+		xml_file_array.push(f_hash)
 	end
 	
 	
@@ -180,7 +188,7 @@ main do |cvdt_xml|
 			puts "Warning: Could not find any useful data in parsed file" if dataArray.empty?
 			puts dataArray if options[:verbose]
 			
-			xml_in2 = putDataToOdx(dataArray, xml_in2)
+			xml_in2 = putDataToOdx(dataArray, xml_in2, xml_file[:file_name])
 		
 		elsif xml_file[:file_type] == "DTC" then
 			puts "Warning: DTCs not yet handled. " + xml_file[:file_name] + " ---> Will ignore this file"
@@ -203,7 +211,7 @@ on("--verbose","Be verbose")
 options['template'] = "Templates/UDS_ODX_Template.odx-d"
 on("-t ODX_TEMPLATE", "--template", "File will be used as ODX template for output")
 
-options['output'] = "output.odx-d"
+options['output'] = "output.odx-proj"
 on("-o ODX_OUTPUT", "--output", "ODX_OUTPUT = ODX_TEMPLATE + cvdt_xml")
 
 options['service-id-read'] = '22'
