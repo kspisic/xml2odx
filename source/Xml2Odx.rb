@@ -2,6 +2,7 @@ require 'nokogiri'
 require 'fileutils'
 require 'methadone'
 require_relative 'OdxTemplates'
+require_relative 'Xml2Vxt.rb'
 
 include Methadone::Main
 include Methadone::CLILogging
@@ -138,11 +139,14 @@ main do |cvdt_xml|
 	f1 = File.open(cvdt_xml, 'rb')
 	f2 = File.open(options['template'], 'rb')
 	f3 = File.open(options['output'], 'w')
+	f4 = File.open(options['vxt_output'], 'w')
+	
 	rescue => e
 		puts e
 		f1.close unless f1.nil?
 		f2.close unless f2.nil?
 		f3.close unless f3.nil?
+		f4.close unless f4.nil?
 		exit 1
 	end
 		
@@ -168,6 +172,7 @@ main do |cvdt_xml|
 		xml_file_array.push(f_hash)
 	end
 	
+	xml_test = nil
 	
 	xml_file_array.map do |xml_file|
 
@@ -189,6 +194,8 @@ main do |cvdt_xml|
 			puts dataArray if options[:verbose]
 			
 			xml_in2 = putDataToOdx(dataArray, xml_in2, xml_file[:file_name])
+			
+			xml_test = generateTestModule(dataArray)
 		
 		elsif xml_file[:file_type] == "DTC" then
 			puts "Warning: DTCs not yet handled. " + xml_file[:file_name] + " ---> Will ignore this file"
@@ -199,20 +206,23 @@ main do |cvdt_xml|
 
 	f3.write(xml_in2.to_xml)
 	f3.close
+	
+	f4.write(xml_test)
+	f4.close
 	puts "Finished!"
 end
 
-version     '0.0.1'
+version     '0.0.2'
 description "Converts VDTXML files into ODX 2.2.0 by KS \nNo warranty. Use at own risk."
 arg         :cvdt_xml, :required
 
 on("--verbose","Be verbose")
 
 options['template'] = "Templates/UDS_ODX_Template.odx-d"
-on("-t ODX_TEMPLATE", "--template", "File will be used as ODX template for output")
+on("-t <ODX_TEMPLATE>", "--template", "File will be used as ODX template for output")
 
 options['output'] = "output.odx-proj"
-on("-o ODX_OUTPUT", "--output", "ODX_OUTPUT = ODX_TEMPLATE + cvdt_xml")
+on("-o <ODX_OUTPUT>", "--output", "ODX_OUTPUT = ODX_TEMPLATE + cvdt_xml")
 
 options['service-id-read'] = '22'
 on('--service-id-read "XX[YY]"', "XX = Main Service ID for Read Request. YY = optional Sub Service ID", /^[a-fA-F0-9]{2,4}/)
@@ -220,5 +230,6 @@ on('--service-id-read "XX[YY]"', "XX = Main Service ID for Read Request. YY = op
 options['service-id-write'] = '2E'
 on('--service-id-write "XX[YY]"', "XX = Main Service ID for Write Request. YY = optional Sub Service ID", /^[a-fA-F0-9]{2,4}/)
 
-
+options['vxt_output'] = 'VXT_Output.vxt'
+on('--vxt_output <FILE>', '<FILE> will be used for output VXT CANoe XML Testcases')
 go!
