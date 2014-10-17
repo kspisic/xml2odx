@@ -1,6 +1,7 @@
 require 'nokogiri'
 require 'fileutils'
 require 'methadone'
+
 require_relative 'OdxTemplates'
 require_relative 'Xml2Vxt.rb'
 
@@ -157,7 +158,7 @@ main do |cvdt_xml|
 
 	xml_file_array = []
 	xml_in1.xpath("//PartialSet").map do |xml_file|
-		f_hash = { :file_name			=> xml_file.xpath('Path').text.gsub('..\\', ''),
+		f_hash = { :file_name			=> File.join(File.dirname(cvdt_xml), xml_file.xpath('Path').text.gsub('..\\', '')),
 				   :file_type		 	=> xml_file.xpath('Type').text   }
 		xml_file_array.push(f_hash)
 		
@@ -212,16 +213,16 @@ main do |cvdt_xml|
 	puts "Finished!"
 end
 
-version     '0.0.2'
+version     '0.0.3'
 description "Converts VDTXML files into ODX 2.2.0 by KS \nNo warranty. Use at own risk."
 arg         :cvdt_xml, :required
 
 on("--verbose","Be verbose")
 
-options['template'] = "Templates/UDS_ODX_Template.odx-d"
+options['template'] = File.join(File.dirname(__FILE__), "Templates/UDS_ODX_Template.odx-d")
 on("-t <ODX_TEMPLATE>", "--template", "File will be used as ODX template for output")
 
-options['output'] = "output.odx-proj"
+options['output'] = "ODX_Output.odx"
 on("-o <ODX_OUTPUT>", "--output", "ODX_OUTPUT = ODX_TEMPLATE + cvdt_xml")
 
 options['service-id-read'] = '22'
