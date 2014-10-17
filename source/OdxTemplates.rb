@@ -247,15 +247,9 @@ def getTemplate_DiagComms(did, r_service, id_ref_functionalclass)
 end
 
 def getTemplate_Params(params)
-
-	paramsString1 = "<PARAMS>"
-	paramsString2 = ""
-	paramsString3 = "</PARAMS>"
-	
-	start_byte = 0
-	
+	paramsString = ""
 	params.each{ |prm|
-		paramsString2 += "
+		paramsString += "
 			    <PARAM SEMANTIC='DATA' xsi:type='VALUE'>
                   <SHORT-NAME>#{prm[:PRM_shortname]}</SHORT-NAME>
                   <LONG-NAME>#{prm[:PRM_longname]}</LONG-NAME>
@@ -266,7 +260,7 @@ def getTemplate_Params(params)
 		"
 	}
 
-	return paramsString1 + paramsString2 + paramsString3
+	return "<PARAMS>" + paramsString + "</PARAMS>"
 end
 
 def getTemplate_Structure(did)
