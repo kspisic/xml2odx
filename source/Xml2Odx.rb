@@ -9,8 +9,6 @@ include Methadone::Main
 include Methadone::CLILogging
 
 $id = 10000
-ID_REF_FunctionalClass = '_161' # 161 --> Stored data
-
 
 def getDidParams(subdata_nodes)
 
@@ -68,13 +66,13 @@ end
 
 def putDataToOdx(dataArray, xml_in2, funct_class)
 	# Find nodes in xml template file
-	request_node = xml_in2 %('//REQUESTS')
-	posresp_node = xml_in2 %('//POS-RESPONSES')
-	negresp_node = xml_in2 %('//NEG-RESPONSES')
-	diagcomms_node = xml_in2 %('//DIAG-COMMS')
-	structures_node = xml_in2 %('//STRUCTURES')
-	dop_node = xml_in2 %('//DATA-OBJECT-PROPS')
-	funct_class_node = xml_in2 %('//FUNCT-CLASSS')
+	request_node = xml_in2.at('//REQUESTS')
+	posresp_node = xml_in2.at('//POS-RESPONSES')
+	negresp_node = xml_in2.at('//NEG-RESPONSES')
+	diagcomms_node = xml_in2.at('//DIAG-COMMS')
+	structures_node = xml_in2.at('//STRUCTURES')
+	dop_node = xml_in2.at('//DATA-OBJECT-PROPS')
+	funct_class_node = xml_in2.at('//FUNCT-CLASSS')
 	
 	funct_class_node.add_child(getTemplate_FunctClass(funct_class, funct_class))
 	id_ref_functionalclass = $id
@@ -166,7 +164,7 @@ main do |cvdt_xml|
 	end
 	
 	if xml_file_array.empty? then 
-		puts "Problem with #{cvdt_xml}: Could not detect <PartialSetList> Node in XML file. Seems not to be a vdtxml file. Will try to handle file as data xml file..."
+		puts "Warning: #{cvdt_xml}: Could not detect <PartialSetList> Node in XML file. Seems not to be a vdtxml file. Will try to handle file as data xml file..."
 		
 		f_hash = { :file_name			=> cvdt_xml,
 				   :file_type		 	=> "Data"   	}
@@ -194,9 +192,9 @@ main do |cvdt_xml|
 			puts "Warning: Could not find any useful data in parsed file" if dataArray.empty?
 			puts dataArray if options[:verbose]
 			
-			xml_in2 = putDataToOdx(dataArray, xml_in2, xml_file[:file_name])
+			xml_in2 = putDataToOdx(dataArray, xml_in2, File.basename(xml_file[:file_name]))
 			
-			xml_test = generateTestModule(dataArray)
+			xml_test = generateTestModule(dataArray, xml_test, File.basename(xml_file[:file_name]))
 		
 		elsif xml_file[:file_type] == "DTC" then
 			puts "Warning: DTCs not yet handled. " + xml_file[:file_name] + " ---> Will ignore this file"

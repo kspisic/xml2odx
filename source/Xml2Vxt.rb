@@ -7,13 +7,11 @@ def getUniqueVarName(param)
 	return "VAR_" + param[:PRM_shortname] + param[:PRM_dop]
 end
 
-def generateTestModule(did_array)
-
-	
+def generateTestModule(did_array, other_xml_test_module, testgroup_name)
 
 	builder = Nokogiri::XML::Builder.new do |xml|
 	  xml.testmodule(	'xmlns:xsi' => 'http://www.w3.org/2001/XMLSchema-instance',
-						'xmlns'     => 'http://www.vector-informatik.de/CANoe/TestModule/1.15',
+						#'xmlns'     => 'http://www.vector-informatik.de/CANoe/TestModule/1.15',
 						'xsi:schemaLocation' => 'http://www.vector-informatik.de/CANoe/TestModule/1.15 testmodule.xsd',
 						:title 		=> "Toyota Tests",
 						:version	=> "1.0") {
@@ -25,7 +23,7 @@ def generateTestModule(did_array)
 				}
 			}
 		}
-		xml.testgroup(:title => 'Read and Write Parameters') {
+		xml.testgroup(:title => "Read and Write Parameters [#{testgroup_name}]") {
 			did_array.each { |did|
 				xml.testcase(:ident => "#{did[:DID_name]}_Read", :title => "0x#{did[:DID_id].to_i.to_s(16).upcase}: #{did[:DID_name]}_Read") {
 					xml.diagservice(:title => "#{did[:DID_name]}_Read", :result => "pos", :ecu => $Ecu, :service => "#{did[:DID_name]}_Read") {
@@ -83,16 +81,23 @@ def generateTestModule(did_array)
 		}
 	 }
 	end
-	
-	#puts builder.to_xml
-	did_array.each { |did|
-		did[:DID_params].each { |param|
-			#if param[:PRM_isArray] or param[:PRM_shortname].include? "[" then
-				#puts param[:PRM_lengthinbits]
-			#end
-		}
-	}
 
-	return builder.to_xml
+	#merge with other xml input file
+	if other_xml_test_module != nil then
+	
+		
+		preparation_node = other_xml_test_module.at("preparation")
+		testgroup_node = other_xml_test_module.at("testgroup")
+		
+		
+		
+		preparation_node.add_child(builder.doc.at('preparation').children)
+		testgroup_node.add_next_sibling(builder.doc.at('testgroup'))
+	
+	else
+		other_xml_test_module = builder.doc
+	end
+	
+	return other_xml_test_module
 	
 end
