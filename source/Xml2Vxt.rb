@@ -44,7 +44,9 @@ def generateTestModule(did_array)
 						if not param[:PRM_isArray] then
 							xml.varset_bycapl(:name => getUniqueVarName(param)) {
 								xml.caplfunction { 
-									xml.cdata("#{getUniqueVarName(param)} = #{getUniqueVarName(param)} + delta;")
+									max = 2**param[:PRM_lengthinbits] - 1
+									var = getUniqueVarName(param)
+									xml.cdata("if(#{max} - delta >= #{var}) #{var} = #{var} + delta; else if(#{var} >= delta) #{var} = #{var} - delta; else #{var} = 0;")
 								}
 								xml.caplparam("#{@Delta}", :name => "delta", :type => "int")
 							}
@@ -83,7 +85,13 @@ def generateTestModule(did_array)
 	end
 	
 	#puts builder.to_xml
-	#puts did_array[0]
+	did_array.each { |did|
+		did[:DID_params].each { |param|
+			#if param[:PRM_isArray] or param[:PRM_shortname].include? "[" then
+				#puts param[:PRM_lengthinbits]
+			#end
+		}
+	}
 
 	return builder.to_xml
 	
