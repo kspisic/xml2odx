@@ -8,7 +8,7 @@ require_relative 'Xml2Vxt.rb'
 include Methadone::Main
 include Methadone::CLILogging
 
-$id = 10000
+$id = 10000000
 
 def getDidParams(subdata_nodes)
 
@@ -214,7 +214,7 @@ main do |cvdt_xml|
 	puts "Finished!"
 end
 
-version     '0.0.3'
+version     '0.0.4'
 description "Converts VDTXML files into ODX 2.2.0 by KS \nNo warranty. Use at own risk."
 arg         :cvdt_xml, :required
 
