@@ -32,40 +32,50 @@ def generateTestModule(did_array)
 						xml.diagrequest
 						xml.diagresponse {
 							did[:DID_params].each { |param|
-								xml.diagparam(:qualifier => param[:PRM_shortname], :copytovar => getUniqueVarName(param))	{
-									xml.var(:name => getUniqueVarName(param))
-								}
+								if not param[:PRM_isArray] then
+									xml.diagparam(:qualifier => param[:PRM_shortname], :copytovar => getUniqueVarName(param))	{
+										xml.var(:name => getUniqueVarName(param))
+									}
+								end
 							}
 						}
 					}
 					did[:DID_params].each { |param|
-						xml.varset_bycapl(:name => getUniqueVarName(param)) {
-							xml.caplfunction { 
-								xml.cdata("#{getUniqueVarName(param)} = #{getUniqueVarName(param)} + delta;")
+						if not param[:PRM_isArray] then
+							xml.varset_bycapl(:name => getUniqueVarName(param)) {
+								xml.caplfunction { 
+									xml.cdata("#{getUniqueVarName(param)} = #{getUniqueVarName(param)} + delta;")
+								}
+								xml.caplparam("#{@Delta}", :name => "delta", :type => "int")
 							}
-							xml.caplparam("#{@Delta}", :name => "delta", :type => "int")
-						}
+						end
 					}
-					xml.diagservice(:title => "#{did[:DID_name]}_Write", :result => "pos", :ecu => $Ecu, :service => "#{did[:DID_name]}_Write") {
-						xml.diagrequest {
-							did[:DID_params].each { |param|
-								xml.diagparam(:qualifier => param[:PRM_shortname])	{
-									xml.var(:name => getUniqueVarName(param))
+					if did[:DID_rw].include? "Write" then
+						xml.diagservice(:title => "#{did[:DID_name]}_Write", :result => "pos", :ecu => $Ecu, :service => "#{did[:DID_name]}_Write") {
+							xml.diagrequest {
+								did[:DID_params].each { |param|
+									if not param[:PRM_isArray] then
+										xml.diagparam(:qualifier => param[:PRM_shortname])	{
+											xml.var(:name => getUniqueVarName(param))
+										}
+									end
+								}
+							}
+							xml.diagresponse
+						}
+						xml.diagservice(:title => "#{did[:DID_name]}_Read", :result => "pos", :ecu => $Ecu, :service => "#{did[:DID_name]}_Read") {
+							xml.diagrequest
+							xml.diagresponse {
+								did[:DID_params].each { |param|
+									if not param[:PRM_isArray] then
+										xml.diagparam(:qualifier => param[:PRM_shortname])	{
+											xml.var(:name => getUniqueVarName(param))
+										}
+									end
 								}
 							}
 						}
-						xml.diagresponse
-					}
-					xml.diagservice(:title => "#{did[:DID_name]}_Read", :result => "pos", :ecu => $Ecu, :service => "#{did[:DID_name]}_Read") {
-						xml.diagrequest
-						xml.diagresponse {
-							did[:DID_params].each { |param|
-								xml.diagparam(:qualifier => param[:PRM_shortname])	{
-									xml.var(:name => getUniqueVarName(param))
-								}
-							}
-						}
-					}
+					end
 				}
 			}
 		}
