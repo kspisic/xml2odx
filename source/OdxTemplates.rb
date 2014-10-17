@@ -272,3 +272,12 @@ def getTemplate_Structure(did)
 		  #{getTemplate_Params(did[:DID_params])}
 		</STRUCTURE>"
 end
+
+
+def setODXEcuName(xml_doc, new_ecu_name)
+	xml_doc.at('ODX/DIAG-LAYER-CONTAINER/SHORT-NAME').content = new_ecu_name
+	xml_doc.at('ODX/DIAG-LAYER-CONTAINER/LONG-NAME').content = new_ecu_name
+	xml_doc.at('BASE-VARIANT/SHORT-NAME').content = new_ecu_name
+	xml_doc.at('BASE-VARIANT/LONG-NAME').content = new_ecu_name
+	xml_doc.at('BASE-VARIANT')['ID'] = new_ecu_name
+end

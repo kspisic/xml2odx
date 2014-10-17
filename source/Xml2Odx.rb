@@ -158,8 +158,7 @@ main do |cvdt_xml|
 	xml_in1.xpath("//PartialSet").map do |xml_file|
 		f_hash = { :file_name			=> File.join(File.dirname(cvdt_xml), xml_file.xpath('Path').text.gsub('..\\', '')),
 				   :file_type		 	=> xml_file.xpath('Type').text   }
-		xml_file_array.push(f_hash)
-		
+		xml_file_array.push(f_hash)		
 		puts "Will use '#{f_hash[:file_name]}' as <<#{f_hash[:file_type]}>>"
 	end
 	
@@ -169,6 +168,8 @@ main do |cvdt_xml|
 		f_hash = { :file_name			=> cvdt_xml,
 				   :file_type		 	=> "Data"   	}
 		xml_file_array.push(f_hash)
+	else	
+		options['ecu_name'] = xml_in1.at('Project/Name').text.gsub(/[^0-9A-Za-z]/, '_')
 	end
 	
 	xml_test = nil
@@ -194,7 +195,7 @@ main do |cvdt_xml|
 			
 			xml_in2 = putDataToOdx(dataArray, xml_in2, File.basename(xml_file[:file_name]))
 			
-			xml_test = generateTestModule(dataArray, xml_test, File.basename(xml_file[:file_name]))
+			xml_test = generateTestModule(dataArray, xml_test, File.basename(xml_file[:file_name]), options['ecu_name'])
 		
 		elsif xml_file[:file_type] == "DTC" then
 			puts "Warning: DTCs not yet handled. " + xml_file[:file_name] + " ---> Will ignore this file"
@@ -203,6 +204,8 @@ main do |cvdt_xml|
 		end # if Data
 	end # xml_file_array
 
+	setODXEcuName(xml_in2, options['ecu_name'])
+	
 	f3.write(xml_in2.to_xml)
 	f3.close
 	
@@ -231,4 +234,7 @@ on('--service-id-write "XX[YY]"', "XX = Main Service ID for Write Request. YY = 
 
 options['vxt_output'] = 'VXT_Output.vxt'
 on('--vxt_output <FILE>', '<FILE> will be used for output VXT CANoe XML Testcases')
+
+options['ecu_name'] = 'Cool_ECU'
+on('--ecu_name <ECU_NAME>', 'This value is set automatically to value from cvdt xml file. If cvdt not used as input it can be set manually with this option. Will be used in ODX file and VXT file at several places')
 go!

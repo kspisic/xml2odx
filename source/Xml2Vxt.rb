@@ -1,13 +1,12 @@
 require 'nokogiri'
 
-$Ecu = "Keko"
 @Delta = 10
 
 def getUniqueVarName(param)
 	return "VAR_" + param[:PRM_shortname] + param[:PRM_dop]
 end
 
-def generateTestModule(did_array, other_xml_test_module, testgroup_name)
+def generateTestModule(did_array, other_xml_test_module, testgroup_name, ecu_name)
 
 	builder = Nokogiri::XML::Builder.new do |xml|
 	  xml.testmodule(	'xmlns:xsi' => 'http://www.w3.org/2001/XMLSchema-instance',
@@ -26,7 +25,7 @@ def generateTestModule(did_array, other_xml_test_module, testgroup_name)
 		xml.testgroup(:title => "Read and Write Parameters [#{testgroup_name}]") {
 			did_array.each { |did|
 				xml.testcase(:ident => "#{did[:DID_name]}_Read", :title => "0x#{did[:DID_id].to_i.to_s(16).upcase}: #{did[:DID_name]}_Read") {
-					xml.diagservice(:title => "#{did[:DID_name]}_Read", :result => "pos", :ecu => $Ecu, :service => "#{did[:DID_name]}_Read") {
+					xml.diagservice(:title => "#{did[:DID_name]}_Read", :result => "pos", :ecu => ecu_name, :service => "#{did[:DID_name]}_Read") {
 						xml.diagrequest
 						xml.diagresponse {
 							did[:DID_params].each { |param|
@@ -51,7 +50,7 @@ def generateTestModule(did_array, other_xml_test_module, testgroup_name)
 						end
 					}
 					if did[:DID_rw].include? "Write" then
-						xml.diagservice(:title => "#{did[:DID_name]}_Write", :result => "pos", :ecu => $Ecu, :service => "#{did[:DID_name]}_Write") {
+						xml.diagservice(:title => "#{did[:DID_name]}_Write", :result => "pos", :ecu => ecu_name, :service => "#{did[:DID_name]}_Write") {
 							xml.diagrequest {
 								did[:DID_params].each { |param|
 									if not param[:PRM_isArray] then
@@ -63,7 +62,7 @@ def generateTestModule(did_array, other_xml_test_module, testgroup_name)
 							}
 							xml.diagresponse
 						}
-						xml.diagservice(:title => "#{did[:DID_name]}_Read", :result => "pos", :ecu => $Ecu, :service => "#{did[:DID_name]}_Read") {
+						xml.diagservice(:title => "#{did[:DID_name]}_Read", :result => "pos", :ecu => ecu_name, :service => "#{did[:DID_name]}_Read") {
 							xml.diagrequest
 							xml.diagresponse {
 								did[:DID_params].each { |param|
@@ -84,20 +83,14 @@ def generateTestModule(did_array, other_xml_test_module, testgroup_name)
 
 	#merge with other xml input file
 	if other_xml_test_module != nil then
-	
-		
 		preparation_node = other_xml_test_module.at("preparation")
 		testgroup_node = other_xml_test_module.at("testgroup")
 		
-		
-		
 		preparation_node.add_child(builder.doc.at('preparation').children)
 		testgroup_node.add_next_sibling(builder.doc.at('testgroup'))
-	
 	else
 		other_xml_test_module = builder.doc
 	end
 	
 	return other_xml_test_module
-	
 end
