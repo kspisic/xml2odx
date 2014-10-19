@@ -104,7 +104,7 @@ main do |cvdt_xml|
 	puts "Finished!"
 end
 
-version     '0.0.4'
+version     '0.1.0'
 description "Converts VDTXML files into ODX 2.2.0 by KS \nNo warranty. Use at own risk."
 arg         :cvdt_xml, :required
 
