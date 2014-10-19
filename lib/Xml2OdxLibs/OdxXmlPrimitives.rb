@@ -1,3 +1,9 @@
+# Contains mapping from internal ruby DID struct to 
+# ODX XML primitives
+#
+# Copyright (C) 2014 Kresimir Spisic <keko@spisic.de>
+# See COPYING for the License of this software
+
 def getTemplate_Read_Request(main_service, sub_service, did, r_service="Read")
 
 	byte_pos = 0
@@ -10,14 +16,14 @@ def getTemplate_Read_Request(main_service, sub_service, did, r_service="Read")
 		str2 = ""
 	end
 	
-	did_hex_len = did[:DID_id].to_i.to_s(16).length
+	did_hex_len = did.id.to_i.to_s(16).length
 	
-	str3 = getTemplate_ServiceParam('ID',			'CODED-CONST',	'RecordDataIdentifier',	'RecordDataIdentifier',	byte_pos, did[:DID_id],	did_hex_len*4)
+	str3 = getTemplate_ServiceParam('ID',			'CODED-CONST',	'RecordDataIdentifier',	'RecordDataIdentifier',	byte_pos, did.id,	did_hex_len*4)
 	byte_pos += did_hex_len / 2
 	
 	return "
-	  <REQUEST ID='_#{$id}'>
-		#{getTemplate_Short_Long_Name("RQ #{did[:DID_name]} #{r_service}")}
+	  <REQUEST ID='_#{RefId.id}'>
+		#{getTemplate_Short_Long_Name("RQ #{did.name} #{r_service}")}
 		<PARAMS>
 		  #{str1}
 		  #{str2}
@@ -37,22 +43,22 @@ def getTemplate_Read_PosResp(main_service, sub_service, did, r_service="Read")
 		str2 = ""
 	end
 	
-	did_hex_len = did[:DID_id].to_i.to_s(16).length
+	did_hex_len = did.id.to_i.to_s(16).length
 	
-	str3 = getTemplate_ServiceParam('ID',			'CODED-CONST',	'RecordDataIdentifier',	'RecordDataIdentifier',	byte_pos, did[:DID_id],	did_hex_len*4)
+	str3 = getTemplate_ServiceParam('ID',			'CODED-CONST',	'RecordDataIdentifier',	'RecordDataIdentifier',	byte_pos, did.id,	did_hex_len*4)
 	byte_pos += did_hex_len / 2
 
 	return "
-			  <POS-RESPONSE ID='_#{$id}'>
-			  	#{getTemplate_Short_Long_Name("PR #{did[:DID_name]} #{r_service}")}
+			  <POS-RESPONSE ID='_#{RefId.id}'>
+			  	#{getTemplate_Short_Long_Name("PR #{did.name} #{r_service}")}
 				<PARAMS>
 				  #{str1}
 				  #{str2}
 				  #{str3}
 				  <PARAM SEMANTIC='DATA' xsi:type='VALUE'>
-				    #{getTemplate_Short_Long_Name("#{did[:DID_name]}", "#{did[:DID_name]}")}
+				    #{getTemplate_Short_Long_Name("#{did.name}", "#{did.name}")}
 					<BYTE-POSITION>#{byte_pos}</BYTE-POSITION>
-					 <DOP-REF ID-REF='_#{did[:DID_struct_ref_id]}'/>
+					 <DOP-REF ID-REF='_#{did.struct_ref_id}'/>
 				  </PARAM>
 				</PARAMS>
 			  </POS-RESPONSE>
@@ -61,8 +67,8 @@ end
 
 def getTemplate_Read_NegResp(main_service, sub_service, did, r_service="Read")
 	return "
-			  <NEG-RESPONSE ID='_#{$id}'>
-			  	#{getTemplate_Short_Long_Name("NR #{did[:DID_name]} #{r_service}")}
+			  <NEG-RESPONSE ID='_#{RefId.id}'>
+			  	#{getTemplate_Short_Long_Name("NR #{did.name} #{r_service}")}
 				<PARAMS>
 				  #{getTemplate_ServiceParam('SERVICE-ID',	'CODED-CONST',	'SID_NR',		'SID-NR',		0,	127,	8)}
 				  #{getTemplate_ServiceParam('SERVICEIDRQ',	'CODED-CONST',	'SID_RQ_NR',	'SID-RQ-NR',	1,	main_service.to_i(16),	8)}				
@@ -88,22 +94,22 @@ def getTemplate_Write_Request(main_service, sub_service, did, r_service="Write")
 		str2 = ""
 	end
 	
-	did_hex_len = did[:DID_id].to_i.to_s(16).length
+	did_hex_len = did.id.to_i.to_s(16).length
 	
-	str3 = getTemplate_ServiceParam('ID',			'CODED-CONST',	'RecordDataIdentifier',	'RecordDataIdentifier',	byte_pos, did[:DID_id],	did_hex_len*4)
+	str3 = getTemplate_ServiceParam('ID',			'CODED-CONST',	'RecordDataIdentifier',	'RecordDataIdentifier',	byte_pos, did.id,	did_hex_len*4)
 	byte_pos += did_hex_len / 2
 
 	return "
-		<REQUEST ID='_#{$id}'>
-		#{getTemplate_Short_Long_Name("RQ #{did[:DID_name]} #{r_service}")}
+		<REQUEST ID='_#{RefId.id}'>
+		#{getTemplate_Short_Long_Name("RQ #{did.name} #{r_service}")}
             <PARAMS>
 				  #{str1}
 				  #{str2}
 				  #{str3}			  
 				  <PARAM SEMANTIC='DATA' xsi:type='VALUE'>
-					#{getTemplate_Short_Long_Name("#{did[:DID_name]}", "#{did[:DID_name]}")}
+					#{getTemplate_Short_Long_Name("#{did.name}", "#{did.name}")}
 					<BYTE-POSITION>#{byte_pos}</BYTE-POSITION>
-					 <DOP-REF ID-REF='_#{did[:DID_struct_ref_id]}'/>
+					 <DOP-REF ID-REF='_#{did.struct_ref_id}'/>
 			  </PARAM>
             </PARAMS>
         </REQUEST>
@@ -121,14 +127,14 @@ def getTemplate_Write_PosResp(main_service, sub_service, did, r_service="Write")
 		str2 = ""
 	end
 	
-	did_hex_len = did[:DID_id].to_i.to_s(16).length
+	did_hex_len = did.id.to_i.to_s(16).length
 	
-	str3 = getTemplate_ServiceParam('ID',			'CODED-CONST',	'RecordDataIdentifier',	'RecordDataIdentifier',	byte_pos, did[:DID_id],	did_hex_len*4)
+	str3 = getTemplate_ServiceParam('ID',			'CODED-CONST',	'RecordDataIdentifier',	'RecordDataIdentifier',	byte_pos, did.id,	did_hex_len*4)
 	byte_pos += did_hex_len / 2
 
 	return "
-		<POS-RESPONSE ID='_#{$id}'>
-			#{getTemplate_Short_Long_Name("PR #{did[:DID_name]} #{r_service}")}
+		<POS-RESPONSE ID='_#{RefId.id}'>
+			#{getTemplate_Short_Long_Name("PR #{did.name} #{r_service}")}
             <PARAMS>
 				  #{str1}
 				  #{str2}
@@ -140,8 +146,8 @@ end
 
 def getTemplate_Write_NegResp(main_service, sub_service, did, r_service="Write")
 	return "
-		<NEG-RESPONSE ID='_#{$id}'>
-			#{getTemplate_Short_Long_Name("NR #{did[:DID_name]} #{r_service}")}		
+		<NEG-RESPONSE ID='_#{RefId.id}'>
+			#{getTemplate_Short_Long_Name("NR #{did.name} #{r_service}")}		
             <PARAMS>
 			  #{getTemplate_ServiceParam('SERVICE-ID',	'CODED-CONST',	'SID_NR',		'SID-NR',		0,	127,	8)}
 			  #{getTemplate_ServiceParam('SERVICEIDRQ',	'CODED-CONST',	'SID_RQ_NR',	'SID-RQ-NR',	1,	main_service.to_i(16),	8)}							
@@ -177,7 +183,7 @@ def getTemplate_ServiceParam(semantic, xsi_type, short_name, long_name, byte_pos
 end
 
 def getTemplate_FunctClass(short_name, long_name)
-    ret ="<FUNCT-CLASS ID='_#{$id}'>
+    ret ="<FUNCT-CLASS ID='_#{RefId.id}'>
 				#{getTemplate_Short_Long_Name(long_name, short_name)}
           </FUNCT-CLASS>"
 end
@@ -186,14 +192,14 @@ def getTemplate_Dops(did)
 
 	prm_string = ""
 	
-	did[:DID_params].each{ |prm|
+	did.params.each{ |prm|
 	
-		bit_length = if prm[:PRM_isArray] then (prm[:PRM_ArrayLengthInByte]*prm[:PRM_ArrayElementLengthInBits]) else prm[:PRM_lengthinbits] end
+		bit_length = if prm.isArray then (prm.arrayLengthInByte*prm.arrayElementLengthInBits) else prm.lengthinbits end
 	
 		prm_string += "
-			<DATA-OBJECT-PROP ID='_#{prm[:PRM_dop]}'>
-              <SHORT-NAME>#{prm[:PRM_shortname]}</SHORT-NAME>
-              <LONG-NAME>#{prm[:PRM_longname]}</LONG-NAME>
+			<DATA-OBJECT-PROP ID='_#{prm.dop}'>
+              <SHORT-NAME>#{prm.shortname}</SHORT-NAME>
+              <LONG-NAME>#{prm.longname}</LONG-NAME>
               <COMPU-METHOD>
                 <CATEGORY>IDENTICAL</CATEGORY>
               </COMPU-METHOD>
@@ -210,22 +216,22 @@ end
 
 def getTemplate_DiagComms(did, r_service, id_ref_functionalclass)
 	return "
-			  <DIAG-SERVICE ID='_#{$id}' SEMANTIC='STOREDDATA' ADDRESSING='FUNCTIONAL-OR-PHYSICAL'>
-				<SHORT-NAME>#{did[:DID_name]}_#{r_service}</SHORT-NAME>
-				<LONG-NAME>#{did[:DID_name]} #{r_service}</LONG-NAME>
+			  <DIAG-SERVICE ID='_#{RefId.id}' SEMANTIC='STOREDDATA' ADDRESSING='FUNCTIONAL-OR-PHYSICAL'>
+				<SHORT-NAME>#{did.name}_#{r_service}</SHORT-NAME>
+				<LONG-NAME>#{did.name} #{r_service}</LONG-NAME>
 				<SDGS>
 				  <SDG>
-					<SDG-CAPTION ID='_#{$id+1}'>
+					<SDG-CAPTION ID='_#{RefId.id+1}'>
 					  <SHORT-NAME>CANdelaServiceInformation</SHORT-NAME>
 					</SDG-CAPTION>
-					<SD SI='DiagInstanceQualifier'>#{did[:DID_name]}</SD>
-					<SD SI='DiagInstanceName'>#{did[:DID_name]}</SD>
+					<SD SI='DiagInstanceQualifier'>#{did.name}</SD>
+					<SD SI='DiagInstanceName'>#{did.name}</SD>
 					<SD SI='ServiceQualifier'>#{r_service}</SD>
 					<SD SI='ServiceName'>#{r_service}</SD>
 					<SD SI='PositiveResponseSuppressed'>no</SD>
 				  </SDG>
 				  <SDG>
-					<SDG-CAPTION ID='_#{$id+2}'>
+					<SDG-CAPTION ID='_#{RefId.id+2}'>
 					  <SHORT-NAME>State_Model</SHORT-NAME>
 					  <LONG-NAME>State Model</LONG-NAME>
 					</SDG-CAPTION>
@@ -235,12 +241,12 @@ def getTemplate_DiagComms(did, r_service, id_ref_functionalclass)
 				  <FUNCT-CLASS-REF ID-REF='_#{id_ref_functionalclass}'/>
 				</FUNCT-CLASS-REFS>
 				<AUDIENCE/>
-				<REQUEST-REF ID-REF='_#{did[:RQ_id]}'/>
+				<REQUEST-REF ID-REF='_#{did.rq_id}'/>
 				<POS-RESPONSE-REFS>
-				  <POS-RESPONSE-REF ID-REF='_#{did[:POSRESP_id]}'/>
+				  <POS-RESPONSE-REF ID-REF='_#{did.posresp_id}'/>
 				</POS-RESPONSE-REFS>
 				<NEG-RESPONSE-REFS>
-				  <NEG-RESPONSE-REF ID-REF='_#{did[:NEGRESP_id]}'/>
+				  <NEG-RESPONSE-REF ID-REF='_#{did.negresp_id}'/>
 				</NEG-RESPONSE-REFS>
 			  </DIAG-SERVICE>
 		"
@@ -251,11 +257,11 @@ def getTemplate_Params(params)
 	params.each{ |prm|
 		paramsString += "
 			    <PARAM SEMANTIC='DATA' xsi:type='VALUE'>
-                  <SHORT-NAME>#{prm[:PRM_shortname]}</SHORT-NAME>
-                  <LONG-NAME>#{prm[:PRM_longname]}</LONG-NAME>
-                  <BYTE-POSITION>#{prm[:PRM_startbyte]}</BYTE-POSITION>
-				  <BIT-POSITION>#{prm[:PRM_startbit]}</BIT-POSITION>
-                  <DOP-REF ID-REF='_#{prm[:PRM_dop]}'/>
+                  <SHORT-NAME>#{prm.shortname}</SHORT-NAME>
+                  <LONG-NAME>#{prm.longname}</LONG-NAME>
+                  <BYTE-POSITION>#{prm.startbyte}</BYTE-POSITION>
+				  <BIT-POSITION>#{prm.startbit}</BIT-POSITION>
+                  <DOP-REF ID-REF='_#{prm.dop}'/>
                 </PARAM>
 		"
 	}
@@ -265,11 +271,11 @@ end
 
 def getTemplate_Structure(did)
 	return "
-		<STRUCTURE ID='_#{$id}'>
-		  <SHORT-NAME>#{did[:DID_name]}</SHORT-NAME>
-		  <LONG-NAME>#{did[:DID_name]}</LONG-NAME>
-		  <BYTE-SIZE>#{did[:DID_byte_size]}</BYTE-SIZE>
-		  #{getTemplate_Params(did[:DID_params])}
+		<STRUCTURE ID='_#{RefId.id}'>
+		  <SHORT-NAME>#{did.name}</SHORT-NAME>
+		  <LONG-NAME>#{did.name}</LONG-NAME>
+		  <BYTE-SIZE>#{did.byte_size}</BYTE-SIZE>
+		  #{getTemplate_Params(did.params)}
 		</STRUCTURE>"
 end
 
