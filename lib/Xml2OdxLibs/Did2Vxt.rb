@@ -13,6 +13,8 @@ end
 
 def generateTestModule(did_array, other_xml_test_module, testgroup_name, ecu_name)
 
+	often_used_code = nil
+
 	builder = Nokogiri::XML::Builder.new do |xml|
 	  xml.testmodule(	'xmlns:xsi' => 'http://www.w3.org/2001/XMLSchema-instance',
 						#'xmlns'     => 'http://www.vector-informatik.de/CANoe/TestModule/1.15',
@@ -29,7 +31,7 @@ def generateTestModule(did_array, other_xml_test_module, testgroup_name, ecu_nam
 		}
 		xml.testgroup(:title => "Read and Write Parameters [#{testgroup_name}]") {
 			did_array.each { |did|
-				xml.testcase(:ident => "#{did.name}_Read", :title => "0x#{did.id.to_i.to_s(16).upcase}: #{did.name}_Read") {
+				xml.testcase(:ident => "#{did.name}_Read", :title => "0x#{did.id.to_i.to_s(16).upcase}: #{did.name}: Read all Parameters of DID, write Parameters with Delta and read back") {
 					xml.diagservice(:title => "#{did.name}_Read", :result => "pos", :ecu => ecu_name, :service => "#{did.name}_Read") {
 						xml.diagrequest
 						xml.diagresponse {
@@ -38,6 +40,9 @@ def generateTestModule(did_array, other_xml_test_module, testgroup_name, ecu_nam
 									xml.diagparam(:qualifier => param.shortname, :copytovar => getUniqueVarName(param))	{
 										xml.var(:name => getUniqueVarName(param))
 									}
+								else
+									puts "array: " + param.inspect
+								
 								end
 							}
 						}
@@ -67,23 +72,40 @@ def generateTestModule(did_array, other_xml_test_module, testgroup_name, ecu_nam
 							}
 							xml.diagresponse
 						}
-						xml.diagservice(:title => "#{did.name}_Read", :result => "pos", :ecu => ecu_name, :service => "#{did.name}_Read") {
-							xml.diagrequest
-							xml.diagresponse {
-								did.params.each { |param|
-									if not param.isArray then
-										xml.diagparam(:qualifier => param.shortname)	{
-											xml.var(:name => getUniqueVarName(param))
-										}
-									end
+						often_used_code = Proc.new { |did|
+							xml.diagservice(:title => "#{did.name}_Read", :result => "pos", :ecu => ecu_name, :service => "#{did.name}_Read") {
+								xml.diagrequest
+								xml.diagresponse {
+									did.params.each { |param|
+										if not param.isArray then
+											xml.diagparam(:qualifier => param.shortname)	{
+												xml.var(:name => getUniqueVarName(param))
+											}
+										end
+									}
 								}
 							}
 						}
+						often_used_code.call(did)
 					end
 				}
 			}
 		}
-	 }
+		
+		xml.testgroup(:title => "Read back Parameters after ECU Reset [#{testgroup_name}]") {
+			xml.testcase(:ident => "Manual Reset", :title => "Manual Reset") {
+				xml.testerconfirmation("Please reset ECU manually and press button", :title => "Wait for user interaction")
+			}
+			
+			did_array.each { |did|
+				xml.testcase(:ident => "#{did.name}_Read", :title => "0x#{did.id.to_i.to_s(16).upcase}: #{did.name}: Read all Parameters of DID after ECU Reset") {
+					if did.rw.include? "Write" then
+						often_used_code.call(did)
+					end
+				}
+			}
+		}
+	  }
 	end
 
 	#merge with other xml input file
@@ -92,7 +114,7 @@ def generateTestModule(did_array, other_xml_test_module, testgroup_name, ecu_nam
 		testgroup_node = other_xml_test_module.at("testgroup")
 		
 		preparation_node.add_child(builder.doc.at('preparation').children)
-		testgroup_node.add_next_sibling(builder.doc.at('testgroup'))
+		testgroup_node.add_next_sibling(builder.doc.xpath('//testgroup'))
 	else
 		other_xml_test_module = builder.doc
 	end
