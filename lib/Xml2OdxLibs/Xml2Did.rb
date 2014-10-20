@@ -40,8 +40,6 @@ class Xml2Did
 					subsubdata.dop				= "_#{RefId.id}"
 					RefId.id += 1
 					paramArray.push(subsubdata)
-					
-					puts subsubdata.inspect
 				}
 			else
 				paramArray.push(hash)
@@ -61,9 +59,19 @@ class Xml2Did
 		param.startbyte						= subdata.xpath('BitStruct/StartByte').text.to_i
 		param.startbit						= subdata.xpath('BitStruct/StartBit').text.to_i
 		param.lengthinbits					= subdata.xpath('BitStruct/LengthInBits').text.to_i
-		param.isArray						= "#{subdata.xpath('BitStruct')}".include?('BitStructs')
-		param.arrayLengthInByte				= if "#{subdata.xpath('BitStruct')}".include?('BitStructs') then subdata.xpath('BitStruct/BitStructs/RepeatCount').text.to_i else 0 end
-		param.arrayElementLengthInBits		= if "#{subdata.xpath('BitStruct')}".include?('BitStructs') then subdata.xpath('BitStruct/BitStructs/LengthInBits').text.to_i else 0 end
+		
+		if "#{subdata.xpath('BitStruct')}".include?('BitStructs') then
+			param.isArray						= "#{subdata.xpath('BitStruct')}".include?('BitStructs')
+			param.arrayLengthInByte				= if "#{subdata.xpath('BitStruct')}".include?('BitStructs') then subdata.xpath('BitStruct/BitStructs/RepeatCount').text.to_i else 0 end
+			param.arrayElementLengthInBits		= if "#{subdata.xpath('BitStruct')}".include?('BitStructs') then subdata.xpath('BitStruct/BitStructs/LengthInBits').text.to_i else 0 end
+		elsif param.lengthinbits > 32
+			param.isArray 						= true
+			param.arrayLengthInByte 			= param.lengthinbits / 8
+			param.arrayElementLengthInBits		= 8
+			
+			puts param.inspect
+		end
+		
 		param.dop							= "_#{RefId.id}"
 		
 		RefId.id += 1
