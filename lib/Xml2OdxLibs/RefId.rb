@@ -1,0 +1,1 @@
+# Used to get unique referenc id's used in ODX xml file## Copyright (C) 2014 Kresimir Spisic <keko@spisic.de># See COPYING for the License of this softwareclass RefId	@@id = 10000000		def self.id		@@id	end		def self.id=(x)		@@id = x	end	end
