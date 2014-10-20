@@ -27,7 +27,26 @@ class Xml2Did
 		paramArray = []
 		subdata_nodes.map do |subdata|
 			hash = getDidParam(subdata)
-			paramArray.push(hash)
+			
+			if hash.isArray == true then
+				hash.arrayLengthInByte.times { |i|
+					subsubdata = Param.new
+					subsubdata.shortname 		= hash.shortname + "_" + i.to_s
+					subsubdata.longname 		= hash.longname  + "_" + i.to_s
+					subsubdata.startbyte 		= hash.startbyte + ((i*hash.arrayElementLengthInBits)/8)
+					subsubdata.startbit 		= hash.startbit + (i*hash.arrayElementLengthInBits)
+					subsubdata.lengthinbits 	= hash.arrayElementLengthInBits
+					subsubdata.isArray 			= false
+					subsubdata.dop				= "_#{RefId.id}"
+					RefId.id += 1
+					paramArray.push(subsubdata)
+					
+					puts subsubdata.inspect
+				}
+			else
+				paramArray.push(hash)
+			end
+			
 		end
 		
 		return paramArray
